@@ -18,7 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		377474A32A804BCB00E3FB7C /* Balancyй.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Balancyй.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		377474A32A804BCB00E3FB7C /* Balancy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Balancy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		377474A62A804BCB00E3FB7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		377474A82A804BCB00E3FB7C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		377474AA2A804BCB00E3FB7C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -41,6 +41,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		375ADDD62A80A686008198AE /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				377474AA2A804BCB00E3FB7C /* ViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
 		3774749A2A804BCB00E3FB7C = {
 			isa = PBXGroup;
 			children = (
@@ -52,7 +60,7 @@
 		377474A42A804BCB00E3FB7C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				377474A32A804BCB00E3FB7C /* Balancyй.app */,
+				377474A32A804BCB00E3FB7C /* Balancy.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -60,10 +68,10 @@
 		377474A52A804BCB00E3FB7C /* Balancyй */ = {
 			isa = PBXGroup;
 			children = (
+				375ADDD62A80A686008198AE /* Main */,
 				377474BA2A804BF100E3FB7C /* Auth */,
 				377474A62A804BCB00E3FB7C /* AppDelegate.swift */,
 				377474A82A804BCB00E3FB7C /* SceneDelegate.swift */,
-				377474AA2A804BCB00E3FB7C /* ViewController.swift */,
 				377474AC2A804BCB00E3FB7C /* Main.storyboard */,
 				377474AF2A804BCD00E3FB7C /* Assets.xcassets */,
 				377474B12A804BCD00E3FB7C /* LaunchScreen.storyboard */,
@@ -84,9 +92,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		377474A22A804BCB00E3FB7C /* Balancyй */ = {
+		377474A22A804BCB00E3FB7C /* Balancy */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 377474B72A804BCD00E3FB7C /* Build configuration list for PBXNativeTarget "Balancyй" */;
+			buildConfigurationList = 377474B72A804BCD00E3FB7C /* Build configuration list for PBXNativeTarget "Balancy" */;
 			buildPhases = (
 				3774749F2A804BCB00E3FB7C /* Sources */,
 				377474A02A804BCB00E3FB7C /* Frameworks */,
@@ -96,9 +104,9 @@
 			);
 			dependencies = (
 			);
-			name = "Balancyй";
+			name = Balancy;
 			productName = "Balancyй";
-			productReference = 377474A32A804BCB00E3FB7C /* Balancyй.app */;
+			productReference = 377474A32A804BCB00E3FB7C /* Balancy.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -116,7 +124,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 3774749E2A804BCB00E3FB7C /* Build configuration list for PBXProject "Balancyй" */;
+			buildConfigurationList = 3774749E2A804BCB00E3FB7C /* Build configuration list for PBXProject "Balancy" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -129,7 +137,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				377474A22A804BCB00E3FB7C /* Balancyй */,
+				377474A22A804BCB00E3FB7C /* Balancy */,
 			);
 		};
 /* End PBXProject section */
@@ -353,7 +361,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3774749E2A804BCB00E3FB7C /* Build configuration list for PBXProject "Balancyй" */ = {
+		3774749E2A804BCB00E3FB7C /* Build configuration list for PBXProject "Balancy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				377474B52A804BCD00E3FB7C /* Debug */,
@@ -362,7 +370,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		377474B72A804BCD00E3FB7C /* Build configuration list for PBXNativeTarget "Balancyй" */ = {
+		377474B72A804BCD00E3FB7C /* Build configuration list for PBXNativeTarget "Balancy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				377474B82A804BCD00E3FB7C /* Debug */,
