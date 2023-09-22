@@ -47,10 +47,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		049B99352ABD2F4D008A07D7 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				377474BF2A804C6900E3FB7C /* AuthViewControllerViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		049B99362ABD2F83008A07D7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		04E2DA5C2A9EAC0700EF9C24 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				377474A62A804BCB00E3FB7C /* AppDelegate.swift */,
+				377474A82A804BCB00E3FB7C /* SceneDelegate.swift */,
+				377474AC2A804BCB00E3FB7C /* Main.storyboard */,
+				377474AF2A804BCD00E3FB7C /* Assets.xcassets */,
+				377474B12A804BCD00E3FB7C /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		04E2DA5D2A9EAC5600EF9C24 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				375ADDD92A82ABA2008198AE /* CustomTabBarViewController.swift */,
+				375ADDDB2A838479008198AE /* TabBarViewController.swift */,
+				377474AA2A804BCB00E3FB7C /* ViewController.swift */,
+				377474BA2A804BF100E3FB7C /* Auth */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		375ADDD62A80A686008198AE /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				377474AA2A804BCB00E3FB7C /* ViewController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -74,17 +111,13 @@
 		377474A52A804BCB00E3FB7C /* Balancyй */ = {
 			isa = PBXGroup;
 			children = (
+				04E2DA5C2A9EAC0700EF9C24 /* Resources */,
+				049B99362ABD2F83008A07D7 /* Views */,
+				049B99352ABD2F4D008A07D7 /* ViewModels */,
+				04E2DA5D2A9EAC5600EF9C24 /* Controllers */,
 				37EF1CD32A8F66C9008997C6 /* Models */,
 				375ADDD62A80A686008198AE /* Main */,
-				377474BA2A804BF100E3FB7C /* Auth */,
-				377474A62A804BCB00E3FB7C /* AppDelegate.swift */,
-				377474A82A804BCB00E3FB7C /* SceneDelegate.swift */,
-				377474AC2A804BCB00E3FB7C /* Main.storyboard */,
-				377474AF2A804BCD00E3FB7C /* Assets.xcassets */,
-				377474B12A804BCD00E3FB7C /* LaunchScreen.storyboard */,
 				377474B42A804BCD00E3FB7C /* Info.plist */,
-				375ADDD92A82ABA2008198AE /* CustomTabBarViewController.swift */,
-				375ADDDB2A838479008198AE /* TabBarViewController.swift */,
 			);
 			path = "Balancyй";
 			sourceTree = "<group>";
@@ -93,7 +126,6 @@
 			isa = PBXGroup;
 			children = (
 				377474BB2A804C2600E3FB7C /* AuthViewController.swift */,
-				377474BF2A804C6900E3FB7C /* AuthViewControllerViewModel.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
