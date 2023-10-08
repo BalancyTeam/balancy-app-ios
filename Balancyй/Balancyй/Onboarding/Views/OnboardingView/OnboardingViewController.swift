@@ -45,7 +45,7 @@ class OnboardingViewController: UIViewController {
         if currentPage == slides.count - 1 {
             let controller = storyboard?.instantiateViewController(withIdentifier: "customTabBarViewController") as! UIViewController
             controller.modalPresentationStyle = .fullScreen
-            controller.modalTransitionStyle = .flipHorizontal
+            controller.modalTransitionStyle = .crossDissolve
             present(controller, animated: true, completion: nil)
         } else {
             currentPage += 1

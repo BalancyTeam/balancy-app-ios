@@ -16,9 +16,11 @@ class OnboardingCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var slideDescriptionLabel: UILabel!
 
     
-    
     func setup(_ slide: OnboardingSlide) {
         slideImageView.image = slide.image
         slideDescriptionLabel.text = slide.description
+        
+        
+        slideDescriptionLabel.halfTextColorChange(fullText: slideDescriptionLabel.text!, changeText: "великої")
     }
 }
