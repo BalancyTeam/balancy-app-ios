@@ -1,22 +1,30 @@
 import UIKit
 
 class AuthViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+     
+     // MARK: - UI Components
+     private let headerView = AuthHeaderView(title: "З поверненням!", subTitle: "Раді знову тебе бачити")
+     
+     // MARK: - LifeCycle
+     
+     
+     override func viewDidLoad() {
+         super.viewDidLoad()
+         self.setupUI()
+     }
+     
+     // MARK: - UI Setup
+     private func setupUI() {
+         self.view.addSubview(headerView)
+         headerView.translatesAutoresizingMaskIntoConstraints = false
+         
+         
+         NSLayoutConstraint.activate([
+            self.headerView.topAnchor.constraint(equalTo: self.view.topAnchor),
+            self.headerView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
+            self.headerView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
+            self.headerView.heightAnchor.constraint(equalToConstant: 270)
+         ])
+     }
 
 }
