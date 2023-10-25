@@ -17,8 +17,6 @@ class OnboardingViewController: UIViewController {
     
     var slides: [OnboardingSlide] = []
     
-    var modifiedWordsArray = ["великої кількості тасків", "підпалюють твою сраку", "Гоу з нами"]
-    
     var currentPage = 0 {
         didSet {
             pageControl.currentPage = currentPage
@@ -34,7 +32,7 @@ class OnboardingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         slides = [
             OnboardingSlide(description: "За*бався від великої кількості тасків та хаосу в житті?", image: #imageLiteral(resourceName: "1"), highlightedText: "великої кількості тасків"),
             OnboardingSlide(description: "Дедлайни підпалюють твою сраку і не знаєш, що робити далі?", image: #imageLiteral(resourceName: "2"), highlightedText: "підпалюють твою сраку"),
@@ -43,7 +41,7 @@ class OnboardingViewController: UIViewController {
         
     }
     
-
+    
     @IBAction func firstButtonClicked(_ sender: UIButton) {
         if currentPage == slides.count - 1 {
             let controller = storyboard?.instantiateViewController(withIdentifier: "customTabBarViewController") as! UIViewController

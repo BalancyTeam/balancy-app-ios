@@ -17,7 +17,7 @@ class OnboardingCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var slideDescriptionLabel: UILabel!
     
     var slides: [OnboardingSlide] = []
-
+    
     func setup(_ slide: OnboardingSlide) {
         slideImageView.image = slide.image
         slideDescriptionLabel.text = slide.description
