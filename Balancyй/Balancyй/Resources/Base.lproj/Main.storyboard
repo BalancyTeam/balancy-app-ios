@@ -1,20 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JwK-g5-4bM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JwK-g5-4bM">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="e-Ukraine-Regular.otf">
-            <string>e-Ukraine-Regular</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Onboarding View Controller-->
         <scene sceneID="HIN-pF-m1e">
@@ -42,18 +37,58 @@
                                             <rect key="frame" x="0.0" y="0.0" width="376" height="608"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="За*бався від великої кількості тасків та хаосу в житті?" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hbS-P2-x20">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hbS-P2-x20">
                                                     <rect key="frame" x="17" y="49" width="314" height="201"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="201" id="LtD-ix-uy9"/>
                                                         <constraint firstAttribute="width" constant="332" id="y7g-uC-Tif"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="e-Ukraine-Regular" family="e-Ukraine" pointSize="24"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="За*бався від">
+                                                            <attributes>
+                                                                <color key="NSBackgroundColor" red="0.85098040100000005" green="0.19607841970000001" blue="0.32549020649999999" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="24" name="e-Ukraine-Regular"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content=" ">
+                                                            <attributes>
+                                                                <color key="NSBackgroundColor" red="0.85098040100000005" green="0.19607841970000001" blue="0.32549020649999999" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                                <font key="NSFont" size="24" name="e-Ukraine-Regular"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="великої кількості тасків">
+                                                            <attributes>
+                                                                <color key="NSBackgroundColor" red="0.85098040100000005" green="0.19607841970000001" blue="0.32549020649999999" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <color key="NSColor" red="0.85098040100000005" green="0.19607841970000001" blue="0.32549020649999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <font key="NSFont" size="24" name="e-Ukraine-Regular"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content=" ">
+                                                            <attributes>
+                                                                <color key="NSBackgroundColor" red="0.85098040100000005" green="0.19607841970000001" blue="0.32549020649999999" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                                <font key="NSFont" size="24" name="e-Ukraine-Regular"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="та хаосу в житті?">
+                                                            <attributes>
+                                                                <color key="NSBackgroundColor" red="0.85098040100000005" green="0.19607841970000001" blue="0.32549020649999999" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="24" name="e-Ukraine-Regular"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="T4L-NN-Dd0">
-                                                    <rect key="frame" x="17" y="219" width="359" height="280"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T4L-NN-Dd0">
+                                                    <rect key="frame" x="0.0" y="219" width="376" height="280"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="326" id="sXH-c2-22z"/>
                                                         <constraint firstAttribute="height" constant="280" id="yYg-Q4-agw"/>
@@ -91,16 +126,19 @@
                                 </connections>
                             </collectionView>
                             <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="bXo-Zf-dq7">
-                                <rect key="frame" x="138" y="644" width="115.66666666666669" height="12"/>
+                                <rect key="frame" x="138" y="644" width="98" height="12"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="P6s-PV-UzA"/>
                                     <constraint firstAttribute="height" constant="12" id="a54-07-CRW"/>
                                 </constraints>
                                 <color key="pageIndicatorTintColor" red="0.1764705926" green="0.1764705926" blue="0.18039217590000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="currentPageIndicatorTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="pageControl:" destination="3rO-oK-fAI" eventType="valueChanged" id="r96-0B-P5H"/>
+                                </connections>
                             </pageControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qvh-iP-kNT">
-                                <rect key="frame" x="17" y="674" width="342" height="50"/>
+                                <rect key="frame" x="8.3333333333333428" y="674" width="342" height="50"/>
                                 <color key="backgroundColor" name="customColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="XpG-TL-s0q"/>
@@ -108,8 +146,16 @@
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Просто капець як">
-                                    <fontDescription key="titleFontDescription" name="e-Ukraine-Medium" family="e-Ukraine" pointSize="16"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Просто капець як">
+                                            <attributes>
+                                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <font key="NSFont" size="16" name="e-Ukraine-Medium"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
                                 </buttonConfiguration>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -138,6 +184,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jYw-la-oSO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="3rO-oK-fAI" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-3152.8000000000002" y="-367.98029556650249"/>
         </scene>
@@ -234,7 +281,7 @@
     </scenes>
     <resources>
         <namedColor name="customColor">
-            <color red="0.84705877299999999" green="0.19607841970000001" blue="0.32549020649999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.84700000286102295" green="0.19599999487400055" blue="0.32499998807907104" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

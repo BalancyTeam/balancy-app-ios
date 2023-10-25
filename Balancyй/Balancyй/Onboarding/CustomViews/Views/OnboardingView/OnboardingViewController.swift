@@ -17,6 +17,8 @@ class OnboardingViewController: UIViewController {
     
     var slides: [OnboardingSlide] = []
     
+    var modifiedWordsArray = ["великої кількості тасків", "підпалюють твою сраку", "Гоу з нами"]
+    
     var currentPage = 0 {
         didSet {
             pageControl.currentPage = currentPage
@@ -34,10 +36,11 @@ class OnboardingViewController: UIViewController {
         super.viewDidLoad()
 
         slides = [
-            OnboardingSlide(description: "За*бався від великої кількості тасків та хаосу в житті?", image: #imageLiteral(resourceName: "1")),
-        OnboardingSlide(description: "Дедлайни підпалюють твою сраку і не знаєш, що робити далі?", image: #imageLiteral(resourceName: "2")),
-            OnboardingSlide(description: "Вихід є! Гоу з нами балансувати твоє бісове життя", image: #imageLiteral(resourceName: "3"))
+            OnboardingSlide(description: "За*бався від великої кількості тасків та хаосу в житті?", image: #imageLiteral(resourceName: "1"), highlightedText: "великої кількості тасків"),
+            OnboardingSlide(description: "Дедлайни підпалюють твою сраку і не знаєш, що робити далі?", image: #imageLiteral(resourceName: "2"), highlightedText: "підпалюють твою сраку"),
+            OnboardingSlide(description: "Вихід є! Гоу з нами балансувати твоє бісове життя", image: #imageLiteral(resourceName: "3"), highlightedText: "Гоу з нами")
         ]
+        
     }
     
 

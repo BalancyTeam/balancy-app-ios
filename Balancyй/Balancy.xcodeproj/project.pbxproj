@@ -112,7 +112,6 @@
 			children = (
 				1B73C0632AC4A15C00FE6290 /* Extensions */,
 				1B73C05F2AC491DE00FE6290 /* CustomViews */,
-				1B73C05E2AC491CA00FE6290 /* Views */,
 				1B73C05D2AC491C100FE6290 /* Models */,
 			);
 			path = Onboarding;
@@ -137,6 +136,7 @@
 		1B73C05F2AC491DE00FE6290 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				1B73C05E2AC491CA00FE6290 /* Views */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
