@@ -1,23 +1,203 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jLH-18-3T0">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JwK-g5-4bM">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Onboarding View Controller-->
+        <scene sceneID="HIN-pF-m1e">
+            <objects>
+                <viewController id="JwK-g5-4bM" customClass="OnboardingViewController" customModule="Balancy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4hh-eK-U3t">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Wnq-lf-ZK2">
+                                <rect key="frame" x="0.0" y="50" width="375" height="616"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="MpY-e4-a8t">
+                                    <size key="itemSize" width="376" height="608"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="OnboardingCollectionViewCell" id="RUO-0p-hvd" customClass="OnboardingCollectionViewCell" customModule="Balancy" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="4" width="376" height="608"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="gu5-LT-Kut">
+                                            <rect key="frame" x="0.0" y="0.0" width="376" height="608"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hbS-P2-x20">
+                                                    <rect key="frame" x="17" y="49" width="314" height="201"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="201" id="LtD-ix-uy9"/>
+                                                        <constraint firstAttribute="width" constant="332" id="y7g-uC-Tif"/>
+                                                    </constraints>
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="За*бався від">
+                                                            <attributes>
+                                                                <color key="NSBackgroundColor" red="0.85098040100000005" green="0.19607841970000001" blue="0.32549020649999999" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="24" name="e-Ukraine-Regular"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content=" ">
+                                                            <attributes>
+                                                                <color key="NSBackgroundColor" red="0.85098040100000005" green="0.19607841970000001" blue="0.32549020649999999" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                                <font key="NSFont" size="24" name="e-Ukraine-Regular"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="великої кількості тасків">
+                                                            <attributes>
+                                                                <color key="NSBackgroundColor" red="0.85098040100000005" green="0.19607841970000001" blue="0.32549020649999999" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <color key="NSColor" red="0.85098040100000005" green="0.19607841970000001" blue="0.32549020649999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <font key="NSFont" size="24" name="e-Ukraine-Regular"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content=" ">
+                                                            <attributes>
+                                                                <color key="NSBackgroundColor" red="0.85098040100000005" green="0.19607841970000001" blue="0.32549020649999999" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                                <font key="NSFont" size="24" name="e-Ukraine-Regular"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="та хаосу в житті?">
+                                                            <attributes>
+                                                                <color key="NSBackgroundColor" red="0.85098040100000005" green="0.19607841970000001" blue="0.32549020649999999" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="24" name="e-Ukraine-Regular"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T4L-NN-Dd0">
+                                                    <rect key="frame" x="0.0" y="219" width="376" height="280"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="326" id="sXH-c2-22z"/>
+                                                        <constraint firstAttribute="height" constant="280" id="yYg-Q4-agw"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="20"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="T4L-NN-Dd0" firstAttribute="centerX" secondItem="gu5-LT-Kut" secondAttribute="centerX" constant="8.5" id="Bx4-iF-CKs"/>
+                                                <constraint firstAttribute="trailing" secondItem="hbS-P2-x20" secondAttribute="trailing" constant="45" id="HNT-L8-gEe"/>
+                                                <constraint firstItem="T4L-NN-Dd0" firstAttribute="centerX" secondItem="gu5-LT-Kut" secondAttribute="centerX" constant="8.5" id="MGP-I6-rog"/>
+                                                <constraint firstAttribute="trailing" secondItem="T4L-NN-Dd0" secondAttribute="trailing" id="N2r-wN-XqH"/>
+                                                <constraint firstItem="T4L-NN-Dd0" firstAttribute="centerX" secondItem="gu5-LT-Kut" secondAttribute="centerX" constant="8.5" id="VPA-w1-csZ"/>
+                                                <constraint firstItem="T4L-NN-Dd0" firstAttribute="top" secondItem="hbS-P2-x20" secondAttribute="bottom" constant="-31" id="bNQ-oW-tUu"/>
+                                                <constraint firstAttribute="trailing" secondItem="T4L-NN-Dd0" secondAttribute="trailing" id="fvc-mW-SeK"/>
+                                                <constraint firstItem="hbS-P2-x20" firstAttribute="leading" secondItem="gu5-LT-Kut" secondAttribute="leading" constant="17" id="idX-t7-4Ma"/>
+                                                <constraint firstItem="hbS-P2-x20" firstAttribute="top" secondItem="gu5-LT-Kut" secondAttribute="top" constant="49" id="ikJ-qw-VoG"/>
+                                                <constraint firstItem="T4L-NN-Dd0" firstAttribute="leading" secondItem="gu5-LT-Kut" secondAttribute="leading" constant="17" id="yvl-do-w3T"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="376" height="608"/>
+                                        <connections>
+                                            <outlet property="slideDescriptionLabel" destination="hbS-P2-x20" id="zdn-Lf-Dl5"/>
+                                            <outlet property="slideImageView" destination="T4L-NN-Dd0" id="cgM-6e-Hgd"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="JwK-g5-4bM" id="KOm-AF-GXk"/>
+                                    <outlet property="delegate" destination="JwK-g5-4bM" id="bMk-ch-VVk"/>
+                                </connections>
+                            </collectionView>
+                            <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="bXo-Zf-dq7">
+                                <rect key="frame" x="138" y="644" width="98" height="12"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="P6s-PV-UzA"/>
+                                    <constraint firstAttribute="height" constant="12" id="a54-07-CRW"/>
+                                </constraints>
+                                <color key="pageIndicatorTintColor" red="0.1764705926" green="0.1764705926" blue="0.18039217590000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="currentPageIndicatorTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="pageControl:" destination="3rO-oK-fAI" eventType="valueChanged" id="r96-0B-P5H"/>
+                                </connections>
+                            </pageControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qvh-iP-kNT">
+                                <rect key="frame" x="8.3333333333333428" y="674" width="342" height="50"/>
+                                <color key="backgroundColor" name="customColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="XpG-TL-s0q"/>
+                                    <constraint firstAttribute="width" constant="342" id="c6r-VX-78B"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Просто капець як">
+                                            <attributes>
+                                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <font key="NSFont" size="16" name="e-Ukraine-Medium"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="firstButtonClicked:" destination="JwK-g5-4bM" eventType="touchUpInside" id="0Nj-Qa-46g"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="63G-ms-LMt"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="qvh-iP-kNT" firstAttribute="centerX" secondItem="63G-ms-LMt" secondAttribute="centerX" constant="-8.3333333333333428" id="7EA-Gd-axc"/>
+                            <constraint firstItem="bXo-Zf-dq7" firstAttribute="leading" secondItem="63G-ms-LMt" secondAttribute="leading" constant="138" id="AXa-D2-wXV"/>
+                            <constraint firstItem="63G-ms-LMt" firstAttribute="trailing" secondItem="bXo-Zf-dq7" secondAttribute="trailing" constant="139" id="C1X-0f-LLL"/>
+                            <constraint firstItem="qvh-iP-kNT" firstAttribute="top" secondItem="bXo-Zf-dq7" secondAttribute="bottom" constant="18" id="SAu-i0-66J"/>
+                            <constraint firstItem="63G-ms-LMt" firstAttribute="bottom" secondItem="qvh-iP-kNT" secondAttribute="bottom" constant="54" id="sCP-7Q-r3E"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="Wnq-lf-ZK2" id="W19-ua-qjZ"/>
+                        <outlet property="firstButton" destination="qvh-iP-kNT" id="WJ3-Cp-HXA"/>
+                        <outlet property="pageControl" destination="bXo-Zf-dq7" id="wxG-F9-JmN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jYw-la-oSO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="3rO-oK-fAI" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-3152.8000000000002" y="-367.98029556650249"/>
+        </scene>
         <!--Item-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Balancy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dse-o1-CjC">
-                                <rect key="frame" x="159" y="408.66666666666669" width="75" height="35"/>
+                                <rect key="frame" x="150" y="388.66666666666669" width="75" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                             </button>
@@ -40,11 +220,11 @@
             <objects>
                 <viewController id="Yhd-Fh-b7c" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="z19-ok-H54">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R3B-Xs-zkT">
-                                <rect key="frame" x="191.66666666666666" y="415.66666666666669" width="10" height="21"/>
+                                <rect key="frame" x="182.66666666666666" y="395.66666666666669" width="10" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -68,7 +248,7 @@
             <objects>
                 <viewController id="5iL-ZO-KB0" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MNy-pm-ktp">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="7GY-4i-VWf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -82,7 +262,7 @@
         <!--Custom Tab Bar View Controller-->
         <scene sceneID="jvp-57-po8">
             <objects>
-                <tabBarController id="jLH-18-3T0" customClass="CustomTabBarViewController" customModule="Balancy" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="customTabBarViewController" id="jLH-18-3T0" customClass="CustomTabBarViewController" customModule="Balancy" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Amj-Gl-KM2" customClass="TabBarViewController" customModule="Balancy" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -100,6 +280,9 @@
         </scene>
     </scenes>
     <resources>
+        <namedColor name="customColor">
+            <color red="0.84700000286102295" green="0.19599999487400055" blue="0.32499998807907104" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

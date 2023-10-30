@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B73C0622AC4925400FE6290 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B73C0612AC4925400FE6290 /* OnboardingViewController.swift */; };
+		1B73C0652AC4A17E00FE6290 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B73C0642AC4A17E00FE6290 /* UIView+Extension.swift */; };
+		1B73C0672AC4A35200FE6290 /* OnboardingSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B73C0662AC4A35200FE6290 /* OnboardingSlide.swift */; };
+		1B73C0692AC4A62100FE6290 /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B73C0682AC4A62100FE6290 /* OnboardingCollectionViewCell.swift */; };
+		1B73C0722AC4C01500FE6290 /* e-Ukraine-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1B73C06C2AC4C01500FE6290 /* e-Ukraine-Medium.otf */; };
+		1B73C0732AC4C01500FE6290 /* e-Ukraine-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1B73C06D2AC4C01500FE6290 /* e-Ukraine-Bold.otf */; };
+		1B73C0742AC4C01500FE6290 /* e-Ukraine-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1B73C06E2AC4C01500FE6290 /* e-Ukraine-Light.otf */; };
+		1B73C0752AC4C01500FE6290 /* e-Ukraine-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1B73C06F2AC4C01500FE6290 /* e-Ukraine-Thin.otf */; };
+		1B73C0762AC4C01500FE6290 /* e-Ukraine-UltraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1B73C0702AC4C01500FE6290 /* e-Ukraine-UltraLight.otf */; };
+		1B73C0772AC4C01500FE6290 /* e-Ukraine-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1B73C0712AC4C01500FE6290 /* e-Ukraine-Regular.otf */; };
+		1BCFC9C22AD071A2001B0E45 /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCFC9C12AD071A2001B0E45 /* UILabel+Extension.swift */; };
 		375ADDDA2A82ABA2008198AE /* CustomTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375ADDD92A82ABA2008198AE /* CustomTabBarViewController.swift */; };
 		375ADDDC2A838479008198AE /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375ADDDB2A838479008198AE /* TabBarViewController.swift */; };
 		377474A72A804BCB00E3FB7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377474A62A804BCB00E3FB7C /* AppDelegate.swift */; };
@@ -21,6 +32,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1B73C0612AC4925400FE6290 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		1B73C0642AC4A17E00FE6290 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		1B73C0662AC4A35200FE6290 /* OnboardingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlide.swift; sourceTree = "<group>"; };
+		1B73C0682AC4A62100FE6290 /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
+		1B73C06C2AC4C01500FE6290 /* e-Ukraine-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "e-Ukraine-Medium.otf"; sourceTree = "<group>"; };
+		1B73C06D2AC4C01500FE6290 /* e-Ukraine-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "e-Ukraine-Bold.otf"; sourceTree = "<group>"; };
+		1B73C06E2AC4C01500FE6290 /* e-Ukraine-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "e-Ukraine-Light.otf"; sourceTree = "<group>"; };
+		1B73C06F2AC4C01500FE6290 /* e-Ukraine-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "e-Ukraine-Thin.otf"; sourceTree = "<group>"; };
+		1B73C0702AC4C01500FE6290 /* e-Ukraine-UltraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "e-Ukraine-UltraLight.otf"; sourceTree = "<group>"; };
+		1B73C0712AC4C01500FE6290 /* e-Ukraine-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "e-Ukraine-Regular.otf"; sourceTree = "<group>"; };
+		1BCFC9C12AD071A2001B0E45 /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
 		375ADDD92A82ABA2008198AE /* CustomTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarViewController.swift; sourceTree = "<group>"; };
 		375ADDDB2A838479008198AE /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		377474A32A804BCB00E3FB7C /* Balancy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Balancy.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,6 +107,79 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		1B73C05C2AC48A5F00FE6290 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				1B73C0632AC4A15C00FE6290 /* Extensions */,
+				1B73C05F2AC491DE00FE6290 /* CustomViews */,
+				1B73C05D2AC491C100FE6290 /* Models */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		1B73C05D2AC491C100FE6290 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1B73C0662AC4A35200FE6290 /* OnboardingSlide.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1B73C05E2AC491CA00FE6290 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1B73C0602AC4921E00FE6290 /* OnboardingView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1B73C05F2AC491DE00FE6290 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				1B73C05E2AC491CA00FE6290 /* Views */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		1B73C0602AC4921E00FE6290 /* OnboardingView */ = {
+			isa = PBXGroup;
+			children = (
+				1B73C0612AC4925400FE6290 /* OnboardingViewController.swift */,
+				1B73C0682AC4A62100FE6290 /* OnboardingCollectionViewCell.swift */,
+			);
+			path = OnboardingView;
+			sourceTree = "<group>";
+		};
+		1B73C0632AC4A15C00FE6290 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1B73C0642AC4A17E00FE6290 /* UIView+Extension.swift */,
+				1BCFC9C12AD071A2001B0E45 /* UILabel+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1B73C06A2AC4C00800FE6290 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				1B73C06B2AC4C01500FE6290 /* e-Ukraine */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		1B73C06B2AC4C01500FE6290 /* e-Ukraine */ = {
+			isa = PBXGroup;
+			children = (
+				1B73C06C2AC4C01500FE6290 /* e-Ukraine-Medium.otf */,
+				1B73C06D2AC4C01500FE6290 /* e-Ukraine-Bold.otf */,
+				1B73C06E2AC4C01500FE6290 /* e-Ukraine-Light.otf */,
+				1B73C06F2AC4C01500FE6290 /* e-Ukraine-Thin.otf */,
+				1B73C0702AC4C01500FE6290 /* e-Ukraine-UltraLight.otf */,
+				1B73C0712AC4C01500FE6290 /* e-Ukraine-Regular.otf */,
+			);
+			path = "e-Ukraine";
+			sourceTree = "<group>";
+		};
 		375ADDD62A80A686008198AE /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +206,8 @@
 		377474A52A804BCB00E3FB7C /* Balancyй */ = {
 			isa = PBXGroup;
 			children = (
+				1B73C06A2AC4C00800FE6290 /* Font */,
+				1B73C05C2AC48A5F00FE6290 /* Onboarding */,
 				04E2DA5C2A9EAC0700EF9C24 /* Resources */,
 				049B99362ABD2F83008A07D7 /* Views */,
 				049B99352ABD2F4D008A07D7 /* ViewModels */,
@@ -197,7 +294,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				377474B32A804BCD00E3FB7C /* LaunchScreen.storyboard in Resources */,
+				1B73C0772AC4C01500FE6290 /* e-Ukraine-Regular.otf in Resources */,
+				1B73C0732AC4C01500FE6290 /* e-Ukraine-Bold.otf in Resources */,
+				1B73C0742AC4C01500FE6290 /* e-Ukraine-Light.otf in Resources */,
+				1B73C0752AC4C01500FE6290 /* e-Ukraine-Thin.otf in Resources */,
 				377474B02A804BCD00E3FB7C /* Assets.xcassets in Resources */,
+				1B73C0762AC4C01500FE6290 /* e-Ukraine-UltraLight.otf in Resources */,
+				1B73C0722AC4C01500FE6290 /* e-Ukraine-Medium.otf in Resources */,
 				377474AE2A804BCB00E3FB7C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -211,12 +314,17 @@
 			files = (
 				377474BC2A804C2600E3FB7C /* AuthViewController.swift in Sources */,
 				377474AB2A804BCB00E3FB7C /* ViewController.swift in Sources */,
+				1B73C0652AC4A17E00FE6290 /* UIView+Extension.swift in Sources */,
 				375ADDDA2A82ABA2008198AE /* CustomTabBarViewController.swift in Sources */,
 				377474C02A804C6900E3FB7C /* AuthViewControllerViewModel.swift in Sources */,
 				375ADDDC2A838479008198AE /* TabBarViewController.swift in Sources */,
 				377474A72A804BCB00E3FB7C /* AppDelegate.swift in Sources */,
 				377474A92A804BCB00E3FB7C /* SceneDelegate.swift in Sources */,
+				1B73C0622AC4925400FE6290 /* OnboardingViewController.swift in Sources */,
 				37EF1CD52A8F66EE008997C6 /* Constants.swift in Sources */,
+				1B73C0672AC4A35200FE6290 /* OnboardingSlide.swift in Sources */,
+				1BCFC9C22AD071A2001B0E45 /* UILabel+Extension.swift in Sources */,
+				1B73C0692AC4A62100FE6290 /* OnboardingCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,8 +476,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -395,8 +502,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
