@@ -1,6 +1,6 @@
 import UIKit
 
-class TabBarViewController: UITabBar {
+final class TabBarViewController: UITabBar {
 
     private var shapeLayer: CALayer?
        

@@ -11,6 +11,7 @@
 		049B993A2ABE8DF6008A07D7 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049B99392ABE8DF6008A07D7 /* SignUpViewController.swift */; };
 		049D7EEF2ADE003E00A13B1B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049D7EEE2ADE003E00A13B1B /* HomeViewController.swift */; };
 		049D7EF22ADE070800A13B1B /* AuthHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049D7EF12ADE070700A13B1B /* AuthHeaderView.swift */; };
+		04E79D372AF4A8D90059C88A /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E79D362AF4A8D90059C88A /* CustomTextField.swift */; };
 		04E9AE832AC7C7E800D1DF82 /* AuthFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E9AE822AC7C7E800D1DF82 /* AuthFlowCoordinator.swift */; };
 		04E9AE852AC7D59600D1DF82 /* AuthFlow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04E9AE842AC7D59500D1DF82 /* AuthFlow.storyboard */; };
 		375ADDDA2A82ABA2008198AE /* CustomTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375ADDD92A82ABA2008198AE /* CustomTabBarViewController.swift */; };
@@ -22,7 +23,6 @@
 		377474B02A804BCD00E3FB7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 377474AF2A804BCD00E3FB7C /* Assets.xcassets */; };
 		377474B32A804BCD00E3FB7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 377474B12A804BCD00E3FB7C /* LaunchScreen.storyboard */; };
 		377474BC2A804C2600E3FB7C /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377474BB2A804C2600E3FB7C /* AuthViewController.swift */; };
-		377474C02A804C6900E3FB7C /* AuthViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377474BF2A804C6900E3FB7C /* AuthViewControllerViewModel.swift */; };
 		37EF1CD52A8F66EE008997C6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EF1CD42A8F66EE008997C6 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +31,7 @@
 		049B99392ABE8DF6008A07D7 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		049D7EEE2ADE003E00A13B1B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		049D7EF12ADE070700A13B1B /* AuthHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthHeaderView.swift; sourceTree = "<group>"; };
+		04E79D362AF4A8D90059C88A /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		04E9AE822AC7C7E800D1DF82 /* AuthFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthFlowCoordinator.swift; sourceTree = "<group>"; };
 		04E9AE842AC7D59500D1DF82 /* AuthFlow.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AuthFlow.storyboard; sourceTree = "<group>"; };
 		375ADDD92A82ABA2008198AE /* CustomTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarViewController.swift; sourceTree = "<group>"; };
@@ -44,7 +45,6 @@
 		377474B22A804BCD00E3FB7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		377474B42A804BCD00E3FB7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		377474BB2A804C2600E3FB7C /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
-		377474BF2A804C6900E3FB7C /* AuthViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewControllerViewModel.swift; sourceTree = "<group>"; };
 		37EF1CD42A8F66EE008997C6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -62,7 +62,6 @@
 		049B99352ABD2F4D008A07D7 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				377474BF2A804C6900E3FB7C /* AuthViewControllerViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -79,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				049D7EF12ADE070700A13B1B /* AuthHeaderView.swift */,
+				04E79D362AF4A8D90059C88A /* CustomTextField.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -244,11 +244,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04E79D372AF4A8D90059C88A /* CustomTextField.swift in Sources */,
 				377474BC2A804C2600E3FB7C /* AuthViewController.swift in Sources */,
 				049B993A2ABE8DF6008A07D7 /* SignUpViewController.swift in Sources */,
 				377474AB2A804BCB00E3FB7C /* ViewController.swift in Sources */,
 				375ADDDA2A82ABA2008198AE /* CustomTabBarViewController.swift in Sources */,
-				377474C02A804C6900E3FB7C /* AuthViewControllerViewModel.swift in Sources */,
 				375ADDDC2A838479008198AE /* TabBarViewController.swift in Sources */,
 				049B99382ABE8DCF008A07D7 /* ForgotPasswordViewController.swift in Sources */,
 				377474A72A804BCB00E3FB7C /* AppDelegate.swift in Sources */,

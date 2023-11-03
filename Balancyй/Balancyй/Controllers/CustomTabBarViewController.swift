@@ -1,7 +1,7 @@
 import Foundation
 import UIKit
 
-class CustomTabBarViewController : UITabBarController, UITabBarControllerDelegate {
+final class CustomTabBarViewController : UITabBarController, UITabBarControllerDelegate {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
     }
