@@ -18,15 +18,16 @@ final class CustomTextField: UITextField {
     
     // MARK: - Will be used for field borders later
 
-//    override func draw(_ rect: CGRect) {
-//
-//      let borderColor = UIColor(named: "#48484A")!.cgColor
-//
-//      layer.borderWidth = 1
-//      layer.borderColor = borderColor
-//
-//      super.draw(rect)
-//    }
+    override func draw(_ rect: CGRect) {
+
+        let borderColor = UIColor(named: "#48484A")?.cgColor ?? UIColor.lightGray.cgColor
+//        let borderColor = #colorLiteral(red: 72, green: 72, blue: 72, alpha: 1).cgColor
+
+      layer.borderWidth = 1
+      layer.borderColor = borderColor
+
+      super.draw(rect)
+    }
     
     private let authFieldType: CustomTextFieldType
     
@@ -36,13 +37,18 @@ final class CustomTextField: UITextField {
         self.authFieldType = authFieldType
         super .init(frame: .zero)
         
-//        self.backgroundColor = UIColor(named: "#121212")
-        self.backgroundColor = .secondarySystemBackground // will be changed to look like in design later
+        self.backgroundColor = UIColor(named: "#121212")
+        
+        // MARK: - Debug line
+//        self.backgroundColor = .secondarySystemBackground
+        
         self.layer.cornerRadius = 20
         
         self.returnKeyType = .done
         self.autocorrectionType = .no
         self.autocapitalizationType = .none
+        
+        draw(.zero)
     }
     
     required init?(coder: NSCoder) {

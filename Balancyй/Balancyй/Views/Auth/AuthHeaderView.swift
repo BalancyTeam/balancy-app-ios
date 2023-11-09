@@ -7,6 +7,7 @@
 
 import UIKit
 
+/// Defines and configures header view with UI elements for AuthViewController
 final class AuthHeaderView: UIView {
 
 //    MARK: - UI Components
