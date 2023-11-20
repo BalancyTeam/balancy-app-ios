@@ -17,7 +17,7 @@ final class AuthViewController: UIViewController {
      // MARK: - UI Setup
      private func setupUI() {
 
-         self.view.backgroundColor = UIColor(named: "#121212")
+         self.view.backgroundColor = #colorLiteral(red: 0.18, green: 0.18, blue: 0.18, alpha: 0.4)
          
          self.view.addSubview(headerView)
          self.view.addSubview(usernameField)

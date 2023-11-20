@@ -16,20 +16,22 @@ final class CustomTextField: UITextField {
         case email
     }
     
-    // MARK: - Will be used for field borders later
-
-    override func draw(_ rect: CGRect) {
-
-        let borderColor = UIColor(named: "#48484A")?.cgColor ?? UIColor.lightGray.cgColor
-//        let borderColor = #colorLiteral(red: 72, green: 72, blue: 72, alpha: 1).cgColor
-
-      layer.borderWidth = 1
-      layer.borderColor = borderColor
-
-      super.draw(rect)
-    }
-    
     private let authFieldType: CustomTextFieldType
+    private let borderWidth: CGFloat = 1
+    private let borderColor = #colorLiteral(red: 0.72, green: 0.72, blue: 0.74, alpha: 0.4).cgColor
+    private let padding = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
+    
+    override public func textRect(forBounds bounds: CGRect) -> CGRect {
+      return bounds.inset(by: padding)
+    }
+
+    override public func placeholderRect(forBounds bounds: CGRect) -> CGRect {
+      return bounds.inset(by: padding)
+    }
+
+    override public func editingRect(forBounds bounds: CGRect) -> CGRect {
+      return bounds.inset(by: padding)
+    }
     
     // MARK: - Init
 
@@ -38,15 +40,14 @@ final class CustomTextField: UITextField {
         super .init(frame: .zero)
         
         self.backgroundColor = UIColor(named: "#121212")
-        
-        // MARK: - Debug line
-//        self.backgroundColor = .secondarySystemBackground
-        
         self.layer.cornerRadius = 20
-        
+        self.layer.masksToBounds = true
         self.returnKeyType = .done
         self.autocorrectionType = .no
         self.autocapitalizationType = .none
+        
+        layer.borderWidth = borderWidth
+        layer.borderColor = borderColor
         
         draw(.zero)
     }

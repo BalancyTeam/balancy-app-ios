@@ -59,6 +59,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		048C76962B0BD7BF00C1624E /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				375ADDD92A82ABA2008198AE /* CustomTabBarViewController.swift */,
+				375ADDDB2A838479008198AE /* TabBarViewController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
 		049B99352ABD2F4D008A07D7 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -99,8 +108,7 @@
 		04E2DA5D2A9EAC5600EF9C24 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				375ADDD92A82ABA2008198AE /* CustomTabBarViewController.swift */,
-				375ADDDB2A838479008198AE /* TabBarViewController.swift */,
+				048C76962B0BD7BF00C1624E /* TabBar */,
 				377474AA2A804BCB00E3FB7C /* ViewController.swift */,
 				377474BA2A804BF100E3FB7C /* Auth */,
 			);
