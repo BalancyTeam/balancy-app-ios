@@ -3,7 +3,12 @@ import UIKit
 
 final class CustomTabBarViewController : UITabBarController, UITabBarControllerDelegate {
     required init?(coder: NSCoder) {
-        super.init(coder: coder)
+        fatalError("init(coder: ) has not been implemented")
+    }
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        // Custom setup
     }
     
     override func viewDidLoad() {

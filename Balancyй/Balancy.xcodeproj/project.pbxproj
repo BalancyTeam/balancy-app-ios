@@ -12,8 +12,6 @@
 		049D7EEF2ADE003E00A13B1B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049D7EEE2ADE003E00A13B1B /* HomeViewController.swift */; };
 		049D7EF22ADE070800A13B1B /* AuthHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049D7EF12ADE070700A13B1B /* AuthHeaderView.swift */; };
 		04E79D372AF4A8D90059C88A /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E79D362AF4A8D90059C88A /* CustomTextField.swift */; };
-		04E9AE832AC7C7E800D1DF82 /* AuthFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E9AE822AC7C7E800D1DF82 /* AuthFlowCoordinator.swift */; };
-		04E9AE852AC7D59600D1DF82 /* AuthFlow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04E9AE842AC7D59500D1DF82 /* AuthFlow.storyboard */; };
 		375ADDDA2A82ABA2008198AE /* CustomTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375ADDD92A82ABA2008198AE /* CustomTabBarViewController.swift */; };
 		375ADDDC2A838479008198AE /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375ADDDB2A838479008198AE /* TabBarViewController.swift */; };
 		377474A72A804BCB00E3FB7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377474A62A804BCB00E3FB7C /* AppDelegate.swift */; };
@@ -21,7 +19,6 @@
 		377474AB2A804BCB00E3FB7C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377474AA2A804BCB00E3FB7C /* ViewController.swift */; };
 		377474AE2A804BCB00E3FB7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 377474AC2A804BCB00E3FB7C /* Main.storyboard */; };
 		377474B02A804BCD00E3FB7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 377474AF2A804BCD00E3FB7C /* Assets.xcassets */; };
-		377474B32A804BCD00E3FB7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 377474B12A804BCD00E3FB7C /* LaunchScreen.storyboard */; };
 		377474BC2A804C2600E3FB7C /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377474BB2A804C2600E3FB7C /* AuthViewController.swift */; };
 		37EF1CD52A8F66EE008997C6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EF1CD42A8F66EE008997C6 /* Constants.swift */; };
 /* End PBXBuildFile section */
@@ -32,8 +29,6 @@
 		049D7EEE2ADE003E00A13B1B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		049D7EF12ADE070700A13B1B /* AuthHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthHeaderView.swift; sourceTree = "<group>"; };
 		04E79D362AF4A8D90059C88A /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
-		04E9AE822AC7C7E800D1DF82 /* AuthFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthFlowCoordinator.swift; sourceTree = "<group>"; };
-		04E9AE842AC7D59500D1DF82 /* AuthFlow.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AuthFlow.storyboard; sourceTree = "<group>"; };
 		375ADDD92A82ABA2008198AE /* CustomTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarViewController.swift; sourceTree = "<group>"; };
 		375ADDDB2A838479008198AE /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		377474A32A804BCB00E3FB7C /* Balancy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Balancy.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -42,7 +37,6 @@
 		377474AA2A804BCB00E3FB7C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		377474AD2A804BCB00E3FB7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		377474AF2A804BCD00E3FB7C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		377474B22A804BCD00E3FB7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		377474B42A804BCD00E3FB7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		377474BB2A804C2600E3FB7C /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		37EF1CD42A8F66EE008997C6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -100,7 +94,6 @@
 				377474A82A804BCB00E3FB7C /* SceneDelegate.swift */,
 				377474AC2A804BCB00E3FB7C /* Main.storyboard */,
 				377474AF2A804BCD00E3FB7C /* Assets.xcassets */,
-				377474B12A804BCD00E3FB7C /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -118,8 +111,6 @@
 		04E9AE812AC7C7B000D1DF82 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
-				04E9AE822AC7C7E800D1DF82 /* AuthFlowCoordinator.swift */,
-				04E9AE842AC7D59500D1DF82 /* AuthFlow.storyboard */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -238,8 +229,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04E9AE852AC7D59600D1DF82 /* AuthFlow.storyboard in Resources */,
-				377474B32A804BCD00E3FB7C /* LaunchScreen.storyboard in Resources */,
 				377474B02A804BCD00E3FB7C /* Assets.xcassets in Resources */,
 				377474AE2A804BCB00E3FB7C /* Main.storyboard in Resources */,
 			);
@@ -263,7 +252,6 @@
 				377474A92A804BCB00E3FB7C /* SceneDelegate.swift in Sources */,
 				37EF1CD52A8F66EE008997C6 /* Constants.swift in Sources */,
 				049D7EF22ADE070800A13B1B /* AuthHeaderView.swift in Sources */,
-				04E9AE832AC7C7E800D1DF82 /* AuthFlowCoordinator.swift in Sources */,
 				049D7EEF2ADE003E00A13B1B /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,14 +265,6 @@
 				377474AD2A804BCB00E3FB7C /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		377474B12A804BCD00E3FB7C /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				377474B22A804BCD00E3FB7C /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -414,8 +394,6 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Balancyй/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = AuthFlow;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -441,8 +419,6 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Balancyй/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = AuthFlow;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

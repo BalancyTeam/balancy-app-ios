@@ -17,8 +17,6 @@
 					<string>Default Configuration</string>
 					<key>UISceneDelegateClassName</key>
 					<string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
-					<key>UISceneStoryboardFile</key>
-					<string>AuthFlow</string>
 				</dict>
 			</array>
 		</dict>
