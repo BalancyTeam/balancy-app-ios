@@ -30,5 +30,7 @@
 		<string>e-Ukraine-Thin.otf</string>
 		<string>e-Ukraine-UltraLight.otf</string>
 	</array>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Please allow access</string>
 </dict>
 </plist>

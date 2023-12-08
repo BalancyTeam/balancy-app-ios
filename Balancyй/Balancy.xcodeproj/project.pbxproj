@@ -25,6 +25,7 @@
 		770F74852B225AC1005D2585 /* e-Ukraine-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 770F74702B2256B2005D2585 /* e-Ukraine-Regular.otf */; };
 		770F74862B225AC3005D2585 /* e-Ukraine-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 770F74712B2256B2005D2585 /* e-Ukraine-Thin.otf */; };
 		770F74872B225AC5005D2585 /* e-Ukraine-UltraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 770F74732B2256B2005D2585 /* e-Ukraine-UltraLight.otf */; };
+		770F74892B23ADBB005D2585 /* AddPhotoViewController + PHPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770F74882B23ADBB005D2585 /* AddPhotoViewController + PHPicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		770F74722B2256B2005D2585 /* e-Ukraine-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "e-Ukraine-Bold.otf"; sourceTree = "<group>"; };
 		770F74732B2256B2005D2585 /* e-Ukraine-UltraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "e-Ukraine-UltraLight.otf"; sourceTree = "<group>"; };
 		770F74742B2256B2005D2585 /* e-Ukraine-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "e-Ukraine-Light.otf"; sourceTree = "<group>"; };
+		770F74882B23ADBB005D2585 /* AddPhotoViewController + PHPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddPhotoViewController + PHPicker.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				770F746C2B225617005D2585 /* AddPhotoViewController.swift */,
+				770F74882B23ADBB005D2585 /* AddPhotoViewController + PHPicker.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -251,6 +254,7 @@
 				375ADDDC2A838479008198AE /* TabBarViewController.swift in Sources */,
 				377474A72A804BCB00E3FB7C /* AppDelegate.swift in Sources */,
 				377474A92A804BCB00E3FB7C /* SceneDelegate.swift in Sources */,
+				770F74892B23ADBB005D2585 /* AddPhotoViewController + PHPicker.swift in Sources */,
 				770F746D2B225618005D2585 /* AddPhotoViewController.swift in Sources */,
 				37EF1CD52A8F66EE008997C6 /* Constants.swift in Sources */,
 			);
