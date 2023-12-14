@@ -15,18 +15,14 @@ extension AddPhotoViewController: PHPickerViewControllerDelegate {
     func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
         dismiss(animated: true, completion: nil)
 
-        results.forEach { result in
-            result.itemProvider.loadObject(ofClass: UIImage.self) { [weak self] (image, error) in
-                guard let image = image as? UIImage else { return }
-                DispatchQueue.main.async {
-                    self?.addPhotoButton.setImage(image, for: .normal)
-                }
+        guard let firstResult = results.first else { return }
+
+        firstResult.itemProvider.loadObject(ofClass: UIImage.self) { [weak self] (image, error) in
+            guard let image = image as? UIImage else { return }
+            DispatchQueue.main.async {
+                self?.addPhotoButton.setImage(image, for: .normal)
             }
         }
-    }
-
-    func pickerDidCancel(_ picker: PHPickerViewController) {
-        dismiss(animated: true, completion: nil)
     }
 
     // MARK: - Private Methods
