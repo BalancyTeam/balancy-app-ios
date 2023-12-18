@@ -12,6 +12,15 @@ final class AddPhotoViewController: UIViewController {
     
     // MARK: - Properties
     
+    private lazy var skipButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("Пропустити", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.titleLabel?.font = UIFont(name: "e-Ukraine-Light", size: 12)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+    
     private lazy var logoImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "logo")
@@ -76,8 +85,9 @@ final class AddPhotoViewController: UIViewController {
     
     // MARK: - UI Configuration
     
-    func configureUI() {
+    private func configureUI() {
         setBackgroundColor()
+        view.addSubview(skipButton)
         view.addSubview(logoImageView)
         view.addSubview(label)
         view.addSubview(pageControl)
@@ -88,7 +98,7 @@ final class AddPhotoViewController: UIViewController {
         setupAddPhotoButton()
     }
     
-    func setBackgroundColor() {
+    private func setBackgroundColor() {
         view.backgroundColor = UIColor(red: 0.07, green: 0.07, blue: 0.07, alpha: 1)
     }
 }
