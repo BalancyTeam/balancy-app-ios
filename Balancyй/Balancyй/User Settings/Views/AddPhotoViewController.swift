@@ -6,19 +6,20 @@
 //
 
 import UIKit
+import SwiftUI
 
 final class AddPhotoViewController: UIViewController {
-
+    
     // MARK: - Properties
-
-    private let logoImageView: UIImageView = {
+    
+    private lazy var logoImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "logo")
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
-
-    private let label: UILabel = {
+    
+    private lazy var label: UILabel = {
         let label = UILabel()
         label.text = "Додайте фото до Вашого профілю"
         label.font = UIFont(name: "e-Ukraine-Regular", size: 24)
@@ -27,17 +28,16 @@ final class AddPhotoViewController: UIViewController {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-
-    let addPhotoButton: UIButton = {
+    
+    lazy var addPhotoButton: UIButton = {
         let button = UIButton()
-        button.layer.cornerRadius = 112
         button.setImage(UIImage(named: "addPhotoImage"), for: .normal)
         button.clipsToBounds = true
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
-
-    private let generateCatButton: UIButton = {
+    
+    private lazy var generateCatButton: UIButton = {
         let button = UIButton()
         button.setTitle("Згенерувати котика", for: .normal)
         button.setTitleColor(.white, for: .normal)
@@ -45,8 +45,8 @@ final class AddPhotoViewController: UIViewController {
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
-
-    private let pageControl: UIPageControl = {
+    
+    private lazy var pageControl: UIPageControl = {
         let pageControl = UIPageControl()
         pageControl.numberOfPages = 2
         pageControl.currentPage = 0
@@ -54,8 +54,8 @@ final class AddPhotoViewController: UIViewController {
         pageControl.translatesAutoresizingMaskIntoConstraints = false
         return pageControl
     }()
-
-    private let nextButton: UIButton = {
+    
+    private lazy var nextButton: UIButton = {
         let button = UIButton()
         button.setTitle("Далі", for: .normal)
         button.setTitleColor(.white, for: .normal)
@@ -66,16 +66,16 @@ final class AddPhotoViewController: UIViewController {
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
-
+    
     // MARK: - View Lifecycle
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
     }
-
+    
     // MARK: - UI Configuration
-
+    
     func configureUI() {
         setBackgroundColor()
         view.addSubview(logoImageView)
@@ -87,7 +87,7 @@ final class AddPhotoViewController: UIViewController {
         setConstraints()
         setupAddPhotoButton()
     }
-
+    
     func setBackgroundColor() {
         view.backgroundColor = UIColor(red: 0.07, green: 0.07, blue: 0.07, alpha: 1)
     }
@@ -95,8 +95,8 @@ final class AddPhotoViewController: UIViewController {
 
 // MARK: - Constraints
 
-extension AddPhotoViewController {
-
+private extension AddPhotoViewController {
+    
     private func setConstraints() {
         NSLayoutConstraint.activate([
             logoImageView.heightAnchor.constraint(equalToConstant: 64),
@@ -111,19 +111,20 @@ extension AddPhotoViewController {
 
             addPhotoButton.heightAnchor.constraint(equalToConstant: 224),
             addPhotoButton.widthAnchor.constraint(equalTo: addPhotoButton.heightAnchor),
-            addPhotoButton.topAnchor.constraint(equalTo: label.bottomAnchor, constant: 54),
-            addPhotoButton.leadingAnchor.constraint(equalTo: label.leadingAnchor, constant: 54),
-
-            generateCatButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            generateCatButton.topAnchor.constraint(equalTo: addPhotoButton.bottomAnchor, constant: 45),
-
-            nextButton.heightAnchor.constraint(equalToConstant: 50),
-            nextButton.leadingAnchor.constraint(equalTo: label.leadingAnchor),
-            nextButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -34),
-            nextButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -27),
-
+            
+            pageControl.topAnchor.constraint(equalTo: nextButton.topAnchor, constant: -30),
             pageControl.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            pageControl.bottomAnchor.constraint(equalTo: nextButton.topAnchor, constant: -11)
+            
+            generateCatButton.topAnchor.constraint(equalTo: addPhotoButton.bottomAnchor, constant: 16),
+            generateCatButton.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
+    }
+}
+
+// MARK: - Preview
+
+struct AddPhotoViewControllerProvider: PreviewProvider {
+    static var previews: some View {
+        AddPhotoViewController().showPreview()
     }
 }
