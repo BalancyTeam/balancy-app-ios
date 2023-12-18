@@ -41,6 +41,7 @@ final class AddPhotoViewController: UIViewController {
     lazy var addPhotoButton: UIButton = {
         let button = UIButton()
         button.setImage(UIImage(named: "addPhotoImage"), for: .normal)
+        button.layer.cornerRadius = view.frame.size.height * 0.26 / 2
         button.clipsToBounds = true
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
@@ -109,17 +110,25 @@ private extension AddPhotoViewController {
     
     private func setConstraints() {
         NSLayoutConstraint.activate([
-            logoImageView.heightAnchor.constraint(equalToConstant: 64),
-            logoImageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 94),
-            logoImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 24),
-            logoImageView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -323),
-
-            label.heightAnchor.constraint(equalToConstant: 68),
-            label.topAnchor.constraint(equalTo: logoImageView.bottomAnchor, constant: 24),
-            label.leadingAnchor.constraint(equalTo: logoImageView.leadingAnchor),
-            label.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -86),
-
-            addPhotoButton.heightAnchor.constraint(equalToConstant: 224),
+            skipButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 16),
+            skipButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -16),
+            
+            logoImageView.topAnchor.constraint(equalTo: skipButton.bottomAnchor, constant: 35),
+            logoImageView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16),
+            
+            label.topAnchor.constraint(equalTo: logoImageView.bottomAnchor, constant: 20),
+            label.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16),
+            label.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -16),
+            
+            
+            nextButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20),
+            nextButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16),
+            nextButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -16),
+            nextButton.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.06),
+            
+            addPhotoButton.topAnchor.constraint(equalTo: label.bottomAnchor, constant: 90),
+            addPhotoButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            addPhotoButton.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.26),
             addPhotoButton.widthAnchor.constraint(equalTo: addPhotoButton.heightAnchor),
             
             pageControl.topAnchor.constraint(equalTo: nextButton.topAnchor, constant: -30),
@@ -127,6 +136,7 @@ private extension AddPhotoViewController {
             
             generateCatButton.topAnchor.constraint(equalTo: addPhotoButton.bottomAnchor, constant: 16),
             generateCatButton.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+            
         ])
     }
 }
