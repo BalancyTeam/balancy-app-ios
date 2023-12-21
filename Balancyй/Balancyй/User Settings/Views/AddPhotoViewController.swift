@@ -41,7 +41,7 @@ final class AddPhotoViewController: UIViewController {
     lazy var addPhotoButton: UIButton = {
         let button = UIButton()
         button.setImage(UIImage(named: "addPhotoImage"), for: .normal)
-        button.layer.cornerRadius = view.frame.size.height * 0.26 / 2
+        button.layer.cornerRadius = view.frame.size.height * 0.28 / 2
         button.layer.masksToBounds = true
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
@@ -163,13 +163,14 @@ private extension AddPhotoViewController {
             
             addPhotoButton.topAnchor.constraint(equalTo: label.bottomAnchor, constant: 90),
             addPhotoButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            addPhotoButton.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.26),
+            addPhotoButton.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.28),
             addPhotoButton.widthAnchor.constraint(equalTo: addPhotoButton.heightAnchor),
             
             pageControl.topAnchor.constraint(equalTo: nextButton.topAnchor, constant: -30),
             pageControl.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             
-            generateCatButton.topAnchor.constraint(equalTo: addPhotoButton.bottomAnchor, constant: 16),
+            generateCatButton.topAnchor.constraint(equalTo: addPhotoButton.bottomAnchor, constant: 30),
+            generateCatButton.bottomAnchor.constraint(equalTo: pageControl.topAnchor, constant: -30),
             generateCatButton.centerXAnchor.constraint(equalTo: view.centerXAnchor)
             
         ])
