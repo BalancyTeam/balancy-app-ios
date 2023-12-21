@@ -11,9 +11,8 @@ import UIKit
 final class CustomTextField: UITextField {
 
     enum CustomTextFieldType {
-        case username
-        case password
         case email
+        case password
     }
     
     private let authFieldType: CustomTextFieldType
@@ -35,11 +34,10 @@ final class CustomTextField: UITextField {
     
     // MARK: - Init
 
-    init(authFieldType: CustomTextFieldType) {
-        self.authFieldType = authFieldType
+    init(fieldType: CustomTextFieldType) {
+        self.authFieldType = fieldType
         super .init(frame: .zero)
         
-        self.backgroundColor = UIColor(named: "#121212")
         self.layer.cornerRadius = 20
         self.layer.masksToBounds = true
         self.returnKeyType = .done
@@ -49,7 +47,12 @@ final class CustomTextField: UITextField {
         layer.borderWidth = borderWidth
         layer.borderColor = borderColor
         
-        draw(.zero)
+        switch fieldType {
+        case .email:
+            self.placeholder = "e-mail"
+        case .password:
+            self.placeholder = "пароль"
+        }
     }
     
     required init?(coder: NSCoder) {
