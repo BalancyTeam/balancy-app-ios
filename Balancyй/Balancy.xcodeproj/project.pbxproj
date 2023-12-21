@@ -117,12 +117,13 @@
 		377474A52A804BCB00E3FB7C /* Balancyй */ = {
 			isa = PBXGroup;
 			children = (
-				770F746E2B225663005D2585 /* Fonts */,
 				770F746A2B2255F0005D2585 /* User Settings */,
-				04E2DA5C2A9EAC0700EF9C24 /* Resources */,
 				049B99352ABD2F4D008A07D7 /* ViewModels */,
 				04E2DA5D2A9EAC5600EF9C24 /* Controllers */,
 				37EF1CD32A8F66C9008997C6 /* Models */,
+				77A524B92B2E42F100DB3ECD /* Extensions */,
+				770F746E2B225663005D2585 /* Fonts */,
+				04E2DA5C2A9EAC0700EF9C24 /* Resources */,
 				377474B42A804BCD00E3FB7C /* Info.plist */,
 			);
 			path = "Balancyй";
@@ -148,7 +149,6 @@
 			isa = PBXGroup;
 			children = (
 				770F746B2B2255FB005D2585 /* Views */,
-				77A524B92B2E42F100DB3ECD /* Extensions */,
 			);
 			path = "User Settings";
 			sourceTree = "<group>";
