@@ -18,19 +18,7 @@ final class CustomTextField: UITextField {
     private let authFieldType: CustomTextFieldType
     private let borderWidth: CGFloat = 1
     private let borderColor = #colorLiteral(red: 0.72, green: 0.72, blue: 0.74, alpha: 0.4).cgColor
-    private let padding = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
-    
-    override public func textRect(forBounds bounds: CGRect) -> CGRect {
-      return bounds.inset(by: padding)
-    }
 
-    override public func placeholderRect(forBounds bounds: CGRect) -> CGRect {
-      return bounds.inset(by: padding)
-    }
-
-    override public func editingRect(forBounds bounds: CGRect) -> CGRect {
-      return bounds.inset(by: padding)
-    }
     
     // MARK: - Init
 
@@ -47,11 +35,18 @@ final class CustomTextField: UITextField {
         layer.borderWidth = borderWidth
         layer.borderColor = borderColor
         
+        self.leftViewMode = .always
+        self.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 12, height: self.frame.size.height))
+        
         switch fieldType {
         case .email:
             self.placeholder = "e-mail"
+            self.keyboardType = .emailAddress
+            self.textContentType = .emailAddress
         case .password:
             self.placeholder = "пароль"
+            self.textContentType = .oneTimeCode
+            self.isSecureTextEntry = true
         }
     }
     
