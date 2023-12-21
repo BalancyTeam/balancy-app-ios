@@ -42,7 +42,7 @@ final class AddPhotoViewController: UIViewController {
         let button = UIButton()
         button.setImage(UIImage(named: "addPhotoImage"), for: .normal)
         button.layer.cornerRadius = view.frame.size.height * 0.26 / 2
-        button.clipsToBounds = true
+        button.layer.masksToBounds = true
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -97,10 +97,46 @@ final class AddPhotoViewController: UIViewController {
         view.addSubview(generateCatButton)
         setConstraints()
         setupAddPhotoButton()
+        setupNextButton()
+        setupSkipButton()
     }
     
     private func setBackgroundColor() {
         view.backgroundColor = UIColor(red: 0.07, green: 0.07, blue: 0.07, alpha: 1)
+    }
+    
+    // TODO: - Generate cat button tapped
+
+    private func generateCatButtonTapped() {
+        
+    }
+    
+    // FIXME: - Follow DRY principle
+
+    private func nextButtonTapped() {
+        let categoryBalanceViewController = CategoryBalanceViewController()
+        categoryBalanceViewController.modalPresentationStyle = .fullScreen
+        present(categoryBalanceViewController, animated: true)
+    }
+    
+    private func setupNextButton() {
+        let action = UIAction { [weak self] _ in
+            self?.nextButtonTapped()
+        }
+        nextButton.addAction(action, for: .touchUpInside)
+    }
+    
+    private func skipButtonTapped() {
+        let categoryBalanceViewController = CategoryBalanceViewController()
+        categoryBalanceViewController.modalPresentationStyle = .fullScreen
+        present(categoryBalanceViewController, animated: true)
+    }
+    
+    private func setupSkipButton() {
+        let action = UIAction { [weak self] _ in
+            self?.skipButtonTapped()
+        }
+        skipButton.addAction(action, for: .touchUpInside)
     }
 }
 
@@ -119,7 +155,6 @@ private extension AddPhotoViewController {
             label.topAnchor.constraint(equalTo: logoImageView.bottomAnchor, constant: 20),
             label.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16),
             label.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -16),
-            
             
             nextButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20),
             nextButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16),
