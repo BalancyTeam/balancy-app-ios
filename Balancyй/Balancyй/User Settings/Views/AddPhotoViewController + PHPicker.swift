@@ -22,6 +22,7 @@ extension AddPhotoViewController: PHPickerViewControllerDelegate {
             DispatchQueue.main.async {
                 self?.addPhotoButton.setImage(image, for: .normal)
             }
+            self?.savePhotoToFileManager(image)
         }
     }
 
@@ -44,5 +45,31 @@ extension AddPhotoViewController: PHPickerViewControllerDelegate {
             self?.addPhotoButtonTapped()
         }
         addPhotoButton.addAction(action, for: .touchUpInside)
+    }
+    
+    
+    func savePhotoToFileManager(_ photo: UIImage) {
+        let fileName = UUID().uuidString + ".jpg"
+        
+        let manager = FileManager.default
+
+        guard let documentsDirectory = manager.urls(for: .documentDirectory, in: .userDomainMask).first else {
+            return
+        }
+        
+        print(documentsDirectory.path)
+
+        let fileURL = documentsDirectory.appendingPathComponent(fileName)
+
+        guard let imageData = photo.jpegData(compressionQuality: 1.0) else {
+            return
+        }
+
+        do {
+            try imageData.write(to: fileURL)
+            print("Photo saved to file manager: \(fileURL)")
+        } catch {
+            print("Error saving photo to file manager: \(error)")
+        }
     }
 }
