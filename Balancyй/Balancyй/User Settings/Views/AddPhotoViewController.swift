@@ -149,7 +149,7 @@ private extension AddPhotoViewController {
             skipButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 16),
             skipButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -16),
             
-            logoImageView.topAnchor.constraint(equalTo: skipButton.bottomAnchor, constant: 35),
+            logoImageView.topAnchor.constraint(greaterThanOrEqualTo: skipButton.bottomAnchor, constant: 20),
             logoImageView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16),
             
             label.topAnchor.constraint(equalTo: logoImageView.bottomAnchor, constant: 20),
@@ -161,7 +161,7 @@ private extension AddPhotoViewController {
             nextButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -16),
             nextButton.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.06),
             
-            addPhotoButton.topAnchor.constraint(equalTo: label.bottomAnchor, constant: 90),
+            addPhotoButton.topAnchor.constraint(equalTo: label.bottomAnchor, constant: 45),
             addPhotoButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             addPhotoButton.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.28),
             addPhotoButton.widthAnchor.constraint(equalTo: addPhotoButton.heightAnchor),
@@ -170,7 +170,7 @@ private extension AddPhotoViewController {
             pageControl.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             
             generateCatButton.topAnchor.constraint(equalTo: addPhotoButton.bottomAnchor, constant: 30),
-            generateCatButton.bottomAnchor.constraint(equalTo: pageControl.topAnchor, constant: -30),
+            generateCatButton.bottomAnchor.constraint(equalTo: pageControl.topAnchor, constant: -45),
             generateCatButton.centerXAnchor.constraint(equalTo: view.centerXAnchor)
             
         ])

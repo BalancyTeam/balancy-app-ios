@@ -9,9 +9,9 @@ import UIKit
 import PhotosUI
 
 extension AddPhotoViewController: PHPickerViewControllerDelegate {
-
+    
     // MARK: - PHPickerViewControllerDelegate
-
+    
     func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
         dismiss(animated: true, completion: nil)
 
