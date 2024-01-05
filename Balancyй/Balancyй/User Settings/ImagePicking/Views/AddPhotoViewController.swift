@@ -18,14 +18,14 @@ final class AddPhotoViewController: UIViewController {
         let button = UIButton()
         button.setTitle("Пропустити", for: .normal)
         button.setTitleColor(.white, for: .normal)
-        button.titleLabel?.font = UIFont(name: "e-Ukraine-Light", size: 12)
+        button.titleLabel?.font = UIFont(name: FontName.light, size: 12)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
     
     private lazy var logoImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(named: "logo")
+        imageView.image = UIImage(named: ImageName.logo)
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
@@ -33,7 +33,7 @@ final class AddPhotoViewController: UIViewController {
     private lazy var label: UILabel = {
         let label = UILabel()
         label.text = "Додайте фото до Вашого профілю"
-        label.font = UIFont(name: "e-Ukraine-Regular", size: 24)
+        label.font = UIFont(name: FontName.regular, size: 24)
         label.textColor = .white
         label.numberOfLines = 0
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -42,7 +42,7 @@ final class AddPhotoViewController: UIViewController {
     
     lazy var addPhotoButton: UIButton = {
         let button = UIButton()
-        button.setImage(UIImage(named: "addPhotoImage"), for: .normal)
+        button.setImage(UIImage(named: ImageName.addPhoto), for: .normal)
         button.layer.cornerRadius = view.frame.size.height * 0.28 / 2
         button.layer.masksToBounds = true
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -53,7 +53,7 @@ final class AddPhotoViewController: UIViewController {
         let button = UIButton()
         button.setTitle("Згенерувати котика", for: .normal)
         button.setTitleColor(.white, for: .normal)
-        button.titleLabel?.font = UIFont(name: "e-Ukraine-Light", size: 12)
+        button.titleLabel?.font = UIFont(name: FontName.light, size: 12)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -71,8 +71,8 @@ final class AddPhotoViewController: UIViewController {
         let button = UIButton()
         button.setTitle("Далі", for: .normal)
         button.setTitleColor(.white, for: .normal)
-        button.titleLabel?.font = UIFont(name: "e-Ukraine-Medium", size: 16)
-        button.backgroundColor = UIColor(red: 0.85, green: 0.2, blue: 0.33, alpha: 1)
+        button.titleLabel?.font = UIFont(name: FontName.medium, size: 16)
+        button.backgroundColor = AppColor.button
         button.layer.cornerRadius = 20
         button.clipsToBounds = true
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -104,8 +104,9 @@ final class AddPhotoViewController: UIViewController {
     }
     
     private func setBackgroundColor() {
-        view.backgroundColor = UIColor(red: 0.07, green: 0.07, blue: 0.07, alpha: 1)
+        view.backgroundColor = AppColor.background
     }
+
     
     // TODO: - Generate cat button tapped
     

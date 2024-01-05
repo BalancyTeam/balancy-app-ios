@@ -27,6 +27,7 @@
 		770F74872B225AC5005D2585 /* e-Ukraine-UltraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 770F74732B2256B2005D2585 /* e-Ukraine-UltraLight.otf */; };
 		770F74892B23ADBB005D2585 /* AddPhotoViewController + PHPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770F74882B23ADBB005D2585 /* AddPhotoViewController + PHPicker.swift */; };
 		773364E32B31E1BF0025DD09 /* CategoryBalanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773364E22B31E1BF0025DD09 /* CategoryBalanceViewController.swift */; };
+		777074B92B48B58B003AE060 /* ImagePickingConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777074B82B48B58B003AE060 /* ImagePickingConstants.swift */; };
 		77A524BB2B2E434C00DB3ECD /* UIViewController + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A524BA2B2E434C00DB3ECD /* UIViewController + Extensions.swift */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +54,7 @@
 		770F74742B2256B2005D2585 /* e-Ukraine-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "e-Ukraine-Light.otf"; sourceTree = "<group>"; };
 		770F74882B23ADBB005D2585 /* AddPhotoViewController + PHPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddPhotoViewController + PHPicker.swift"; sourceTree = "<group>"; };
 		773364E22B31E1BF0025DD09 /* CategoryBalanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryBalanceViewController.swift; sourceTree = "<group>"; };
+		777074B82B48B58B003AE060 /* ImagePickingConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickingConstants.swift; sourceTree = "<group>"; };
 		77A524BA2B2E434C00DB3ECD /* UIViewController + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -176,9 +178,18 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		777074B72B48B56D003AE060 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				777074B82B48B58B003AE060 /* ImagePickingConstants.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		777866142B482DDF00134443 /* ImagePicking */ = {
 			isa = PBXGroup;
 			children = (
+				777074B72B48B56D003AE060 /* Models */,
 				770F746B2B2255FB005D2585 /* Views */,
 			);
 			path = ImagePicking;
@@ -278,6 +289,7 @@
 				377474A92A804BCB00E3FB7C /* SceneDelegate.swift in Sources */,
 				77A524BB2B2E434C00DB3ECD /* UIViewController + Extensions.swift in Sources */,
 				770F74892B23ADBB005D2585 /* AddPhotoViewController + PHPicker.swift in Sources */,
+				777074B92B48B58B003AE060 /* ImagePickingConstants.swift in Sources */,
 				773364E32B31E1BF0025DD09 /* CategoryBalanceViewController.swift in Sources */,
 				770F746D2B225618005D2585 /* AddPhotoViewController.swift in Sources */,
 				37EF1CD52A8F66EE008997C6 /* Constants.swift in Sources */,
