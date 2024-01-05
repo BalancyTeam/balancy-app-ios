@@ -6,12 +6,14 @@ final class AuthViewController: UIViewController {
     private let headerView = AuthHeaderView(title: "З поверненням!", subTitle: "Раді знову тебе бачити")
     private let emailField = CustomTextField(fieldType: .email)
     private let passwordField = CustomTextField(fieldType: .password)
+    
 
     // MARK: - LifeCycle
      
      override func viewDidLoad() {
          super.viewDidLoad()
          self.setupUI()
+         passwordField.enablePasswordToggle()
      }
    
     override func viewWillAppear(_ animated: Bool) {

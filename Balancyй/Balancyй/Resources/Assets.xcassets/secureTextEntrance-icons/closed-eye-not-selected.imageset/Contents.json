@@ -1,17 +1,15 @@
 {
   "images" : [
     {
-      "filename" : "tabbaricon1.png",
+      "filename" : "closed-eye-not-selected.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "tabbaricon2.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "tabbaricon3.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

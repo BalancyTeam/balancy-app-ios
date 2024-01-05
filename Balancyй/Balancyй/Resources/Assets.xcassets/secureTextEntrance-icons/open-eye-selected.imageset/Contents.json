@@ -1,17 +1,15 @@
 {
   "images" : [
     {
-      "filename" : "tasksTabBarIcon.png",
+      "filename" : "open-eye-selected.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "tasksTabBarIcon2.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "tasksTabBarIcon3.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
