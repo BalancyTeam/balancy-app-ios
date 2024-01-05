@@ -16,13 +16,18 @@ extension AddPhotoViewController: PHPickerViewControllerDelegate {
         dismiss(animated: true, completion: nil)
 
         guard let firstResult = results.first else { return }
+        
+        guard let imageUrl = firstResult.itemProvider.suggestedName else { return }
+            let imageName = URL(fileURLWithPath: imageUrl).lastPathComponent + ".jpg"
+            print("Image Name: \(imageName)")
 
         firstResult.itemProvider.loadObject(ofClass: UIImage.self) { [weak self] (image, error) in
             guard let image = image as? UIImage else { return }
             DispatchQueue.main.async {
                 self?.addPhotoButton.setImage(image, for: .normal)
             }
-            self?.savePhotoToFileManager(image)
+            
+            self?.saveImageToFileManager(imageName, image)
         }
     }
 
@@ -48,8 +53,7 @@ extension AddPhotoViewController: PHPickerViewControllerDelegate {
     }
     
     
-    func savePhotoToFileManager(_ photo: UIImage) {
-        let fileName = UUID().uuidString + ".jpg"
+    func saveImageToFileManager(_ imageName: String, _ image: UIImage) {
         
         let manager = FileManager.default
 
@@ -59,9 +63,9 @@ extension AddPhotoViewController: PHPickerViewControllerDelegate {
         
         print(documentsDirectory.path)
 
-        let fileURL = documentsDirectory.appendingPathComponent(fileName)
+        let fileURL = documentsDirectory.appendingPathComponent(imageName)
 
-        guard let imageData = photo.jpegData(compressionQuality: 1.0) else {
+        guard let imageData = image.jpegData(compressionQuality: 1.0) else {
             return
         }
 

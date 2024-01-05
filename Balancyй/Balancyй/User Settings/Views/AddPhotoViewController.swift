@@ -106,17 +106,21 @@ final class AddPhotoViewController: UIViewController {
     }
     
     // TODO: - Generate cat button tapped
-
+    
     private func generateCatButtonTapped() {
         
     }
     
     // FIXME: - Follow DRY principle
-
-    private func nextButtonTapped() {
+    
+    private func presentCategoryBalanceViewController() {
         let categoryBalanceViewController = CategoryBalanceViewController()
         categoryBalanceViewController.modalPresentationStyle = .fullScreen
         present(categoryBalanceViewController, animated: true)
+    }
+    
+    private func nextButtonTapped() {
+        presentCategoryBalanceViewController()
     }
     
     private func setupNextButton() {
@@ -127,9 +131,7 @@ final class AddPhotoViewController: UIViewController {
     }
     
     private func skipButtonTapped() {
-        let categoryBalanceViewController = CategoryBalanceViewController()
-        categoryBalanceViewController.modalPresentationStyle = .fullScreen
-        present(categoryBalanceViewController, animated: true)
+        presentCategoryBalanceViewController()
     }
     
     private func setupSkipButton() {
