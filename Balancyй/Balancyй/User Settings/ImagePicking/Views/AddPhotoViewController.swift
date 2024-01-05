@@ -10,6 +10,8 @@ import SwiftUI
 
 final class AddPhotoViewController: UIViewController {
     
+    var selectedImageName: String?
+    
     // MARK: - Properties
     
     private lazy var skipButton: UIButton = {
@@ -116,10 +118,20 @@ final class AddPhotoViewController: UIViewController {
     private func presentCategoryBalanceViewController() {
         let categoryBalanceViewController = CategoryBalanceViewController()
         categoryBalanceViewController.modalPresentationStyle = .fullScreen
-        present(categoryBalanceViewController, animated: true)
+        present(categoryBalanceViewController, animated: false)
     }
     
     private func nextButtonTapped() {
+        guard let selectedImageName = selectedImageName else { return }
+        guard let selectedImage = addPhotoButton.currentImage else { return }
+        
+        if selectedImageName == "addPhotoImage" {
+            nextButton.isEnabled = false
+        } else {
+            nextButton.isEnabled = true
+            saveImageToFileManager(selectedImageName, selectedImage)
+        }
+        
         presentCategoryBalanceViewController()
     }
     
@@ -127,6 +139,7 @@ final class AddPhotoViewController: UIViewController {
         let action = UIAction { [weak self] _ in
             self?.nextButtonTapped()
         }
+        
         nextButton.addAction(action, for: .touchUpInside)
     }
     
