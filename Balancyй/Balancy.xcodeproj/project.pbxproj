@@ -148,7 +148,7 @@
 		770F746A2B2255F0005D2585 /* User Settings */ = {
 			isa = PBXGroup;
 			children = (
-				770F746B2B2255FB005D2585 /* Views */,
+				777866142B482DDF00134443 /* ImagePicking */,
 			);
 			path = "User Settings";
 			sourceTree = "<group>";
@@ -174,6 +174,14 @@
 				770F74732B2256B2005D2585 /* e-Ukraine-UltraLight.otf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		777866142B482DDF00134443 /* ImagePicking */ = {
+			isa = PBXGroup;
+			children = (
+				770F746B2B2255FB005D2585 /* Views */,
+			);
+			path = ImagePicking;
 			sourceTree = "<group>";
 		};
 		77A524B92B2E42F100DB3ECD /* Extensions */ = {
