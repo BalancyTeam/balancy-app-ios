@@ -10,6 +10,8 @@ import SwiftUI
 
 final class AddPhotoViewController: UIViewController {
     
+    let viewModel = AddPhotoViewModel()
+    
     var selectedImageName: String?
     
     // MARK: - Properties
@@ -113,14 +115,14 @@ final class AddPhotoViewController: UIViewController {
     private func generateCatButtonTapped() {
         
     }
-    
-    // FIXME: - Follow DRY principle
-    
+        
     private func presentCategoryBalanceViewController() {
         let categoryBalanceViewController = CategoryBalanceViewController()
         categoryBalanceViewController.modalPresentationStyle = .fullScreen
         present(categoryBalanceViewController, animated: false)
     }
+    
+    // next button methods
     
     private func nextButtonTapped() {
         guard let selectedImageName = selectedImageName else { return }
@@ -130,7 +132,7 @@ final class AddPhotoViewController: UIViewController {
             nextButton.isEnabled = false
         } else {
             nextButton.isEnabled = true
-            saveImageToFileManager(selectedImageName, selectedImage)
+            viewModel.saveImageToFileManager(selectedImageName, selectedImage)
         }
         
         presentCategoryBalanceViewController()
@@ -143,6 +145,8 @@ final class AddPhotoViewController: UIViewController {
         
         nextButton.addAction(action, for: .touchUpInside)
     }
+    
+    // skip button methods
     
     private func skipButtonTapped() {
         presentCategoryBalanceViewController()
@@ -195,8 +199,8 @@ private extension AddPhotoViewController {
 
 // MARK: - Preview
 
-struct AddPhotoViewControllerProvider: PreviewProvider {
-    static var previews: some View {
+private struct AddPhotoViewControllerProvider: PreviewProvider {
+    fileprivate static var previews: some View {
         AddPhotoViewController().showPreview()
     }
 }

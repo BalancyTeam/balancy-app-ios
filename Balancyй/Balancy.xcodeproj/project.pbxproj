@@ -28,6 +28,7 @@
 		770F74892B23ADBB005D2585 /* AddPhotoViewController + PHPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770F74882B23ADBB005D2585 /* AddPhotoViewController + PHPicker.swift */; };
 		773364E32B31E1BF0025DD09 /* CategoryBalanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773364E22B31E1BF0025DD09 /* CategoryBalanceViewController.swift */; };
 		777074B92B48B58B003AE060 /* ImagePickingConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777074B82B48B58B003AE060 /* ImagePickingConstants.swift */; };
+		777074BC2B48B839003AE060 /* AddPhotoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777074BB2B48B838003AE060 /* AddPhotoViewModel.swift */; };
 		77A524BB2B2E434C00DB3ECD /* UIViewController + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A524BA2B2E434C00DB3ECD /* UIViewController + Extensions.swift */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +56,7 @@
 		770F74882B23ADBB005D2585 /* AddPhotoViewController + PHPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddPhotoViewController + PHPicker.swift"; sourceTree = "<group>"; };
 		773364E22B31E1BF0025DD09 /* CategoryBalanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryBalanceViewController.swift; sourceTree = "<group>"; };
 		777074B82B48B58B003AE060 /* ImagePickingConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickingConstants.swift; sourceTree = "<group>"; };
+		777074BB2B48B838003AE060 /* AddPhotoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoViewModel.swift; sourceTree = "<group>"; };
 		77A524BA2B2E434C00DB3ECD /* UIViewController + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -186,11 +188,20 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		777074BA2B48B824003AE060 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				777074BB2B48B838003AE060 /* AddPhotoViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		777866142B482DDF00134443 /* ImagePicking */ = {
 			isa = PBXGroup;
 			children = (
 				777074B72B48B56D003AE060 /* Models */,
 				770F746B2B2255FB005D2585 /* Views */,
+				777074BA2B48B824003AE060 /* ViewModels */,
 			);
 			path = ImagePicking;
 			sourceTree = "<group>";
@@ -281,6 +292,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				377474BC2A804C2600E3FB7C /* AuthViewController.swift in Sources */,
+				777074BC2B48B839003AE060 /* AddPhotoViewModel.swift in Sources */,
 				377474AB2A804BCB00E3FB7C /* ViewController.swift in Sources */,
 				375ADDDA2A82ABA2008198AE /* CustomTabBarViewController.swift in Sources */,
 				377474C02A804C6900E3FB7C /* AuthViewControllerViewModel.swift in Sources */,
