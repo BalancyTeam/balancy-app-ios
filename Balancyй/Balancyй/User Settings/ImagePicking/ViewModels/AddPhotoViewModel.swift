@@ -7,7 +7,7 @@
 
 import UIKit
 
-private class AddPhotoViewModel {
+class AddPhotoViewModel {
     
     func saveImageToFileManager(_ imageName: String, _ image: UIImage) {
         
