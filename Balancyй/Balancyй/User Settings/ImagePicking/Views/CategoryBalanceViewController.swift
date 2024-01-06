@@ -8,7 +8,7 @@
 import UIKit
 import SwiftUI
 
-class CategoryBalanceViewController: UIViewController {
+final class CategoryBalanceViewController: UIViewController {
     
     // MARK: - View Lifecycle
     

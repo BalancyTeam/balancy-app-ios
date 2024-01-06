@@ -10,11 +10,13 @@ import SwiftUI
 
 final class AddPhotoViewController: UIViewController {
     
-    let viewModel = AddPhotoViewModel()
+    // MARK: - Properties
+    
+    private let viewModel = AddPhotoViewModel()
     
     var selectedImageName: String?
     
-    // MARK: - Properties
+    // MARK: - UI Components
     
     private lazy var skipButton: UIButton = {
         let button = UIButton()
@@ -128,7 +130,7 @@ final class AddPhotoViewController: UIViewController {
         guard let selectedImageName = selectedImageName else { return }
         guard let selectedImage = addPhotoButton.currentImage else { return }
         
-        if selectedImageName == "addPhotoImage" {
+        if selectedImageName == ImageName.addPhoto {
             nextButton.isEnabled = false
         } else {
             nextButton.isEnabled = true

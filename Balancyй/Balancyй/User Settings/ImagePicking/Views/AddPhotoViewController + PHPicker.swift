@@ -24,9 +24,7 @@ extension AddPhotoViewController: PHPickerViewControllerDelegate {
         
         firstResult.itemProvider.loadObject(ofClass: UIImage.self) { [weak self] (image, _) in
             guard let image = image as? UIImage else { return }
-            DispatchQueue.main.async {
-                self?.addPhotoButton.setImage(image, for: .normal)
-            }
+            self?.addPhotoButton.setImage(image, for: .normal)
         }
     }
     

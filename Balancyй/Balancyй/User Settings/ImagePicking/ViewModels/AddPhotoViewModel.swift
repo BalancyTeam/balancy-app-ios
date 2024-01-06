@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AddPhotoViewModel {
+private class AddPhotoViewModel {
     
     func saveImageToFileManager(_ imageName: String, _ image: UIImage) {
         
@@ -17,8 +17,6 @@ class AddPhotoViewModel {
             return
         }
         
-        print(documentsDirectory.path)
-
         let fileURL = documentsDirectory.appendingPathComponent(imageName)
 
         guard let imageData = image.jpegData(compressionQuality: 1.0) else {
