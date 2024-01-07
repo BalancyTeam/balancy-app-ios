@@ -16,6 +16,8 @@ final class AddPhotoViewController: UIViewController {
     
     var selectedImageName: String?
     
+    var isImageSet = false
+    
     // MARK: - UI Components
     
     private lazy var skipButton: UIButton = {
@@ -111,11 +113,11 @@ final class AddPhotoViewController: UIViewController {
         view.backgroundColor = AppColor.background
     }
 
-    
-    // TODO: - Generate cat button tapped
-    
-    private func generateCatButtonTapped() {
         
+    private func generateCatButtonTapped() {
+        // TODO: - Implement generateCatButtonTapped method
+
+        isImageSet = true
     }
         
     private func presentCategoryBalanceViewController() {
@@ -130,7 +132,7 @@ final class AddPhotoViewController: UIViewController {
         guard let selectedImageName = selectedImageName else { return }
         guard let selectedImage = addPhotoButton.currentImage else { return }
         
-        if selectedImageName == ImageName.addPhoto {
+        if !isImageSet {
             nextButton.isEnabled = false
         } else {
             nextButton.isEnabled = true

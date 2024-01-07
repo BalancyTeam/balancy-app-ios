@@ -28,6 +28,8 @@ extension AddPhotoViewController: PHPickerViewControllerDelegate {
                 self?.addPhotoButton.setImage(image, for: .normal)
             }
         }
+        
+        isImageSet = true
     }
     
     // MARK: - Private Methods
