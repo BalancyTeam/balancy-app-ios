@@ -92,7 +92,7 @@ final class AddPhotoViewController: UIViewController {
         configureUI()
     }
     
-    // MARK: - UI Configuration
+    // UI Configuration
     
     private func configureUI() {
         view.backgroundColor = AppColor.background
@@ -155,7 +155,7 @@ final class AddPhotoViewController: UIViewController {
     }
 }
 
-// MARK: - Constraints
+// Constraints
 
 private extension AddPhotoViewController {
     
@@ -192,10 +192,8 @@ private extension AddPhotoViewController {
     }
 }
 
-// MARK: - Preview
+// Preview
 
-private struct AddPhotoViewControllerProvider: PreviewProvider {
-    fileprivate static var previews: some View {
-        AddPhotoViewController().showPreview()
-    }
+#Preview {
+    AddPhotoViewController.preview
 }

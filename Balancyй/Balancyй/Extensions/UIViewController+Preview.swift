@@ -9,6 +9,10 @@ import SwiftUI
 
 extension UIViewController {
     
+    static var preview: some View {
+        Preview(viewController: Self()).ignoresSafeArea()
+    }
+    
     private struct Preview: UIViewControllerRepresentable {
         let viewController: UIViewController
         
@@ -18,9 +22,5 @@ extension UIViewController {
         
         func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
         }
-    }
-    
-    func showPreview() -> some View {
-        Preview(viewController: self).ignoresSafeArea()
     }
 }
