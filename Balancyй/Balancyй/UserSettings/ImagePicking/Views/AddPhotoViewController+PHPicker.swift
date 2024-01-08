@@ -1,5 +1,5 @@
 //
-//  AddPhotoViewController + PHPicker.swift
+//  AddPhotoViewController+PHPicker.swift
 //  Balancy
 //
 //  Created by  Toropov Oleksandr on 08.12.2023.
@@ -13,23 +13,21 @@ extension AddPhotoViewController: PHPickerViewControllerDelegate {
     // MARK: - PHPickerViewControllerDelegate
     
     func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
-        dismiss(animated: true, completion: nil)
+        dismiss(animated: true)
         
-        guard let firstResult = results.first else { return }
+        guard let selectedImage = results.first, let imageUrl = selectedImage.itemProvider.suggestedName else { return }
         
-        guard let imageUrl = firstResult.itemProvider.suggestedName else { return }
         let imageName = URL(fileURLWithPath: imageUrl).lastPathComponent + ".jpg"
         
         selectedImageName = imageName
         
-        firstResult.itemProvider.loadObject(ofClass: UIImage.self) { [weak self] (image, _) in
+        selectedImage.itemProvider.loadObject(ofClass: UIImage.self) { [weak self] (image, _) in
             guard let image = image as? UIImage else { return }
             DispatchQueue.main.async {
                 self?.addPhotoButton.setImage(image, for: .normal)
+                self?.isImageSet = true
             }
         }
-        
-        isImageSet = true
     }
     
     // MARK: - Private Methods

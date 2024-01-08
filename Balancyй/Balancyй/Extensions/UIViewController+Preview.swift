@@ -1,5 +1,5 @@
 //
-//  UIViewController + Extensions.swift
+//  UIViewController+Preview.swift
 //  Balancy
 //
 //  Created by  Toropov Oleksandr on 16.12.2023.

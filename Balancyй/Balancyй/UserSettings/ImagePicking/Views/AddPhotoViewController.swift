@@ -10,15 +10,15 @@ import SwiftUI
 
 final class AddPhotoViewController: UIViewController {
     
-    // MARK: - Properties
+    // Properties
     
-    private let viewModel = AddPhotoViewModel()
+    private let profilePhotoManager = ProfilePhotoManager()
     
     var selectedImageName: String?
     
     var isImageSet = false
     
-    // MARK: - UI Components
+    // UI
     
     private lazy var skipButton: UIButton = {
         let button = UIButton()
@@ -29,7 +29,7 @@ final class AddPhotoViewController: UIViewController {
         return button
     }()
     
-    private lazy var logoImageView: UIImageView = {
+    private let logoImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: ImageName.logo)
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -49,7 +49,7 @@ final class AddPhotoViewController: UIViewController {
     lazy var addPhotoButton: UIButton = {
         let button = UIButton()
         button.setImage(UIImage(named: ImageName.addPhoto), for: .normal)
-        button.layer.cornerRadius = view.frame.size.height * 0.28 / 2
+        button.layer.cornerRadius = view.frame.size.height * 0.14
         button.layer.masksToBounds = true
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
@@ -68,7 +68,7 @@ final class AddPhotoViewController: UIViewController {
         let pageControl = UIPageControl()
         pageControl.numberOfPages = 2
         pageControl.currentPage = 0
-        pageControl.pageIndicatorTintColor = UIColor(red: 0.17, green: 0.17, blue: 0.18, alpha: 1)
+        pageControl.pageIndicatorTintColor = AppColor.pageIndicatorTintColor
         pageControl.translatesAutoresizingMaskIntoConstraints = false
         return pageControl
     }()
@@ -85,7 +85,7 @@ final class AddPhotoViewController: UIViewController {
         return button
     }()
     
-    // MARK: - View Lifecycle
+    // Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -95,7 +95,7 @@ final class AddPhotoViewController: UIViewController {
     // MARK: - UI Configuration
     
     private func configureUI() {
-        setBackgroundColor()
+        view.backgroundColor = AppColor.background
         view.addSubview(skipButton)
         view.addSubview(logoImageView)
         view.addSubview(label)
@@ -108,13 +108,8 @@ final class AddPhotoViewController: UIViewController {
         setupNextButton()
         setupSkipButton()
     }
-    
-    private func setBackgroundColor() {
-        view.backgroundColor = AppColor.background
-    }
-
         
-    private func generateCatButtonTapped() {
+    private func randomImageButtonTapped() {
         // TODO: - Implement generateCatButtonTapped method
 
         isImageSet = true
@@ -123,11 +118,9 @@ final class AddPhotoViewController: UIViewController {
     private func presentCategoryBalanceViewController() {
         let categoryBalanceViewController = CategoryBalanceViewController()
         categoryBalanceViewController.modalPresentationStyle = .fullScreen
-        present(categoryBalanceViewController, animated: false)
+        present(categoryBalanceViewController, animated: true)
     }
-    
-    // next button methods
-    
+        
     private func nextButtonTapped() {
         guard let selectedImageName = selectedImageName else { return }
         guard let selectedImage = addPhotoButton.currentImage else { return }
@@ -136,7 +129,7 @@ final class AddPhotoViewController: UIViewController {
             nextButton.isEnabled = false
         } else {
             nextButton.isEnabled = true
-            viewModel.saveImageToFileManager(selectedImageName, selectedImage)
+            profilePhotoManager.saveImageToFileManager(selectedImageName, selectedImage)
         }
         
         presentCategoryBalanceViewController()
@@ -149,9 +142,7 @@ final class AddPhotoViewController: UIViewController {
         
         nextButton.addAction(action, for: .touchUpInside)
     }
-    
-    // skip button methods
-    
+        
     private func skipButtonTapped() {
         presentCategoryBalanceViewController()
     }

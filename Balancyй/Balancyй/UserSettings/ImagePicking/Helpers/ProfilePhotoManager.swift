@@ -1,5 +1,5 @@
 //
-//  AddPhotoViewModel.swift
+//  ProfilePhotoManager.swift
 //  Balancy
 //
 //  Created by  Toropov Oleksandr on 06.01.2024.
@@ -7,21 +7,15 @@
 
 import UIKit
 
-class AddPhotoViewModel {
+final class ProfilePhotoManager {
     
     func saveImageToFileManager(_ imageName: String, _ image: UIImage) {
-        
-        let manager = FileManager.default
 
-        guard let documentsDirectory = manager.urls(for: .documentDirectory, in: .userDomainMask).first else {
+        guard let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first, let imageData = image.jpegData(compressionQuality: 1.0) else {
             return
         }
         
         let fileURL = documentsDirectory.appendingPathComponent(imageName)
-
-        guard let imageData = image.jpegData(compressionQuality: 1.0) else {
-            return
-        }
 
         do {
             try imageData.write(to: fileURL)

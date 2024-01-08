@@ -31,6 +31,6 @@
 		<string>e-Ukraine-UltraLight.otf</string>
 	</array>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Please allow access</string>
+	<string>Please grant the access to a photo library to pick the profile picture from</string>
 </dict>
 </plist>

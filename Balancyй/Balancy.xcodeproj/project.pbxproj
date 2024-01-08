@@ -25,11 +25,10 @@
 		770F74852B225AC1005D2585 /* e-Ukraine-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 770F74702B2256B2005D2585 /* e-Ukraine-Regular.otf */; };
 		770F74862B225AC3005D2585 /* e-Ukraine-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 770F74712B2256B2005D2585 /* e-Ukraine-Thin.otf */; };
 		770F74872B225AC5005D2585 /* e-Ukraine-UltraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 770F74732B2256B2005D2585 /* e-Ukraine-UltraLight.otf */; };
-		770F74892B23ADBB005D2585 /* AddPhotoViewController + PHPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770F74882B23ADBB005D2585 /* AddPhotoViewController + PHPicker.swift */; };
+		770F74892B23ADBB005D2585 /* AddPhotoViewController+PHPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770F74882B23ADBB005D2585 /* AddPhotoViewController+PHPicker.swift */; };
 		773364E32B31E1BF0025DD09 /* CategoryBalanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773364E22B31E1BF0025DD09 /* CategoryBalanceViewController.swift */; };
-		777074B92B48B58B003AE060 /* ImagePickingConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777074B82B48B58B003AE060 /* ImagePickingConstants.swift */; };
-		777074BC2B48B839003AE060 /* AddPhotoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777074BB2B48B838003AE060 /* AddPhotoViewModel.swift */; };
-		77A524BB2B2E434C00DB3ECD /* UIViewController + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A524BA2B2E434C00DB3ECD /* UIViewController + Extensions.swift */; };
+		777074BC2B48B839003AE060 /* ProfilePhotoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777074BB2B48B838003AE060 /* ProfilePhotoManager.swift */; };
+		77A524BB2B2E434C00DB3ECD /* UIViewController+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A524BA2B2E434C00DB3ECD /* UIViewController+Preview.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,11 +52,10 @@
 		770F74722B2256B2005D2585 /* e-Ukraine-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "e-Ukraine-Bold.otf"; sourceTree = "<group>"; };
 		770F74732B2256B2005D2585 /* e-Ukraine-UltraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "e-Ukraine-UltraLight.otf"; sourceTree = "<group>"; };
 		770F74742B2256B2005D2585 /* e-Ukraine-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "e-Ukraine-Light.otf"; sourceTree = "<group>"; };
-		770F74882B23ADBB005D2585 /* AddPhotoViewController + PHPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddPhotoViewController + PHPicker.swift"; sourceTree = "<group>"; };
+		770F74882B23ADBB005D2585 /* AddPhotoViewController+PHPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddPhotoViewController+PHPicker.swift"; sourceTree = "<group>"; };
 		773364E22B31E1BF0025DD09 /* CategoryBalanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryBalanceViewController.swift; sourceTree = "<group>"; };
-		777074B82B48B58B003AE060 /* ImagePickingConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickingConstants.swift; sourceTree = "<group>"; };
-		777074BB2B48B838003AE060 /* AddPhotoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoViewModel.swift; sourceTree = "<group>"; };
-		77A524BA2B2E434C00DB3ECD /* UIViewController + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extensions.swift"; sourceTree = "<group>"; };
+		777074BB2B48B838003AE060 /* ProfilePhotoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePhotoManager.swift; sourceTree = "<group>"; };
+		77A524BA2B2E434C00DB3ECD /* UIViewController+Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Preview.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,7 +119,7 @@
 		377474A52A804BCB00E3FB7C /* Balancyй */ = {
 			isa = PBXGroup;
 			children = (
-				770F746A2B2255F0005D2585 /* User Settings */,
+				770F746A2B2255F0005D2585 /* UserSettings */,
 				049B99352ABD2F4D008A07D7 /* ViewModels */,
 				04E2DA5D2A9EAC5600EF9C24 /* Controllers */,
 				37EF1CD32A8F66C9008997C6 /* Models */,
@@ -149,19 +147,19 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		770F746A2B2255F0005D2585 /* User Settings */ = {
+		770F746A2B2255F0005D2585 /* UserSettings */ = {
 			isa = PBXGroup;
 			children = (
 				777866142B482DDF00134443 /* ImagePicking */,
 			);
-			path = "User Settings";
+			path = UserSettings;
 			sourceTree = "<group>";
 		};
 		770F746B2B2255FB005D2585 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				770F746C2B225617005D2585 /* AddPhotoViewController.swift */,
-				770F74882B23ADBB005D2585 /* AddPhotoViewController + PHPicker.swift */,
+				770F74882B23ADBB005D2585 /* AddPhotoViewController+PHPicker.swift */,
 				773364E22B31E1BF0025DD09 /* CategoryBalanceViewController.swift */,
 			);
 			path = Views;
@@ -183,17 +181,16 @@
 		777074B72B48B56D003AE060 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				777074B82B48B58B003AE060 /* ImagePickingConstants.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
 		};
-		777074BA2B48B824003AE060 /* ViewModels */ = {
+		777074BA2B48B824003AE060 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				777074BB2B48B838003AE060 /* AddPhotoViewModel.swift */,
+				777074BB2B48B838003AE060 /* ProfilePhotoManager.swift */,
 			);
-			path = ViewModels;
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		777866142B482DDF00134443 /* ImagePicking */ = {
@@ -201,7 +198,7 @@
 			children = (
 				777074B72B48B56D003AE060 /* Models */,
 				770F746B2B2255FB005D2585 /* Views */,
-				777074BA2B48B824003AE060 /* ViewModels */,
+				777074BA2B48B824003AE060 /* Helpers */,
 			);
 			path = ImagePicking;
 			sourceTree = "<group>";
@@ -209,7 +206,7 @@
 		77A524B92B2E42F100DB3ECD /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				77A524BA2B2E434C00DB3ECD /* UIViewController + Extensions.swift */,
+				77A524BA2B2E434C00DB3ECD /* UIViewController+Preview.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -292,16 +289,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				377474BC2A804C2600E3FB7C /* AuthViewController.swift in Sources */,
-				777074BC2B48B839003AE060 /* AddPhotoViewModel.swift in Sources */,
+				777074BC2B48B839003AE060 /* ProfilePhotoManager.swift in Sources */,
 				377474AB2A804BCB00E3FB7C /* ViewController.swift in Sources */,
 				375ADDDA2A82ABA2008198AE /* CustomTabBarViewController.swift in Sources */,
 				377474C02A804C6900E3FB7C /* AuthViewControllerViewModel.swift in Sources */,
 				375ADDDC2A838479008198AE /* TabBarViewController.swift in Sources */,
 				377474A72A804BCB00E3FB7C /* AppDelegate.swift in Sources */,
 				377474A92A804BCB00E3FB7C /* SceneDelegate.swift in Sources */,
-				77A524BB2B2E434C00DB3ECD /* UIViewController + Extensions.swift in Sources */,
-				770F74892B23ADBB005D2585 /* AddPhotoViewController + PHPicker.swift in Sources */,
-				777074B92B48B58B003AE060 /* ImagePickingConstants.swift in Sources */,
+				77A524BB2B2E434C00DB3ECD /* UIViewController+Preview.swift in Sources */,
+				770F74892B23ADBB005D2585 /* AddPhotoViewController+PHPicker.swift in Sources */,
 				773364E32B31E1BF0025DD09 /* CategoryBalanceViewController.swift in Sources */,
 				770F746D2B225618005D2585 /* AddPhotoViewController.swift in Sources */,
 				37EF1CD52A8F66EE008997C6 /* Constants.swift in Sources */,
