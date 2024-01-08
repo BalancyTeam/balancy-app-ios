@@ -150,6 +150,7 @@
 		770F746A2B2255F0005D2585 /* UserSettings */ = {
 			isa = PBXGroup;
 			children = (
+				777074BD2B4C7B37003AE060 /* CategoryBalance */,
 				777866142B482DDF00134443 /* ImagePicking */,
 			);
 			path = UserSettings;
@@ -160,7 +161,6 @@
 			children = (
 				770F746C2B225617005D2585 /* AddPhotoViewController.swift */,
 				770F74882B23ADBB005D2585 /* AddPhotoViewController+PHPicker.swift */,
-				773364E22B31E1BF0025DD09 /* CategoryBalanceViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -191,6 +191,22 @@
 				777074BB2B48B838003AE060 /* ProfilePhotoManager.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		777074BD2B4C7B37003AE060 /* CategoryBalance */ = {
+			isa = PBXGroup;
+			children = (
+				777074BE2B4C7B4C003AE060 /* Views */,
+			);
+			path = CategoryBalance;
+			sourceTree = "<group>";
+		};
+		777074BE2B4C7B4C003AE060 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				773364E22B31E1BF0025DD09 /* CategoryBalanceViewController.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		777866142B482DDF00134443 /* ImagePicking */ = {
@@ -447,7 +463,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = KBJ55Q96F8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Balancyй/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -475,7 +491,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = KBJ55Q96F8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Balancyй/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

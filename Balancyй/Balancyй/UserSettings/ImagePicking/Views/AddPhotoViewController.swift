@@ -5,6 +5,8 @@
 //  Created by  Toropov Oleksandr on 07.12.2023.
 //
 
+// TODO: - Implement generateCatButtonTapped method
+
 import UIKit
 import SwiftUI
 
@@ -25,14 +27,12 @@ final class AddPhotoViewController: UIViewController {
         button.setTitle("Пропустити", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = UIFont(name: FontName.light, size: 12)
-        button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
     
     private let logoImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: ImageName.logo)
-        imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
     
@@ -42,7 +42,6 @@ final class AddPhotoViewController: UIViewController {
         label.font = UIFont(name: FontName.regular, size: 24)
         label.textColor = .white
         label.numberOfLines = 0
-        label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
@@ -51,7 +50,6 @@ final class AddPhotoViewController: UIViewController {
         button.setImage(UIImage(named: ImageName.addPhoto), for: .normal)
         button.layer.cornerRadius = view.frame.size.height * 0.14
         button.layer.masksToBounds = true
-        button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
     
@@ -60,7 +58,6 @@ final class AddPhotoViewController: UIViewController {
         button.setTitle("Згенерувати котика", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = UIFont(name: FontName.light, size: 12)
-        button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
     
@@ -69,7 +66,6 @@ final class AddPhotoViewController: UIViewController {
         pageControl.numberOfPages = 2
         pageControl.currentPage = 0
         pageControl.pageIndicatorTintColor = AppColor.pageIndicatorTintColor
-        pageControl.translatesAutoresizingMaskIntoConstraints = false
         return pageControl
     }()
     
@@ -81,7 +77,6 @@ final class AddPhotoViewController: UIViewController {
         button.backgroundColor = AppColor.button
         button.layer.cornerRadius = 20
         button.clipsToBounds = true
-        button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
     
@@ -108,19 +103,17 @@ final class AddPhotoViewController: UIViewController {
         setupNextButton()
         setupSkipButton()
     }
-        
+    
     private func randomImageButtonTapped() {
-        // TODO: - Implement generateCatButtonTapped method
-
         isImageSet = true
     }
-        
+    
     private func presentCategoryBalanceViewController() {
         let categoryBalanceViewController = CategoryBalanceViewController()
         categoryBalanceViewController.modalPresentationStyle = .fullScreen
         present(categoryBalanceViewController, animated: true)
     }
-        
+    
     private func nextButtonTapped() {
         guard let selectedImageName = selectedImageName else { return }
         guard let selectedImage = addPhotoButton.currentImage else { return }
@@ -132,7 +125,7 @@ final class AddPhotoViewController: UIViewController {
             profilePhotoManager.saveImageToFileManager(selectedImageName, selectedImage)
         }
         
-        presentCategoryBalanceViewController()
+        //        presentCategoryBalanceViewController()
     }
     
     private func setupNextButton() {
@@ -142,7 +135,7 @@ final class AddPhotoViewController: UIViewController {
         
         nextButton.addAction(action, for: .touchUpInside)
     }
-        
+    
     private func skipButtonTapped() {
         presentCategoryBalanceViewController()
     }
@@ -160,6 +153,10 @@ final class AddPhotoViewController: UIViewController {
 private extension AddPhotoViewController {
     
     private func setConstraints() {
+        [skipButton, logoImageView, label, pageControl, nextButton, addPhotoButton, generateCatButton].forEach {
+            $0.translatesAutoresizingMaskIntoConstraints = false
+        }
+        
         NSLayoutConstraint.activate([
             skipButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 16),
             skipButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -16),
