@@ -22,8 +22,8 @@ final class AddPhotoViewController: UIViewController {
     
     // UI
     
-    private lazy var skipButton: UIButton = {
-        let button = UIButton()
+    private let skipButton: UIButton = {
+        let button = UIButton(type: .system)
         button.setTitle("Пропустити", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = UIFont(name: FontName.light, size: 12)
@@ -36,7 +36,7 @@ final class AddPhotoViewController: UIViewController {
         return imageView
     }()
     
-    private lazy var label: UILabel = {
+    private let label: UILabel = {
         let label = UILabel()
         label.text = "Додайте фото до Вашого профілю"
         label.font = UIFont(name: FontName.regular, size: 24)
@@ -53,7 +53,7 @@ final class AddPhotoViewController: UIViewController {
         return button
     }()
     
-    private lazy var generateCatButton: UIButton = {
+    private let generateCatButton: UIButton = {
         let button = UIButton()
         button.setTitle("Згенерувати котика", for: .normal)
         button.setTitleColor(.white, for: .normal)
@@ -61,23 +61,23 @@ final class AddPhotoViewController: UIViewController {
         return button
     }()
     
-    private lazy var pageControl: UIPageControl = {
+    private let pageControl: UIPageControl = {
         let pageControl = UIPageControl()
         pageControl.numberOfPages = 2
-        pageControl.currentPage = 0
         pageControl.pageIndicatorTintColor = AppColor.pageIndicatorTintColor
         pageControl.isUserInteractionEnabled = false
         return pageControl
     }()
     
-    private lazy var nextButton: UIButton = {
-        let button = UIButton()
+    let nextButton: UIButton = {
+        let button = UIButton(type: .system)
         button.setTitle("Далі", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = UIFont(name: FontName.medium, size: 16)
         button.backgroundColor = AppColor.button
         button.layer.cornerRadius = 20
         button.clipsToBounds = true
+        button.isEnabled = false
         return button
     }()
     
@@ -116,17 +116,11 @@ final class AddPhotoViewController: UIViewController {
     }
     
     private func nextButtonTapped() {
-        guard let selectedImageName = selectedImageName else { return }
-        guard let selectedImage = addPhotoButton.currentImage else { return }
-        
-        if !isImageSet {
-            nextButton.isEnabled = false
-        } else {
-            nextButton.isEnabled = true
-            profilePhotoManager.saveImageToFileManager(selectedImageName, selectedImage)
-        }
-        
-                presentCategoryBalanceViewController()
+        guard let selectedImageName = selectedImageName, let selectedImage = addPhotoButton.currentImage else { return }
+
+        profilePhotoManager.saveImageToFileManager(selectedImageName, selectedImage)
+
+        presentCategoryBalanceViewController()
     }
     
     private func setupNextButton() {

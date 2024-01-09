@@ -19,15 +19,12 @@ extension AddPhotoViewController: PHPickerViewControllerDelegate {
         
         selectedImageName = imageName
         
-        selectedImage.itemProvider.loadObject(ofClass: UIImage.self) { [weak self] (image, _) in
-            guard let image = image as? UIImage else { return }
-            DispatchQueue.main.async {
-                self?.addPhotoButton.setImage(image, for: .normal)
-                self?.isImageSet = true
-            }
-        }
+        setImage(selectedImage)
     }
-        
+}
+
+extension AddPhotoViewController {
+    
     private func addPhotoButtonTapped() {
         var configuration = PHPickerConfiguration(photoLibrary: .shared())
         configuration.selectionLimit = 1
@@ -43,5 +40,16 @@ extension AddPhotoViewController: PHPickerViewControllerDelegate {
             self?.addPhotoButtonTapped()
         }
         addPhotoButton.addAction(action, for: .touchUpInside)
+    }
+    
+    private func setImage(_ selectedImage: PHPickerResult) {
+        selectedImage.itemProvider.loadObject(ofClass: UIImage.self) { [weak self] (image, _) in
+            guard let image = image as? UIImage else { return }
+            DispatchQueue.main.async {
+                self?.addPhotoButton.setImage(image, for: .normal)
+                self?.isImageSet = true
+                self?.nextButton.isEnabled = true
+            }
+        }
     }
 }
