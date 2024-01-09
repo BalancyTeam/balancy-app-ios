@@ -5,7 +5,7 @@
 //  Created by  Toropov Oleksandr on 07.12.2023.
 //
 
-// TODO: - Implement generateCatButtonTapped method
+// TODO: - Implement randomImageButtonTapped method
 
 import UIKit
 import SwiftUI
@@ -66,6 +66,7 @@ final class AddPhotoViewController: UIViewController {
         pageControl.numberOfPages = 2
         pageControl.currentPage = 0
         pageControl.pageIndicatorTintColor = AppColor.pageIndicatorTintColor
+        pageControl.isUserInteractionEnabled = false
         return pageControl
     }()
     
@@ -125,7 +126,7 @@ final class AddPhotoViewController: UIViewController {
             profilePhotoManager.saveImageToFileManager(selectedImageName, selectedImage)
         }
         
-        //        presentCategoryBalanceViewController()
+                presentCategoryBalanceViewController()
     }
     
     private func setupNextButton() {

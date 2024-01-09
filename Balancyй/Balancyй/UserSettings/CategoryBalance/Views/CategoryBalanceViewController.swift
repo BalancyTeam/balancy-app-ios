@@ -9,8 +9,6 @@ import UIKit
 
 final class CategoryBalanceViewController: UIViewController {
     
-    // MARK: - View Lifecycle
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .red

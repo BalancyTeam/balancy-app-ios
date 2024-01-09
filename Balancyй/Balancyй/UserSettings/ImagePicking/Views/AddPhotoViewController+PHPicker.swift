@@ -9,9 +9,7 @@ import UIKit
 import PhotosUI
 
 extension AddPhotoViewController: PHPickerViewControllerDelegate {
-    
-    // MARK: - PHPickerViewControllerDelegate
-    
+        
     func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
         dismiss(animated: true)
         
@@ -29,9 +27,7 @@ extension AddPhotoViewController: PHPickerViewControllerDelegate {
             }
         }
     }
-    
-    // MARK: - Private Methods
-    
+        
     private func addPhotoButtonTapped() {
         var configuration = PHPickerConfiguration(photoLibrary: .shared())
         configuration.selectionLimit = 1
@@ -41,9 +37,7 @@ extension AddPhotoViewController: PHPickerViewControllerDelegate {
         
         present(picker, animated: true)
     }
-    
-    // MARK: - Public Methods
-    
+        
     func setupAddPhotoButton() {
         let action = UIAction { [weak self] _ in
             self?.addPhotoButtonTapped()
