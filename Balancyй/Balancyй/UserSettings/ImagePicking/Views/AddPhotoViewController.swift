@@ -16,15 +16,13 @@ final class AddPhotoViewController: UIViewController {
     
     private let profilePhotoManager = ProfilePhotoManager()
     
-    var selectedImageName: String?
-    
-    var isImageSet = false
+    private var selectedImageName: String?
     
     // UI
     
     private let skipButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setTitle("Пропустити", for: .normal)
+        button.setTitle(NSLocalizedString("skip", comment: "ImagePicking"), for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = UIFont(name: FontName.light, size: 12)
         return button
@@ -38,7 +36,7 @@ final class AddPhotoViewController: UIViewController {
     
     private let label: UILabel = {
         let label = UILabel()
-        label.text = "Додайте фото до Вашого профілю"
+        label.text = NSLocalizedString("addPhoto", comment: "ImagePicking")
         label.font = UIFont(name: FontName.regular, size: 24)
         label.textColor = .white
         label.numberOfLines = 0
@@ -55,7 +53,7 @@ final class AddPhotoViewController: UIViewController {
     
     private let generateCatButton: UIButton = {
         let button = UIButton()
-        button.setTitle("Згенерувати котика", for: .normal)
+        button.setTitle(NSLocalizedString("generateCat", comment: "ImagePicking"), for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = UIFont(name: FontName.light, size: 12)
         return button
@@ -71,7 +69,7 @@ final class AddPhotoViewController: UIViewController {
     
     let nextButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setTitle("Далі", for: .normal)
+        button.setTitle(NSLocalizedString("next", comment: "ImagePicking"), for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = UIFont(name: FontName.medium, size: 16)
         button.backgroundColor = AppColor.button
@@ -105,8 +103,14 @@ final class AddPhotoViewController: UIViewController {
         setupSkipButton()
     }
     
+    private func configureButton(_ title: String, _ color: UIColor, _ font: UIFont) -> UIButton {
+        button.setTitle(title, for: .normal)
+        button.setTitleColor(color, for: .normal)
+        button.titleLabel?.font = UIFont(name: FontName.light, size: 12)
+        return button
+    }
+    
     private func randomImageButtonTapped() {
-        isImageSet = true
     }
     
     private func presentCategoryBalanceViewController() {
@@ -117,9 +121,9 @@ final class AddPhotoViewController: UIViewController {
     
     private func nextButtonTapped() {
         guard let selectedImageName = selectedImageName, let selectedImage = addPhotoButton.currentImage else { return }
-
+        
         profilePhotoManager.saveImageToFileManager(selectedImageName, selectedImage)
-
+        
         presentCategoryBalanceViewController()
     }
     
@@ -140,6 +144,10 @@ final class AddPhotoViewController: UIViewController {
             self?.skipButtonTapped()
         }
         skipButton.addAction(action, for: .touchUpInside)
+    }
+    
+    func setSelectedImageName(_ imageName: String?) {
+        selectedImageName = imageName
     }
 }
 

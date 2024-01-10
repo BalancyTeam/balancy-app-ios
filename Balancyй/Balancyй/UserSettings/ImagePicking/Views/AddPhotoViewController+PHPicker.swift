@@ -17,7 +17,7 @@ extension AddPhotoViewController: PHPickerViewControllerDelegate {
         
         let imageName = URL(fileURLWithPath: imageUrl).lastPathComponent + ".jpg"
         
-        selectedImageName = imageName
+        setSelectedImageName(imageName)
         
         setImage(selectedImage)
     }
@@ -47,7 +47,6 @@ extension AddPhotoViewController {
             guard let image = image as? UIImage else { return }
             DispatchQueue.main.async {
                 self?.addPhotoButton.setImage(image, for: .normal)
-                self?.isImageSet = true
                 self?.nextButton.isEnabled = true
             }
         }

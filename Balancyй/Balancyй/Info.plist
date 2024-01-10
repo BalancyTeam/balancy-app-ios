@@ -2,6 +2,15 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>e-Ukraine-Bold.otf</string>
+		<string>e-Ukraine-Light.otf</string>
+		<string>e-Ukraine-Medium.otf</string>
+		<string>e-Ukraine-Regular.otf</string>
+		<string>e-Ukraine-Thin.otf</string>
+		<string>e-Ukraine-UltraLight.otf</string>
+	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -21,16 +30,5 @@
 			</array>
 		</dict>
 	</dict>
-	<key>UIAppFonts</key>
-	<array>
-		<string>e-Ukraine-Bold.otf</string>
-		<string>e-Ukraine-Light.otf</string>
-		<string>e-Ukraine-Medium.otf</string>
-		<string>e-Ukraine-Regular.otf</string>
-		<string>e-Ukraine-Thin.otf</string>
-		<string>e-Ukraine-UltraLight.otf</string>
-	</array>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Please grant the access to a photo library to pick the profile picture from</string>
 </dict>
 </plist>
