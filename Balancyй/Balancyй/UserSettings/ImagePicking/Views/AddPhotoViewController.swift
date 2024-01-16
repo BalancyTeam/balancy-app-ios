@@ -22,7 +22,6 @@ final class AddPhotoViewController: UIViewController {
     
     private let skipButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setTitle(NSLocalizedString("skip", comment: "ImagePicking"), for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = UIFont(name: FontName.light, size: 12)
         return button
@@ -30,13 +29,11 @@ final class AddPhotoViewController: UIViewController {
     
     private let logoImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(named: ImageName.logo)
         return imageView
     }()
     
     private let label: UILabel = {
         let label = UILabel()
-        label.text = NSLocalizedString("addPhoto", comment: "ImagePicking")
         label.font = UIFont(name: FontName.regular, size: 24)
         label.textColor = .white
         label.numberOfLines = 0
@@ -45,7 +42,6 @@ final class AddPhotoViewController: UIViewController {
     
     lazy var addPhotoButton: UIButton = {
         let button = UIButton()
-        button.setImage(UIImage(named: ImageName.addPhoto), for: .normal)
         button.layer.cornerRadius = view.frame.size.height * 0.14
         button.layer.masksToBounds = true
         return button
@@ -53,7 +49,6 @@ final class AddPhotoViewController: UIViewController {
     
     private let generateCatButton: UIButton = {
         let button = UIButton()
-        button.setTitle(NSLocalizedString("generateCat", comment: "ImagePicking"), for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = UIFont(name: FontName.light, size: 12)
         return button
@@ -69,7 +64,6 @@ final class AddPhotoViewController: UIViewController {
     
     let nextButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setTitle(NSLocalizedString("next", comment: "ImagePicking"), for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = UIFont(name: FontName.medium, size: 16)
         button.backgroundColor = AppColor.button
@@ -84,6 +78,7 @@ final class AddPhotoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
+        populateWithData()
     }
     
     // UI Configuration
@@ -102,6 +97,20 @@ final class AddPhotoViewController: UIViewController {
         setupNextButton()
         setupSkipButton()
     }
+    
+    private func populateWithData() {
+            skipButton.setTitle(NSLocalizedString("skip", comment: "ImagePicking"), for: .normal)
+
+            logoImageView.image = UIImage(named: ImageName.logo)
+
+            label.text = NSLocalizedString("addPhoto", comment: "ImagePicking")
+
+            addPhotoButton.setImage(UIImage(named: ImageName.addPhoto), for: .normal)
+
+            generateCatButton.setTitle(NSLocalizedString("generateCat", comment: "ImagePicking"), for: .normal)
+
+            nextButton.setTitle(NSLocalizedString("next", comment: "ImagePicking"), for: .normal)
+        }
 
     private func randomImageButtonTapped() {
     }

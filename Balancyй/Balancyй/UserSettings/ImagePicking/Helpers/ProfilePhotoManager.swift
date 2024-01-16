@@ -10,16 +10,16 @@ import UIKit
 final class ProfilePhotoManager {
     
     func save(_ imageName: String, _ image: UIImage) {
-        let manager = FileManager.default
+        let fileManager = FileManager.default
         let imageNameWithExtension = imageName + ".jpg"
 
         
-        guard let documentsDirectory = manager.urls(for: .documentDirectory, in: .userDomainMask).first, let imageData = image.jpegData(compressionQuality: 1.0) else {
+        guard let documentsDirectory = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first, let imageData = image.jpegData(compressionQuality: 1.0) else {
             return
         }
                 
         let profileImagesDirectory = documentsDirectory.appendingPathComponent("ProfileImages")
-        try? manager.createDirectory(at: profileImagesDirectory, withIntermediateDirectories: true)
+        try? fileManager.createDirectory(at: profileImagesDirectory, withIntermediateDirectories: true)
         
         removeAllFilesInDirectory(at: profileImagesDirectory)
         
