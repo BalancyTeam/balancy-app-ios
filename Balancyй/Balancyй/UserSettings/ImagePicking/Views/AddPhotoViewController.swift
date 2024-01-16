@@ -148,7 +148,7 @@ final class AddPhotoViewController: UIViewController {
         skipButton.addAction(action, for: .touchUpInside)
     }
     
-    func setSelectedImageName(_ imageName: String?) {
+    func setSelectedImageName(_ imageName: String) {
         selectedImageName = imageName
     }
 }
