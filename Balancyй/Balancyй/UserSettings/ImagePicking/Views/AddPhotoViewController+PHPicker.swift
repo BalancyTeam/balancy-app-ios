@@ -15,7 +15,7 @@ extension AddPhotoViewController: PHPickerViewControllerDelegate {
         
         guard let selectedImage = results.first, let imageUrl = selectedImage.itemProvider.suggestedName else { return }
         
-        let imageName = URL(fileURLWithPath: imageUrl).lastPathComponent + ".jpg"
+        let imageName = URL(fileURLWithPath: imageUrl).lastPathComponent
         
         setSelectedImageName(imageName)
         

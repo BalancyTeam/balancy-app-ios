@@ -27,7 +27,7 @@
 		770F74872B225AC5005D2585 /* e-Ukraine-UltraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 770F74732B2256B2005D2585 /* e-Ukraine-UltraLight.otf */; };
 		770F74892B23ADBB005D2585 /* AddPhotoViewController+PHPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770F74882B23ADBB005D2585 /* AddPhotoViewController+PHPicker.swift */; };
 		773364E32B31E1BF0025DD09 /* CategoryBalanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773364E22B31E1BF0025DD09 /* CategoryBalanceViewController.swift */; };
-		774C2E0A2B4ECD6600FF3733 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 774C2E092B4ECCD100FF3733 /* Localizable.strings */; };
+		774C2E442B51A9A700FF3733 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 774C2E462B51A9A700FF3733 /* Localizable.strings */; };
 		777074BC2B48B839003AE060 /* ProfilePhotoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777074BB2B48B838003AE060 /* ProfilePhotoManager.swift */; };
 		77A524BB2B2E434C00DB3ECD /* UIViewController+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A524BA2B2E434C00DB3ECD /* UIViewController+Preview.swift */; };
 /* End PBXBuildFile section */
@@ -55,7 +55,7 @@
 		770F74742B2256B2005D2585 /* e-Ukraine-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "e-Ukraine-Light.otf"; sourceTree = "<group>"; };
 		770F74882B23ADBB005D2585 /* AddPhotoViewController+PHPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddPhotoViewController+PHPicker.swift"; sourceTree = "<group>"; };
 		773364E22B31E1BF0025DD09 /* CategoryBalanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryBalanceViewController.swift; sourceTree = "<group>"; };
-		774C2E082B4ECCD100FF3733 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		774C2E472B51A9B600FF3733 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Localizable.strings; sourceTree = "<group>"; };
 		777074BB2B48B838003AE060 /* ProfilePhotoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePhotoManager.swift; sourceTree = "<group>"; };
 		77A524BA2B2E434C00DB3ECD /* UIViewController+Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Preview.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -129,7 +129,7 @@
 				770F746E2B225663005D2585 /* Fonts */,
 				04E2DA5C2A9EAC0700EF9C24 /* Resources */,
 				377474B42A804BCD00E3FB7C /* Info.plist */,
-				774C2E092B4ECCD100FF3733 /* Localizable.strings */,
+				774C2E462B51A9A700FF3733 /* Localizable.strings */,
 			);
 			path = "Balancyй";
 			sourceTree = "<group>";
@@ -181,20 +181,6 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
-		774C2E0B2B4F01A400FF3733 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		777074B72B48B56D003AE060 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		777074BA2B48B824003AE060 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -222,8 +208,6 @@
 		777866142B482DDF00134443 /* ImagePicking */ = {
 			isa = PBXGroup;
 			children = (
-				774C2E0B2B4F01A400FF3733 /* Extensions */,
-				777074B72B48B56D003AE060 /* Models */,
 				770F746B2B2255FB005D2585 /* Views */,
 				777074BA2B48B824003AE060 /* Helpers */,
 			);
@@ -275,11 +259,11 @@
 			};
 			buildConfigurationList = 3774749E2A804BCB00E3FB7C /* Build configuration list for PBXProject "Balancy" */;
 			compatibilityVersion = "Xcode 14.0";
-			developmentRegion = en;
+			developmentRegion = uk;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
+				uk,
 			);
 			mainGroup = 3774749A2A804BCB00E3FB7C;
 			productRefGroup = 377474A42A804BCB00E3FB7C /* Products */;
@@ -301,7 +285,7 @@
 				770F74872B225AC5005D2585 /* e-Ukraine-UltraLight.otf in Resources */,
 				770F74862B225AC3005D2585 /* e-Ukraine-Thin.otf in Resources */,
 				377474B32A804BCD00E3FB7C /* LaunchScreen.storyboard in Resources */,
-				774C2E0A2B4ECD6600FF3733 /* Localizable.strings in Resources */,
+				774C2E442B51A9A700FF3733 /* Localizable.strings in Resources */,
 				770F74842B225ABE005D2585 /* e-Ukraine-Medium.otf in Resources */,
 				377474B02A804BCD00E3FB7C /* Assets.xcassets in Resources */,
 				770F74832B225ABB005D2585 /* e-Ukraine-Light.otf in Resources */,
@@ -351,10 +335,10 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		774C2E092B4ECCD100FF3733 /* Localizable.strings */ = {
+		774C2E462B51A9A700FF3733 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				774C2E082B4ECCD100FF3733 /* en */,
+				774C2E472B51A9B600FF3733 /* uk */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";

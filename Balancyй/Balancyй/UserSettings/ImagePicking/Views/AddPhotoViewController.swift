@@ -102,14 +102,7 @@ final class AddPhotoViewController: UIViewController {
         setupNextButton()
         setupSkipButton()
     }
-    
-    private func configureButton(_ title: String, _ color: UIColor, _ font: UIFont) -> UIButton {
-        button.setTitle(title, for: .normal)
-        button.setTitleColor(color, for: .normal)
-        button.titleLabel?.font = UIFont(name: FontName.light, size: 12)
-        return button
-    }
-    
+
     private func randomImageButtonTapped() {
     }
     
@@ -122,7 +115,7 @@ final class AddPhotoViewController: UIViewController {
     private func nextButtonTapped() {
         guard let selectedImageName = selectedImageName, let selectedImage = addPhotoButton.currentImage else { return }
         
-        profilePhotoManager.saveImageToFileManager(selectedImageName, selectedImage)
+        profilePhotoManager.save(selectedImageName, selectedImage)
         
         presentCategoryBalanceViewController()
     }

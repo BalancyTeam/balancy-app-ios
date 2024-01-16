@@ -9,14 +9,31 @@ import UIKit
 
 final class ProfilePhotoManager {
     
-    func saveImageToFileManager(_ imageName: String, _ image: UIImage) {
+    func save(_ imageName: String, _ image: UIImage) {
+        let manager = FileManager.default
+        let imageNameWithExtension = imageName + ".jpg"
+
         
-        guard let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first, let imageData = image.jpegData(compressionQuality: 1.0) else {
+        guard let documentsDirectory = manager.urls(for: .documentDirectory, in: .userDomainMask).first, let imageData = image.jpegData(compressionQuality: 1.0) else {
             return
         }
+                
+        let profileImagesDirectory = documentsDirectory.appendingPathComponent("ProfileImages")
+        try? manager.createDirectory(at: profileImagesDirectory, withIntermediateDirectories: true)
         
-        let fileURL = documentsDirectory.appendingPathComponent(imageName)
+        removeAllFilesInDirectory(at: profileImagesDirectory)
         
+        let fileURL = profileImagesDirectory.appendingPathComponent(imageNameWithExtension)
         try? imageData.write(to: fileURL)
+    }
+    
+    func removeAllFilesInDirectory(at path: URL) {
+        let fileManager = FileManager.default
+        
+        guard let files = try? fileManager.contentsOfDirectory(at: path, includingPropertiesForKeys: nil) else { return }
+            
+            for file in files {
+                try? fileManager.removeItem(at: file)
+            }
     }
 }
