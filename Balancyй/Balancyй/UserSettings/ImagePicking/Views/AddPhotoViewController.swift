@@ -5,7 +5,9 @@
 //  Created by  Toropov Oleksandr on 07.12.2023.
 //
 
-// TODO: - Implement randomImageButtonTapped method
+// TODO: Implement randomImageButtonTapped method
+// TODO: Implement custom view for picking image
+// TODO: Change nextButton color depending on users' choice
 
 import UIKit
 import SwiftUI
@@ -70,6 +72,7 @@ final class AddPhotoViewController: UIViewController {
         button.layer.cornerRadius = 20
         button.clipsToBounds = true
         button.isEnabled = false
+        button.alpha = 0.5
         return button
     }()
     
