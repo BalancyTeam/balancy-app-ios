@@ -16,6 +16,8 @@ final class AddPhotoViewController: UIViewController {
     
     // Properties
     
+    private let localizedService = LocalizedService()
+    
     private let profilePhotoManager = ProfilePhotoManager()
     
     private var selectedImageName: String?
@@ -34,7 +36,7 @@ final class AddPhotoViewController: UIViewController {
         return imageView
     }()
     
-    private let label: UILabel = {
+    private let addPhotoLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont(name: FontName.regular, size: 24)
         label.textColor = .white
@@ -49,7 +51,7 @@ final class AddPhotoViewController: UIViewController {
         return button
     }()
     
-    private let generateCatButton: UIButton = {
+    private let generateRandomImageButton: UIButton = {
         let button = UIButton()
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = UIFont(name: FontName.light, size: 12)
@@ -90,11 +92,11 @@ final class AddPhotoViewController: UIViewController {
         view.backgroundColor = AppColor.background
         view.addSubview(skipButton)
         view.addSubview(logoImageView)
-        view.addSubview(label)
+        view.addSubview(addPhotoLabel)
         view.addSubview(pageControl)
         view.addSubview(nextButton)
         view.addSubview(addPhotoButton)
-        view.addSubview(generateCatButton)
+        view.addSubview(generateRandomImageButton)
         setConstraints()
         setupAddPhotoButton()
         setupNextButton()
@@ -102,19 +104,19 @@ final class AddPhotoViewController: UIViewController {
     }
     
     private func populateWithData() {
-            skipButton.setTitle(NSLocalizedString("skip", comment: "ImagePicking"), for: .normal)
-
-            logoImageView.image = UIImage(named: ImageName.logo)
-
-            label.text = NSLocalizedString("addPhoto", comment: "ImagePicking")
-
-            addPhotoButton.setImage(UIImage(named: ImageName.addPhoto), for: .normal)
-
-            generateCatButton.setTitle(NSLocalizedString("generateCat", comment: "ImagePicking"), for: .normal)
-
-            nextButton.setTitle(NSLocalizedString("next", comment: "ImagePicking"), for: .normal)
-        }
-
+        skipButton.setTitle(localizedService.getString(for: .skipButton), for: .normal)
+        
+        logoImageView.image = UIImage(named: ImageName.logo)
+        
+        addPhotoLabel.text = localizedService.getString(for: .addPhotoLabel)
+        
+        addPhotoButton.setImage(UIImage(named: ImageName.addPhoto), for: .normal)
+        
+        generateRandomImageButton.setTitle(localizedService.getString(for: .generateRandomImageButton), for: .normal)
+        
+        nextButton.setTitle(localizedService.getString(for: .nextButton), for: .normal)
+    }
+    
     private func randomImageButtonTapped() {
     }
     
@@ -161,7 +163,7 @@ final class AddPhotoViewController: UIViewController {
 private extension AddPhotoViewController {
     
     private func setConstraints() {
-        [skipButton, logoImageView, label, pageControl, nextButton, addPhotoButton, generateCatButton].forEach {
+        [skipButton, logoImageView, addPhotoLabel, pageControl, nextButton, addPhotoButton, generateRandomImageButton].forEach {
             $0.translatesAutoresizingMaskIntoConstraints = false
         }
         
@@ -172,16 +174,16 @@ private extension AddPhotoViewController {
             logoImageView.topAnchor.constraint(greaterThanOrEqualTo: skipButton.bottomAnchor, constant: 20),
             logoImageView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16),
             
-            label.topAnchor.constraint(equalTo: logoImageView.bottomAnchor, constant: 20),
-            label.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16),
-            label.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -16),
+            addPhotoLabel.topAnchor.constraint(equalTo: logoImageView.bottomAnchor, constant: 20),
+            addPhotoLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16),
+            addPhotoLabel.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -16),
             
             nextButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20),
             nextButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16),
             nextButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -16),
             nextButton.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.06),
             
-            addPhotoButton.topAnchor.constraint(equalTo: label.bottomAnchor, constant: 45),
+            addPhotoButton.topAnchor.constraint(equalTo: addPhotoLabel.bottomAnchor, constant: 45),
             addPhotoButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             addPhotoButton.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.28),
             addPhotoButton.widthAnchor.constraint(equalTo: addPhotoButton.heightAnchor),
@@ -189,9 +191,9 @@ private extension AddPhotoViewController {
             pageControl.topAnchor.constraint(equalTo: nextButton.topAnchor, constant: -30),
             pageControl.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             
-            generateCatButton.topAnchor.constraint(equalTo: addPhotoButton.bottomAnchor, constant: 30),
-            generateCatButton.bottomAnchor.constraint(equalTo: pageControl.topAnchor, constant: -45),
-            generateCatButton.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+            generateRandomImageButton.topAnchor.constraint(equalTo: addPhotoButton.bottomAnchor, constant: 30),
+            generateRandomImageButton.bottomAnchor.constraint(equalTo: pageControl.topAnchor, constant: -45),
+            generateRandomImageButton.centerXAnchor.constraint(equalTo: view.centerXAnchor)
             
         ])
     }
