@@ -8,6 +8,7 @@
 import Foundation
 
 class LocalizedService {
+    
     func getString(for target: LocalizedTarget) -> String {
         NSLocalizedString(target.rawValue, comment: "ImagePicking")
     }
