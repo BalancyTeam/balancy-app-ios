@@ -48,7 +48,7 @@ extension AddPhotoViewController {
             DispatchQueue.main.async {
                 self?.addPhotoButton.setImage(image, for: .normal)
                 self?.nextButton.isEnabled = true
-                self?.nextButton.alpha = 0.5
+                self?.nextButton.alpha = 1
             }
         }
     }
