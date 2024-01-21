@@ -18,6 +18,12 @@
 		377474BC2A804C2600E3FB7C /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377474BB2A804C2600E3FB7C /* AuthViewController.swift */; };
 		377474C02A804C6900E3FB7C /* AuthViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377474BF2A804C6900E3FB7C /* AuthViewControllerViewModel.swift */; };
 		37EF1CD52A8F66EE008997C6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EF1CD42A8F66EE008997C6 /* Constants.swift */; };
+		D2CEEBDB2B5D68B100C1BCCB /* AvatarPickerImageErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CEEBDA2B5D68B100C1BCCB /* AvatarPickerImageErrorViewController.swift */; };
+		D2CEEBDD2B5D690900C1BCCB /* RoundedButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CEEBDC2B5D690900C1BCCB /* RoundedButtonView.swift */; };
+		D2CEEBDF2B5D693300C1BCCB /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CEEBDE2B5D693300C1BCCB /* UIView+Extensions.swift */; };
+		D2CEEBE12B5D695000C1BCCB /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CEEBE02B5D695000C1BCCB /* UIViewController+Extensions.swift */; };
+		D2CEEBE32B5D696E00C1BCCB /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CEEBE22B5D696E00C1BCCB /* AppColors.swift */; };
+		D2CEEBE52B5D69ED00C1BCCB /* ImageLoaderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CEEBE42B5D69ED00C1BCCB /* ImageLoaderService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +40,12 @@
 		377474BB2A804C2600E3FB7C /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		377474BF2A804C6900E3FB7C /* AuthViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewControllerViewModel.swift; sourceTree = "<group>"; };
 		37EF1CD42A8F66EE008997C6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D2CEEBDA2B5D68B100C1BCCB /* AvatarPickerImageErrorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarPickerImageErrorViewController.swift; sourceTree = "<group>"; };
+		D2CEEBDC2B5D690900C1BCCB /* RoundedButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButtonView.swift; sourceTree = "<group>"; };
+		D2CEEBDE2B5D693300C1BCCB /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		D2CEEBE02B5D695000C1BCCB /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		D2CEEBE22B5D696E00C1BCCB /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
+		D2CEEBE42B5D69ED00C1BCCB /* ImageLoaderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoaderService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +123,7 @@
 		377474A52A804BCB00E3FB7C /* Balancyй */ = {
 			isa = PBXGroup;
 			children = (
+				D2CEEBD92B5D689A00C1BCCB /* AvatarImagePickerErrorModule */,
 				04E2DA5C2A9EAC0700EF9C24 /* Resources */,
 				049B99362ABD2F83008A07D7 /* Views */,
 				049B99352ABD2F4D008A07D7 /* ViewModels */,
@@ -136,6 +149,35 @@
 				37EF1CD42A8F66EE008997C6 /* Constants.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		D2CEEBD92B5D689A00C1BCCB /* AvatarImagePickerErrorModule */ = {
+			isa = PBXGroup;
+			children = (
+				D2CEEBE42B5D69ED00C1BCCB /* ImageLoaderService.swift */,
+				D2CEEBDA2B5D68B100C1BCCB /* AvatarPickerImageErrorViewController.swift */,
+				D2CEEBE72B5D6A0700C1BCCB /* Reusable */,
+				D2CEEBE62B5D69FC00C1BCCB /* Extensions */,
+			);
+			path = AvatarImagePickerErrorModule;
+			sourceTree = "<group>";
+		};
+		D2CEEBE62B5D69FC00C1BCCB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D2CEEBDE2B5D693300C1BCCB /* UIView+Extensions.swift */,
+				D2CEEBE02B5D695000C1BCCB /* UIViewController+Extensions.swift */,
+				D2CEEBE22B5D696E00C1BCCB /* AppColors.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D2CEEBE72B5D6A0700C1BCCB /* Reusable */ = {
+			isa = PBXGroup;
+			children = (
+				D2CEEBDC2B5D690900C1BCCB /* RoundedButtonView.swift */,
+			);
+			path = Reusable;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,14 +251,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2CEEBE52B5D69ED00C1BCCB /* ImageLoaderService.swift in Sources */,
 				377474BC2A804C2600E3FB7C /* AuthViewController.swift in Sources */,
+				D2CEEBDB2B5D68B100C1BCCB /* AvatarPickerImageErrorViewController.swift in Sources */,
 				377474AB2A804BCB00E3FB7C /* ViewController.swift in Sources */,
+				D2CEEBE32B5D696E00C1BCCB /* AppColors.swift in Sources */,
 				375ADDDA2A82ABA2008198AE /* CustomTabBarViewController.swift in Sources */,
+				D2CEEBE12B5D695000C1BCCB /* UIViewController+Extensions.swift in Sources */,
 				377474C02A804C6900E3FB7C /* AuthViewControllerViewModel.swift in Sources */,
 				375ADDDC2A838479008198AE /* TabBarViewController.swift in Sources */,
 				377474A72A804BCB00E3FB7C /* AppDelegate.swift in Sources */,
 				377474A92A804BCB00E3FB7C /* SceneDelegate.swift in Sources */,
+				D2CEEBDD2B5D690900C1BCCB /* RoundedButtonView.swift in Sources */,
 				37EF1CD52A8F66EE008997C6 /* Constants.swift in Sources */,
+				D2CEEBDF2B5D693300C1BCCB /* UIView+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
