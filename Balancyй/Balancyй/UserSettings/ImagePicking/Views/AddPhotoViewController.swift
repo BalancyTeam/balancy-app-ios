@@ -16,8 +16,6 @@ final class AddPhotoViewController: UIViewController {
     
     // Properties
     
-    private let localizedService = LocalizedService()
-    
     private let profilePhotoManager = ProfilePhotoManager()
     
     private var selectedImageName: String?
@@ -73,8 +71,7 @@ final class AddPhotoViewController: UIViewController {
         button.backgroundColor = AppColor.button
         button.layer.cornerRadius = 20
         button.clipsToBounds = true
-        button.isEnabled = false
-        button.alpha = 0.5
+        button.setDisabled()
         return button
     }()
     
@@ -104,17 +101,17 @@ final class AddPhotoViewController: UIViewController {
     }
     
     private func populateWithData() {
-        skipButton.setTitle(localizedService.getString(for: .skipButton), for: .normal)
+        skipButton.setTitle(Localized.skipButton.localizedString, for: .normal)
         
         logoImageView.image = UIImage(named: ImageName.logo)
         
-        addPhotoLabel.text = localizedService.getString(for: .addPhotoLabel)
+        addPhotoLabel.text = Localized.addPhotoLabel.localizedString
         
         addPhotoButton.setImage(UIImage(named: ImageName.addPhoto), for: .normal)
         
-        generateRandomImageButton.setTitle(localizedService.getString(for: .generateRandomImageButton), for: .normal)
+        generateRandomImageButton.setTitle(Localized.generateRandomImageButton.localizedString, for: .normal)
         
-        nextButton.setTitle(localizedService.getString(for: .nextButton), for: .normal)
+        nextButton.setTitle(Localized.nextButton.localizedString, for: .normal)
     }
     
     private func randomImageButtonTapped() {

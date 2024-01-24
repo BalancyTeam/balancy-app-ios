@@ -47,8 +47,7 @@ extension AddPhotoViewController {
             guard let image = image as? UIImage else { return }
             DispatchQueue.main.async {
                 self?.addPhotoButton.setImage(image, for: .normal)
-                self?.nextButton.isEnabled = true
-                self?.nextButton.alpha = 1
+                self?.nextButton.setEnabled()
             }
         }
     }
