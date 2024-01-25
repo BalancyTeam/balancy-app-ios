@@ -1,6 +1,6 @@
 import UIKit
 
-struct Const {    
+struct Const {
     static let tabBarTitles = ["","",""]
     static let tabBarImages = ["tasksTabBarIcon","nill","profileTabBarIcon"]
 }
