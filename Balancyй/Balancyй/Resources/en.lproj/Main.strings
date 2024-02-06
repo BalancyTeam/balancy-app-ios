@@ -1,0 +1,18 @@
+
+/* Class = "UILabel"; text = "2"; ObjectID = "R3B-Xs-zkT"; */
+"R3B-Xs-zkT.text" = "2";
+
+/* Class = "UITabBarItem"; title = "Item 2"; ObjectID = "WHK-d3-Cq4"; */
+"WHK-d3-Cq4.title" = "Item 2";
+
+/* Class = "UITabBarItem"; title = "Item 1"; ObjectID = "WaS-MN-nco"; */
+"WaS-MN-nco.title" = "Item 1";
+
+/* Class = "UIButton"; configuration.title = "Button"; ObjectID = "dse-o1-CjC"; */
+"dse-o1-CjC.configuration.title" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "dse-o1-CjC"; */
+"dse-o1-CjC.normalTitle" = "Button";
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "zKy-al-OsB"; */
+"zKy-al-OsB.title" = "Item";

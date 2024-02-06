@@ -1,0 +1,14 @@
+/*
+  Localizable.strings
+  Balancy
+
+  Created by  Toropov Oleksandr on 12.01.2024.
+  
+*/
+
+//ImagePicking
+
+"skip" = "Пропустити";
+"addPhoto" = "Додати фото до Вашого профілю";
+"generateCat" = "Згенерувати котика";
+"next" = "Далі";
