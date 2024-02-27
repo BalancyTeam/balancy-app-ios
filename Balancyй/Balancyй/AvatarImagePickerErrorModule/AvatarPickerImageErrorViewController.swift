@@ -1,23 +1,32 @@
 import Foundation
 import UIKit
+import SwiftUI
+
+#Preview {
+    AvatarPickerErrorViewController.preview
+}
 
 final class AvatarPickerErrorViewController: UIViewController {
+    private let contentHorizontalPadding: CGFloat = 24
+    private let errorHorizontalPadding: CGFloat = 51.5
+    private let contentHeight: CGFloat = 50
+    
     private let containerView: UIView = {
         var backgroundView = UIView()
-        backgroundView.backgroundColor = AppColors.containerBack
+        backgroundView.backgroundColor = AppColor.containerBack
         backgroundView.setCornerRadius(28)
         backgroundView.setShadow(
             radius: 20,
             color:  UIColor(red: 0, green: 0, blue: 0, alpha: 0.2),
-            opacity: 1)
-       
+            opacity: 1
+        )
+    
         return backgroundView
     }()
     
     private let imageView: UIImageView = {
         let image = UIImageView()
-        image.image = UIImage(named: "LoadErrorImage")
-        
+        image.image = UIImage(named: ImageName.loadErrorImage)
         return image
     }()
     
@@ -25,15 +34,15 @@ final class AvatarPickerErrorViewController: UIViewController {
         let label = UILabel()
         label.textColor = .white
         label.textAlignment = .center
-        label.font = UIFont(name: "e-Ukraine-Medium", size: 22)
+        label.font = UIFont(name: FontName.medium, size: 22)
         
         return label
     }()
     
     private let errorDescriptionLabel: UILabel = {
         let label = UILabel()
-        label.textColor = AppColors.buttonText
-        label.font = UIFont(name: "e-Ukraine-Light", size: 16)
+        label.textColor = AppColor.buttonText
+        label.font = UIFont(name: FontName.light, size: 16)
         label.numberOfLines = 0
         label.lineBreakMode = .byWordWrapping
         label.textAlignment = .center
@@ -43,7 +52,7 @@ final class AvatarPickerErrorViewController: UIViewController {
     
     private let addButtonView: RoundedButtonView = {
         let button = RoundedButtonView(.system)
-        button.backgroundColor = AppColors.button
+        button.backgroundColor = AppColor.button
         
         return button
     }()
@@ -51,7 +60,7 @@ final class AvatarPickerErrorViewController: UIViewController {
     private let generateCatButtonView: RoundedButtonView = {
         let button = RoundedButtonView(.system)
         button.backgroundColor = .clear
-        button.setupBorder(width: 2, color: AppColors.buttonBorder)
+        button.setupBorder(width: 2, color: AppColor.buttonBorder)
         
         return button
     }()
@@ -87,29 +96,29 @@ private extension AvatarPickerErrorViewController {
     
     func setupConstraints() {
         NSLayoutConstraint.activate([
-            imageView.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 0),
+            imageView.topAnchor.constraint(equalTo: containerView.topAnchor),
             imageView.centerXAnchor.constraint(equalTo: containerView.centerXAnchor),
             imageView.heightAnchor.constraint(equalToConstant: 280),
             
             errorTextLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 18),
-            errorTextLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 24),
-            errorTextLabel.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -24),
+            errorTextLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: contentHorizontalPadding),
+            errorTextLabel.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -contentHorizontalPadding),
             errorTextLabel.heightAnchor.constraint(equalToConstant: 29),
             
             errorDescriptionLabel.topAnchor.constraint(equalTo: errorTextLabel.bottomAnchor, constant: 12),
-            errorDescriptionLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 51.5),
-            errorDescriptionLabel.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -51.5),
-            errorDescriptionLabel.heightAnchor.constraint(equalToConstant: 50),
+            errorDescriptionLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: errorHorizontalPadding),
+            errorDescriptionLabel.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -errorHorizontalPadding),
+            errorDescriptionLabel.heightAnchor.constraint(equalToConstant: contentHeight),
             
             addButtonView.topAnchor.constraint(equalTo: errorDescriptionLabel.bottomAnchor, constant: 20),
-            addButtonView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 24),
-            addButtonView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -24),
-            addButtonView.heightAnchor.constraint(equalToConstant: 50),
+            addButtonView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: contentHorizontalPadding),
+            addButtonView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -contentHorizontalPadding),
+            addButtonView.heightAnchor.constraint(equalToConstant: contentHeight),
             
             generateCatButtonView.topAnchor.constraint(equalTo: addButtonView.bottomAnchor, constant: 12),
-            generateCatButtonView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 24),
-            generateCatButtonView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -24),
-            generateCatButtonView.heightAnchor.constraint(equalToConstant: 50),
+            generateCatButtonView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: contentHorizontalPadding),
+            generateCatButtonView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -contentHorizontalPadding),
+            generateCatButtonView.heightAnchor.constraint(equalToConstant: contentHeight),
             generateCatButtonView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -28),
             
             containerView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
@@ -120,19 +129,19 @@ private extension AvatarPickerErrorViewController {
     }
     
     func setupViewTexts() {
-        errorTextLabel.font = UIFont(name: "e-Ukraine-Medium", size: 22)
-        errorDescriptionLabel.text = "Додайте файл розміром до 30 мб"
+        errorTextLabel.font = UIFont(name: FontName.medium, size: 22)
+        errorDescriptionLabel.text = Localized.errorDescription.localizedString
     }
     
     func setupAddButtonAction() {
-        addButtonView.setTitle("Додати інше фото")
+        addButtonView.setTitle(Localized.addOther.localizedString)
         mapButton(addButtonView) {
             self.onClickAddButton()
         }
     }
     
     func setupGenerateButtonAction() {
-        generateCatButtonView.setTitle("Згенерувати котика", textColor: AppColors.buttonText)
+        generateCatButtonView.setTitle(Localized.generateRandomImageButton.localizedString, textColor: AppColor.buttonText)
         mapButton(generateCatButtonView) {
             self.onClickGenerateButton()
         }

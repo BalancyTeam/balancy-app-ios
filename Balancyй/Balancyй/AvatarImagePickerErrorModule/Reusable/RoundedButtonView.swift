@@ -1,4 +1,15 @@
 import UIKit
+import SwiftUI
+
+#Preview {
+    let button = RoundedButtonView(text: Localized.addOther.localizedString)
+    button.backgroundColor = AppColor.button
+    button.setupBorder(width: 2, color: .white)
+    
+    return button.preview
+        .padding(.horizontal, 24)
+        .frame(height: 50)
+}
 
 final class RoundedButtonView: UIButton {
     override init(frame: CGRect) {
