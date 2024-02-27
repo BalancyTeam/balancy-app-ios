@@ -7,26 +7,38 @@
 
 import UIKit
 
-final class CustomButton: UIButton {
-    
-//    let buttonText: String
-    private let button: UIButton = {
-        let button = UIButton()
-        button.setTitle("Увійти", for: .normal)
-        button.backgroundColor = .systemBlue
-        button.titleLabel?.font = .systemFont(ofSize: 20, weight: .bold)
-        button.layer.cornerRadius = 10
-        //    button.setImage(UIImage(systemName: "plus"), for: .normal)?.withTintColor(.white, renderingMode: .alwaysOriginal), for: .normal)
-        return button
-    }()
+/// Describe a custom button type
+class CustomButton: UIButton {
 
+    enum FontSize {
+        case medium
+        case big
+    }
     
-//    init(button text: String) {
-//        self.layer.cornerRadius = 20
-//    }
-    
+    // MARK: - Init
+
+    init(title: String, hasBackground: Bool = false, fontSize: FontSize) {
+        super.init(frame: .zero)
+        self.setTitle(title, for: .normal)
+        self.layer.cornerRadius = 20
+        self.layer.masksToBounds = true
+        
+        self.backgroundColor = hasBackground ? #colorLiteral(red: 0.8471, green: 0.1961, blue: 0.3255, alpha: 1) : .clear
+        
+        let titleColor: UIColor = .white
+        self.setTitleColor(titleColor, for: .normal)
+        
+        switch fontSize {
+        case .big:
+            self.titleLabel?.font = .systemFont(ofSize: 16, weight: .bold)
+        
+        case .medium:
+            self.titleLabel?.font = .systemFont(ofSize: 12, weight: .semibold)
+            
+        }
+    }
+        
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
 }

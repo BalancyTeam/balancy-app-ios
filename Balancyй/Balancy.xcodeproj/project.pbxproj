@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		042E0D422B8D84CE0092585A /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042E0D412B8D84CE0092585A /* CustomButton.swift */; };
+		042E0D442B8D85110092585A /* CustomTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042E0D432B8D85110092585A /* CustomTextView.swift */; };
 		0466E4BE2B44F7030061D176 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0466E4BD2B44F7030061D176 /* Extensions.swift */; };
 		0466E4C42B44FBF70061D176 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0466E4C32B44FBF70061D176 /* Assets.xcassets */; };
 		049B99382ABE8DCF008A07D7 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049B99372ABE8DCF008A07D7 /* ForgotPasswordViewController.swift */; };
@@ -26,6 +28,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		042E0D412B8D84CE0092585A /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		042E0D432B8D85110092585A /* CustomTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextView.swift; sourceTree = "<group>"; };
 		0466E4BD2B44F7030061D176 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		0466E4C32B44FBF70061D176 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		049B99372ABE8DCF008A07D7 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
@@ -66,13 +70,6 @@
 			path = TabBar;
 			sourceTree = "<group>";
 		};
-		049B99352ABD2F4D008A07D7 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModels;
-			sourceTree = "<group>";
-		};
 		049B99362ABD2F83008A07D7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +83,8 @@
 			children = (
 				049D7EF12ADE070700A13B1B /* AuthHeaderView.swift */,
 				04E79D362AF4A8D90059C88A /* CustomTextField.swift */,
+				042E0D412B8D84CE0092585A /* CustomButton.swift */,
+				042E0D432B8D85110092585A /* CustomTextView.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -93,7 +92,6 @@
 		04E2DA5C2A9EAC0700EF9C24 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				04E9AE812AC7C7B000D1DF82 /* Auth */,
 				377474A62A804BCB00E3FB7C /* AppDelegate.swift */,
 				377474A82A804BCB00E3FB7C /* SceneDelegate.swift */,
 				377474AC2A804BCB00E3FB7C /* Main.storyboard */,
@@ -111,20 +109,6 @@
 				377474BA2A804BF100E3FB7C /* Auth */,
 			);
 			path = Controllers;
-			sourceTree = "<group>";
-		};
-		04E9AE812AC7C7B000D1DF82 /* Auth */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Auth;
-			sourceTree = "<group>";
-		};
-		375ADDD62A80A686008198AE /* Main */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Main;
 			sourceTree = "<group>";
 		};
 		3774749A2A804BCB00E3FB7C = {
@@ -148,10 +132,8 @@
 			children = (
 				04E2DA5C2A9EAC0700EF9C24 /* Resources */,
 				049B99362ABD2F83008A07D7 /* Views */,
-				049B99352ABD2F4D008A07D7 /* ViewModels */,
 				04E2DA5D2A9EAC5600EF9C24 /* Controllers */,
 				37EF1CD32A8F66C9008997C6 /* Models */,
-				375ADDD62A80A686008198AE /* Main */,
 				377474B42A804BCD00E3FB7C /* Info.plist */,
 			);
 			path = "Balancyй";
@@ -257,10 +239,12 @@
 				049D8EE12B47941D00FA0A5F /* SignUpOrLogInViewController.swift in Sources */,
 				377474A72A804BCB00E3FB7C /* AppDelegate.swift in Sources */,
 				0466E4BE2B44F7030061D176 /* Extensions.swift in Sources */,
+				042E0D442B8D85110092585A /* CustomTextView.swift in Sources */,
 				377474A92A804BCB00E3FB7C /* SceneDelegate.swift in Sources */,
 				37EF1CD52A8F66EE008997C6 /* Constants.swift in Sources */,
 				049D7EF22ADE070800A13B1B /* AuthHeaderView.swift in Sources */,
 				049D7EEF2ADE003E00A13B1B /* HomeViewController.swift in Sources */,
+				042E0D422B8D84CE0092585A /* CustomButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
