@@ -3,6 +3,7 @@ import UIKit
 struct Const {
     static let tabBarTitles = ["","",""]
     static let tabBarImages = ["tasksTabBarIcon","nill","profileTabBarIcon"]
+    static let avatarMaxSize: Double = 30.0
 }
 
 enum FontName {

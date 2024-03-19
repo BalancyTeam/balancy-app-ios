@@ -1,4 +1,5 @@
 import Foundation
+import PhotosUI
 import UIKit
 import SwiftUI
 
@@ -6,7 +7,7 @@ import SwiftUI
     AvatarPickerErrorViewController.preview
 }
 
-final class AvatarPickerErrorViewController: UIViewController {
+final class AvatarPickerErrorViewController: BaseImageSelectionViewController {
     private let contentHorizontalPadding: CGFloat = 24
     private let errorHorizontalPadding: CGFloat = 51.5
     private let contentHeight: CGFloat = 50
@@ -20,7 +21,7 @@ final class AvatarPickerErrorViewController: UIViewController {
             color:  UIColor(red: 0, green: 0, blue: 0, alpha: 0.2),
             opacity: 1
         )
-    
+        
         return backgroundView
     }()
     
@@ -65,11 +66,8 @@ final class AvatarPickerErrorViewController: UIViewController {
         return button
     }()
     
-    private let imageLoader: LoaderService
-    
-    init() {
-        self.imageLoader = ImageLoaderService()
-        super.init(nibName: nil, bundle: nil)
+    override init(verificationService: ProfileVerificationService = .init(), imageLoader: LoaderService = ImageLoaderService())  {
+        super.init(verificationService: verificationService)
     }
     
     required init?(coder: NSCoder) {
@@ -78,7 +76,19 @@ final class AvatarPickerErrorViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.isOpaque = false
+        view.backgroundColor = .clear
         setupUI()
+    }
+    
+    override func handleVerifiedImage() {
+        super.handleVerifiedImage()
+        dismiss(animated: true)
+    }
+    
+    override func generateAvatar() {
+        super.generateAvatar()
+        dismissPopup()
     }
 }
 
@@ -143,7 +153,7 @@ private extension AvatarPickerErrorViewController {
     func setupGenerateButtonAction() {
         generateCatButtonView.setTitle(Localized.generateRandomImageButton.localizedString, textColor: AppColor.buttonText)
         mapButton(generateCatButtonView) {
-            self.onClickGenerateButton()
+            self.generateAvatar()
         }
     }
 }
@@ -151,10 +161,6 @@ private extension AvatarPickerErrorViewController {
 //MARK: - Button actions
 private extension AvatarPickerErrorViewController {
     func onClickAddButton() {
-        //TODO: add image picker Logic after merge
-    }
-    
-    func onClickGenerateButton() {
-        dismissPopup()
+        openPhotoPicker()
     }
 }

@@ -1,4 +1,5 @@
 import UIKit
+import PhotosUI
 
 extension UIViewController {
     func dismissPopup(completion: (() -> Void)? = nil) {
