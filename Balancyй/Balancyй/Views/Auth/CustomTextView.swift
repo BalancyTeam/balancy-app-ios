@@ -8,7 +8,7 @@
 import UIKit
 
 /// Describe a custom and reusable text view type for combining two UI elements (String, String) where the second element has an attribute tappableText
-class CustomTextView: UITextView, UITextViewDelegate {
+final class CustomTextView: UITextView, UITextViewDelegate {
     
 //    Text font enum
 //    enum FontSize {
@@ -43,10 +43,7 @@ class CustomTextView: UITextView, UITextViewDelegate {
         fullAttributedString.append(normalTextString)
         fullAttributedString.append(tappableTextString)
         
-//        Debug
-        print("Full string before setting text view:", fullAttributedString)
-
-
+        self.tintColor = .white
         self.backgroundColor = .clear
         self.attributedText = fullAttributedString
         delegate = self
