@@ -12,3 +12,8 @@
 "addPhoto" = "Додати фото до Вашого профілю";
 "generateCat" = "Згенерувати котика";
 "next" = "Далі";
+
+//AvatarImageError
+
+"errorDescription" = "Додайте файл розміром до 30 мб";
+"addOther" = "Додати інше фото";
