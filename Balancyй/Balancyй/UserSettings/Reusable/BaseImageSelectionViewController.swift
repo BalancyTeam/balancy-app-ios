@@ -24,12 +24,10 @@ class BaseImageSelectionViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func handleUnverifiedImage() {
-        
-    }
-    
-    func handleVerifiedImage() {
-        
+    func verifyImage(_ image: PHPickerResult) {
+        if verificationService.isValidImage(image) {
+            verificationService.setSelectedImage(image)
+        }
     }
     
     func generateAvatar() {
@@ -59,10 +57,6 @@ extension BaseImageSelectionViewController: PHPickerViewControllerDelegate {
         
         guard let selectedImage = results.first, let _ = selectedImage.itemProvider.suggestedName else { return }
         
-        if verificationService.verifyImage(selectedImage) {
-            handleVerifiedImage()
-        } else {
-            handleUnverifiedImage()
-        }
+        verifyImage(selectedImage)
     }
 }

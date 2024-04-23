@@ -124,7 +124,7 @@ final class AddPhotoViewController: BaseImageSelectionViewController {
     }
     
     private func nextButtonTapped() {
-        guard let selectedImageName = verificationService.getImageName(), let selectedImage = addPhotoButton.currentImage else { return }
+        guard let selectedImageName = verificationService.imageName, let selectedImage = addPhotoButton.currentImage else { return }
         
         profilePhotoManager.save(selectedImageName, selectedImage)
         
@@ -159,8 +159,15 @@ final class AddPhotoViewController: BaseImageSelectionViewController {
         }
     }
     
-    override func handleUnverifiedImage() {
-        super.handleUnverifiedImage()
+    override func verifyImage(_ image: PHPickerResult) {
+        if verificationService.isValidImage(image) {
+            verificationService.setSelectedImage(image)
+        } else {
+            handleUnverifiedImage()
+        }
+    }
+    
+    private func handleUnverifiedImage() {
         let pickerErrorViewController = AvatarPickerErrorViewController(verificationService: verificationService)
         pickerErrorViewController.modalPresentationStyle = .overCurrentContext
         present(pickerErrorViewController, animated: true)

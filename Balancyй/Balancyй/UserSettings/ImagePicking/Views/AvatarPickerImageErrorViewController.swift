@@ -3,10 +3,6 @@ import PhotosUI
 import UIKit
 import SwiftUI
 
-#Preview {
-    AvatarPickerErrorViewController.preview
-}
-
 final class AvatarPickerErrorViewController: BaseImageSelectionViewController {
     private let contentHorizontalPadding: CGFloat = 24
     private let errorHorizontalPadding: CGFloat = 51.5
@@ -67,7 +63,7 @@ final class AvatarPickerErrorViewController: BaseImageSelectionViewController {
     }()
     
     override init(verificationService: ProfileVerificationService = .init(), imageLoader: LoaderService = ImageLoaderService())  {
-        super.init(verificationService: verificationService)
+        super.init(verificationService: verificationService, imageLoader: imageLoader)
     }
     
     required init?(coder: NSCoder) {
@@ -81,9 +77,11 @@ final class AvatarPickerErrorViewController: BaseImageSelectionViewController {
         setupUI()
     }
     
-    override func handleVerifiedImage() {
-        super.handleVerifiedImage()
-        dismiss(animated: true)
+    override func verifyImage(_ image: PHPickerResult) {
+        if verificationService.isValidImage(image) {
+            verificationService.setSelectedImage(image)
+            dismissPopup()
+        }
     }
     
     override func generateAvatar() {
@@ -163,4 +161,9 @@ private extension AvatarPickerErrorViewController {
     func onClickAddButton() {
         openPhotoPicker()
     }
+}
+
+//MARK: - Preview
+#Preview {
+    AvatarPickerErrorViewController.preview
 }

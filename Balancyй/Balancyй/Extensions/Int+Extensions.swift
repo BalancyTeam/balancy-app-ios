@@ -8,7 +8,7 @@
 import Foundation
 
 extension Int {
-    func convertToSize() -> Double {
+    var fileSizeInMegabytes: Double {
         let totalSizeInMB = Double(self) / (1024 * 1024)
         return totalSizeInMB
     }

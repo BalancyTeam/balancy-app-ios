@@ -12,15 +12,12 @@ import Combine
 final class ProfileVerificationService {
     @Published private(set) var selectedImage: PHPickerResult?
     
-    func getImageName() -> String? {
-        if let name = selectedImage?.itemProvider.suggestedName {
-            return URL(fileURLWithPath: name).lastPathComponent
-        } else {
-            return nil
-        }
+    var imageName: String? {
+        guard let name = selectedImage?.itemProvider.suggestedName else { return nil }
+        return URL(fileURLWithPath: name).lastPathComponent
     }
     
-    func verifyImage(_ image: PHPickerResult) -> Bool {
+    func isValidImage(_ image: PHPickerResult) -> Bool {
         guard let assetIdentifier = image.assetIdentifier else {
             print("Picked item without identifier")
             return false
@@ -34,12 +31,10 @@ final class ProfileVerificationService {
         
         let fileSizeInBytes = data.value(forKey: "fileSize") as? Int ?? 0
         
-        if fileSizeInBytes.convertToSize() < Const.avatarMaxSize {
-            selectedImage = image
-            return true
-        } else {
-            return false
-        }
+        return fileSizeInBytes.fileSizeInMegabytes < Const.avatarMaxSize
     }
     
+    func setSelectedImage(_ image: PHPickerResult) {
+        selectedImage = image
+    }
 }
