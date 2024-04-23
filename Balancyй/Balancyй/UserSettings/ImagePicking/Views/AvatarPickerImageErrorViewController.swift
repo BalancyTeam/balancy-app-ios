@@ -5,7 +5,7 @@ import SwiftUI
 
 final class AvatarPickerErrorViewController: BaseImageSelectionViewController {
     private let contentHorizontalPadding: CGFloat = 24
-    private let errorHorizontalPadding: CGFloat = 51.5
+    private let errorHorizontalPadding: CGFloat = 52
     private let contentHeight: CGFloat = 50
     
     private let containerView: UIView = {
