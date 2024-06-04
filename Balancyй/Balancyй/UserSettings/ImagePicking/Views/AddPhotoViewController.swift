@@ -5,20 +5,20 @@
 //  Created by  Toropov Oleksandr on 07.12.2023.
 //
 
-// TODO: Implement randomImageButtonTapped method
 // TODO: Implement custom view for picking image
 // TODO: Change nextButton color depending on users' choice
 
 import UIKit
 import SwiftUI
+import PhotosUI
+import Combine
 
-final class AddPhotoViewController: UIViewController {
+final class AddPhotoViewController: BaseImageSelectionViewController {
     
     // Properties
     
     private let profilePhotoManager = ProfilePhotoManager()
-    
-    private var selectedImageName: String?
+    private var cancellables: Set<AnyCancellable> = []
     
     // UI
     
@@ -76,6 +76,14 @@ final class AddPhotoViewController: UIViewController {
     }()
     
     // Lifecycle
+    override init(verificationService: ProfileVerificationService = .init(), imageLoader: LoaderService = ImageLoaderService())  {
+        super.init(verificationService: verificationService, imageLoader: imageLoader)
+        subscribeOnSelectionImage()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -87,17 +95,12 @@ final class AddPhotoViewController: UIViewController {
     
     private func configureUI() {
         view.backgroundColor = AppColor.background
-        view.addSubview(skipButton)
-        view.addSubview(logoImageView)
-        view.addSubview(addPhotoLabel)
-        view.addSubview(pageControl)
-        view.addSubview(nextButton)
-        view.addSubview(addPhotoButton)
-        view.addSubview(generateRandomImageButton)
+        view.addSubviews(skipButton, logoImageView, addPhotoLabel, pageControl, nextButton, addPhotoButton, generateRandomImageButton)
         setConstraints()
         setupAddPhotoButton()
         setupNextButton()
         setupSkipButton()
+        setupGenerateButton()
     }
     
     private func populateWithData() {
@@ -113,10 +116,7 @@ final class AddPhotoViewController: UIViewController {
         
         nextButton.setTitle(Localized.nextButton.localizedString, for: .normal)
     }
-    
-    private func randomImageButtonTapped() {
-    }
-    
+
     private func presentCategoryBalanceViewController() {
         let categoryBalanceViewController = CategoryBalanceViewController()
         categoryBalanceViewController.modalPresentationStyle = .fullScreen
@@ -124,7 +124,7 @@ final class AddPhotoViewController: UIViewController {
     }
     
     private func nextButtonTapped() {
-        guard let selectedImageName = selectedImageName, let selectedImage = addPhotoButton.currentImage else { return }
+        guard let selectedImageName = verificationService.imageName, let selectedImage = addPhotoButton.currentImage else { return }
         
         profilePhotoManager.save(selectedImageName, selectedImage)
         
@@ -132,11 +132,21 @@ final class AddPhotoViewController: UIViewController {
     }
     
     private func setupNextButton() {
-        let action = UIAction { [weak self] _ in
+        mapButton(nextButton) { [weak self]  in
             self?.nextButtonTapped()
         }
-        
-        nextButton.addAction(action, for: .touchUpInside)
+    }
+    
+    private func setupAddPhotoButton() {
+        mapButton(addPhotoButton) { [weak self] in
+            self?.openPhotoPicker()
+        }
+    }
+    
+    private func setupGenerateButton() {
+        mapButton(generateRandomImageButton) { [weak self] in
+            self?.generateAvatar()
+        }
     }
     
     private func skipButtonTapped() {
@@ -144,14 +154,44 @@ final class AddPhotoViewController: UIViewController {
     }
     
     private func setupSkipButton() {
-        let action = UIAction { [weak self] _ in
+        mapButton(skipButton) { [weak self] in
             self?.skipButtonTapped()
         }
-        skipButton.addAction(action, for: .touchUpInside)
     }
     
-    func setSelectedImageName(_ imageName: String) {
-        selectedImageName = imageName
+    override func verifyImage(_ image: PHPickerResult) {
+        if verificationService.isValidImage(image) {
+            verificationService.setSelectedImage(image)
+        } else {
+            handleUnverifiedImage()
+        }
+    }
+    
+    private func handleUnverifiedImage() {
+        let pickerErrorViewController = AvatarPickerErrorViewController(verificationService: verificationService)
+        pickerErrorViewController.modalPresentationStyle = .overCurrentContext
+        present(pickerErrorViewController, animated: true)
+    }
+}
+
+private extension AddPhotoViewController {
+    func subscribeOnSelectionImage() {
+        verificationService.$selectedImage
+            .compactMap { $0 }
+            .sink { [weak self] result in
+                self?.setImage(result)
+            }
+            .store(in: &cancellables)
+    }
+    
+    func setImage(_ selectedImage: PHPickerResult) {
+        selectedImage.itemProvider.loadObject(ofClass: UIImage.self) { [weak self] (image, _) in
+            guard let image = image as? UIImage else { return }
+            DispatchQueue.main.async {
+                self?.addPhotoButton.setImage(image, for: .normal)
+                self?.nextButton.setEnabled()
+            }
+        }
     }
 }
 
@@ -160,10 +200,6 @@ final class AddPhotoViewController: UIViewController {
 private extension AddPhotoViewController {
     
     private func setConstraints() {
-        [skipButton, logoImageView, addPhotoLabel, pageControl, nextButton, addPhotoButton, generateRandomImageButton].forEach {
-            $0.translatesAutoresizingMaskIntoConstraints = false
-        }
-        
         NSLayoutConstraint.activate([
             skipButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 16),
             skipButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -16),
