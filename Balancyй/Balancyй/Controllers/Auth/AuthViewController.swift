@@ -1,6 +1,6 @@
 import UIKit
 
-final class AuthViewController: UIViewController {
+final class AuthViewController: UIViewController, UITextFieldDelegate {
      
      // MARK: - UI Components 
     private let headerView = AuthHeaderView(title: "З поверненням!", subTitle: "Раді знову тебе бачити")
@@ -17,8 +17,30 @@ final class AuthViewController: UIViewController {
          super.viewDidLoad()
          self.setupUI()
          passwordField.enablePasswordToggle()
+         
+//         Set delegates for text fields
+         emailField.delegate = self
+         passwordField.delegate = self
      }
    
+    // MARK: - UITextFieldDelegate
+    // MARK: - STOPPED HERE
+
+    
+//    func textFieldDidBeginEditing(_ textField: UITextField) {
+//            if let customTextField = textField as? CustomTextField {
+//                customTextField.setBorderColor(.blue) // Change to desired color when editing begins
+//            }
+//        }
+//        
+//        func textFieldDidEndEditing(_ textField: UITextField) {
+//            if let customTextField = textField as? CustomTextField {
+//                customTextField.setBorderColor(.gray) // Change to desired color when editing ends
+//            }
+//        }
+        
+
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.isHidden = true
