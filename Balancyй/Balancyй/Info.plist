@@ -4,6 +4,15 @@
 <dict>
 	<key>AppSupports</key>
 	<false/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>e-Ukraine-Bold.otf</string>
+		<string>e-Ukraine-Light.otf</string>
+		<string>e-Ukraine-Medium.otf</string>
+		<string>e-Ukraine-Regular.otf</string>
+		<string>e-Ukraine-Thin.otf</string>
+		<string>e-Ukraine-UltraLight.otf</string>
+	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
