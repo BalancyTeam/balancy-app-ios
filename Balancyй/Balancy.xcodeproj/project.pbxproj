@@ -39,6 +39,7 @@
 		D2CEEBDF2B5D693300C1BCCB /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CEEBDE2B5D693300C1BCCB /* UIView+Extensions.swift */; };
 		D2CEEBE12B5D695000C1BCCB /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CEEBE02B5D695000C1BCCB /* UIViewController+Extensions.swift */; };
 		D2CEEBE52B5D69ED00C1BCCB /* ImageLoaderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CEEBE42B5D69ED00C1BCCB /* ImageLoaderService.swift */; };
+		D2CFF6092C39656D0006CF8B /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CFF6082C39656D0006CF8B /* MainScreenViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +77,7 @@
 		D2CEEBDE2B5D693300C1BCCB /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		D2CEEBE02B5D695000C1BCCB /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		D2CEEBE42B5D69ED00C1BCCB /* ImageLoaderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoaderService.swift; sourceTree = "<group>"; };
+		D2CFF6082C39656D0006CF8B /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 		377474A52A804BCB00E3FB7C /* Balancyй */ = {
 			isa = PBXGroup;
 			children = (
+				D2CFF6072C39655E0006CF8B /* MainScreen */,
 				770F746A2B2255F0005D2585 /* UserSettings */,
 				049B99352ABD2F4D008A07D7 /* ViewModels */,
 				04E2DA5D2A9EAC5600EF9C24 /* Controllers */,
@@ -257,6 +260,14 @@
 			path = Reusable;
 			sourceTree = "<group>";
 		};
+		D2CFF6072C39655E0006CF8B /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				D2CFF6082C39656D0006CF8B /* MainScreenViewController.swift */,
+			);
+			path = MainScreen;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -348,6 +359,7 @@
 				774C2E6C2B5AD01A00FF3733 /* Localized.swift in Sources */,
 				377474A92A804BCB00E3FB7C /* SceneDelegate.swift in Sources */,
 				D2CEEBDD2B5D690900C1BCCB /* RoundedButtonView.swift in Sources */,
+				D2CFF6092C39656D0006CF8B /* MainScreenViewController.swift in Sources */,
 				77A524BB2B2E434C00DB3ECD /* UIViewController+Preview.swift in Sources */,
 				D2B98A6D2B977F21007DBD05 /* Int+Extensions.swift in Sources */,
 				D2B98A6B2B977A4A007DBD05 /* ProfileVerificationService.swift in Sources */,
