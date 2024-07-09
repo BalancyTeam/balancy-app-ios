@@ -13,6 +13,8 @@ enum Localized: String {
     case addPhotoLabel = "addPhoto"
     case generateRandomImageButton = "generateCat"
     case nextButton = "next"
+    case chooseBalanceLabel = "chooseBalance"
+    case runButton = "run"
     
     var localizedString: String {
         switch self {
@@ -24,6 +26,10 @@ enum Localized: String {
             return NSLocalizedString(Localized.generateRandomImageButton.rawValue, comment: "ImagePicking")
         case .nextButton:
             return NSLocalizedString(Localized.nextButton.rawValue, comment: "ImagePicking")
+        case.chooseBalanceLabel:
+            return NSLocalizedString(Localized.chooseBalanceLabel.rawValue, comment: "CategoryBalance")
+        case .runButton:
+            return NSLocalizedString(Localized.runButton.rawValue, comment: "CategoryBalance")
         }
     }
 }

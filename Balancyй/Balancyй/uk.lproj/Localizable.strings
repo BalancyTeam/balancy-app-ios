@@ -12,3 +12,8 @@
 "addPhoto" = "Додати фото до Вашого профілю";
 "generateCat" = "Згенерувати котика";
 "next" = "Далі";
+
+//CategoryBalance
+
+"chooseBalance" = "Оберіть баланс категорій";
+"run" = "Запустити Balancyй";

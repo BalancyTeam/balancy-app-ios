@@ -119,7 +119,8 @@ final class AddPhotoViewController: UIViewController {
     
     private func presentCategoryBalanceViewController() {
         let categoryBalanceViewController = CategoryBalanceViewController()
-        categoryBalanceViewController.modalPresentationStyle = .fullScreen
+        categoryBalanceViewController.modalTransitionStyle = .crossDissolve
+        categoryBalanceViewController.modalPresentationStyle = .overFullScreen
         present(categoryBalanceViewController, animated: true)
     }
     

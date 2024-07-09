@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		16203DBF2C18A5EC0086BF6D /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16203DBE2C18A5EC0086BF6D /* UIView+Extensions.swift */; };
+		16A79A542C3D979100A1DC38 /* UISlider+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A79A532C3D979100A1DC38 /* UISlider+Extensions.swift */; };
 		375ADDDA2A82ABA2008198AE /* CustomTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375ADDD92A82ABA2008198AE /* CustomTabBarViewController.swift */; };
 		375ADDDC2A838479008198AE /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375ADDDB2A838479008198AE /* TabBarViewController.swift */; };
 		377474A72A804BCB00E3FB7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377474A62A804BCB00E3FB7C /* AppDelegate.swift */; };
@@ -35,6 +37,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		16203DBE2C18A5EC0086BF6D /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		16A79A532C3D979100A1DC38 /* UISlider+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISlider+Extensions.swift"; sourceTree = "<group>"; };
 		375ADDD92A82ABA2008198AE /* CustomTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarViewController.swift; sourceTree = "<group>"; };
 		375ADDDB2A838479008198AE /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		377474A32A804BCB00E3FB7C /* Balancy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Balancy.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -224,6 +228,8 @@
 			children = (
 				77A524BA2B2E434C00DB3ECD /* UIViewController+Preview.swift */,
 				774C2E712B60468100FF3733 /* UIButton+Extensions.swift */,
+				16203DBE2C18A5EC0086BF6D /* UIView+Extensions.swift */,
+				16A79A532C3D979100A1DC38 /* UISlider+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -306,11 +312,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				377474BC2A804C2600E3FB7C /* AuthViewController.swift in Sources */,
+				16A79A542C3D979100A1DC38 /* UISlider+Extensions.swift in Sources */,
 				777074BC2B48B839003AE060 /* ProfilePhotoManager.swift in Sources */,
 				377474AB2A804BCB00E3FB7C /* ViewController.swift in Sources */,
 				375ADDDA2A82ABA2008198AE /* CustomTabBarViewController.swift in Sources */,
 				377474C02A804C6900E3FB7C /* AuthViewControllerViewModel.swift in Sources */,
 				375ADDDC2A838479008198AE /* TabBarViewController.swift in Sources */,
+				16203DBF2C18A5EC0086BF6D /* UIView+Extensions.swift in Sources */,
 				377474A72A804BCB00E3FB7C /* AppDelegate.swift in Sources */,
 				774C2E6C2B5AD01A00FF3733 /* Localized.swift in Sources */,
 				377474A92A804BCB00E3FB7C /* SceneDelegate.swift in Sources */,
