@@ -6,18 +6,13 @@
 //
 
 import UIKit
-import SwiftUI
 
 final class MainScreenTabBarView: UIView {
-    private let secondaryButtonSize: CGFloat = 48.0
-    private let secondaryImageSize: CGFloat = 24.0
-    
     private let barStack: UIStackView = {
         let stack = UIStackView()
         stack.axis = .horizontal
         stack.alignment = .bottom
         stack.distribution = .equalCentering
-        
         return stack
     }()
     
@@ -27,35 +22,25 @@ final class MainScreenTabBarView: UIView {
     private let addButton: RoundedButtonView = {
         let button = RoundedButtonView(.system)
         button.backgroundColor = AppColor.button
-        
         return button
     }()
     
     private let profileButtonImage: UIImageView = {
         let imageView = UIImageView()
-        let image = UIImage(named: ImageName.profile)
-        imageView.image = image?.withRenderingMode(.alwaysTemplate)
         imageView.contentMode = .scaleAspectFit
-        
         return imageView
     }()
     
     private let addButtonImage: UIImageView = {
         let imageView = UIImageView()
-        let image = UIImage(named: ImageName.addButton)
-        imageView.image = image?.withRenderingMode(.alwaysTemplate)
         imageView.tintColor = .white
         imageView.contentMode = .scaleAspectFit
-        
         return imageView
     }()
     
     private let tasksButtonImage: UIImageView = {
         let imageView = UIImageView()
-        let image = UIImage(named: ImageName.tasks)
-        imageView.image = image?.withRenderingMode(.alwaysTemplate)
         imageView.contentMode = .scaleAspectFit
-        
         return imageView
     }()
     
@@ -79,7 +64,7 @@ final class MainScreenTabBarView: UIView {
         self.onOpenProfile = openProfileAction
     }
     
-    func updateTabBarButtons(with state: MainTabType) {
+    func updateStyle(forState state: TabBarItem) {
         tasksButtonImage.tintColor = state == .tasks ? AppColor.tabBarSelected : AppColor.tabBarDeselected
         profileButtonImage.tintColor = state == .profile ? AppColor.tabBarSelected : AppColor.tabBarDeselected
     }
@@ -87,6 +72,14 @@ final class MainScreenTabBarView: UIView {
 
 //MARK: - Setup UI
 private extension MainScreenTabBarView {
+    private enum Size {
+        static let bar: CGFloat = 254
+        static let addButton: CGFloat = 66
+        static let addButtonImage: CGFloat = 36
+        static let secondaryButtonSize: CGFloat = 48.0
+        static let secondaryImageSize: CGFloat = 24.0
+    }
+    
     func setupUI() {
         backgroundColor = .clear
         addSubviews(barStack)
@@ -95,6 +88,7 @@ private extension MainScreenTabBarView {
         setupConstraints()
         
         setupButtonActions()
+        setupButtonsImages()
     }
     
     func setupBarStack() {
@@ -114,30 +108,29 @@ private extension MainScreenTabBarView {
     func setupConstraints() {
         NSLayoutConstraint.activate([
             barStack.centerXAnchor.constraint(equalTo: centerXAnchor),
-            barStack.widthAnchor.constraint(equalToConstant: 254),
+            barStack.widthAnchor.constraint(equalToConstant: Size.bar),
             barStack.bottomAnchor.constraint(equalTo: bottomAnchor),
             
-            addButton.widthAnchor.constraint(equalToConstant: 66),
-            addButton.heightAnchor.constraint(equalToConstant: 66),
+            addButton.widthAnchor.constraint(equalToConstant: Size.addButton),
+            addButton.heightAnchor.constraint(equalToConstant: Size.addButton),
             addButtonImage.centerXAnchor.constraint(equalTo: addButton.centerXAnchor),
             addButtonImage.centerYAnchor.constraint(equalTo: addButton.centerYAnchor),
-            addButtonImage.heightAnchor.constraint(equalToConstant: 36),
-            addButtonImage.widthAnchor.constraint(equalToConstant: 36),
+            addButtonImage.heightAnchor.constraint(equalToConstant: Size.addButtonImage),
+            addButtonImage.widthAnchor.constraint(equalToConstant: Size.addButtonImage),
             
-            tasksButton.widthAnchor.constraint(equalToConstant: secondaryButtonSize),
-            tasksButton.heightAnchor.constraint(equalToConstant: secondaryButtonSize),
+            tasksButton.widthAnchor.constraint(equalToConstant: Size.secondaryButtonSize),
+            tasksButton.heightAnchor.constraint(equalToConstant: Size.secondaryButtonSize),
             tasksButtonImage.centerXAnchor.constraint(equalTo: tasksButton.centerXAnchor),
             tasksButtonImage.centerYAnchor.constraint(equalTo: tasksButton.centerYAnchor),
-            tasksButtonImage.heightAnchor.constraint(equalToConstant: secondaryImageSize),
-            tasksButtonImage.widthAnchor.constraint(equalToConstant: secondaryImageSize),
+            tasksButtonImage.heightAnchor.constraint(equalToConstant: Size.secondaryImageSize),
+            tasksButtonImage.widthAnchor.constraint(equalToConstant: Size.secondaryImageSize),
             
-            profileButton.widthAnchor.constraint(equalToConstant: secondaryButtonSize),
-            profileButton.heightAnchor.constraint(equalToConstant: secondaryButtonSize),
-            
+            profileButton.widthAnchor.constraint(equalToConstant: Size.secondaryButtonSize),
+            profileButton.heightAnchor.constraint(equalToConstant: Size.secondaryButtonSize),
             profileButtonImage.centerXAnchor.constraint(equalTo: profileButton.centerXAnchor),
             profileButtonImage.centerYAnchor.constraint(equalTo: profileButton.centerYAnchor),
-            profileButtonImage.heightAnchor.constraint(equalToConstant: secondaryImageSize),
-            profileButtonImage.widthAnchor.constraint(equalToConstant: secondaryImageSize),
+            profileButtonImage.heightAnchor.constraint(equalToConstant: Size.secondaryImageSize),
+            profileButtonImage.widthAnchor.constraint(equalToConstant: Size.secondaryImageSize),
         ])
     }
     
@@ -154,12 +147,25 @@ private extension MainScreenTabBarView {
             self?.onOpenProfile?()
         }
     }
+    
+    func setupButtonsImages() {
+        let taskImage = UIImage(named: ImageName.tasks)
+        tasksButtonImage.image = taskImage?.withRenderingMode(.alwaysTemplate)
+        
+        let profileImage = UIImage(named: ImageName.profile)
+        profileButtonImage.image = profileImage?.withRenderingMode(.alwaysTemplate)
+        
+        let addImage = UIImage(named: ImageName.addButton)
+        addButtonImage.image = addImage?.withRenderingMode(.alwaysTemplate)
+    }
 }
 
 //MARK: - Preview
+import SwiftUI
+
 #Preview {
     let bar = MainScreenTabBarView()
-    bar.updateTabBarButtons(with: .tasks)
+    bar.updateStyle(forState: .tasks)
     
     return bar.preview
 }

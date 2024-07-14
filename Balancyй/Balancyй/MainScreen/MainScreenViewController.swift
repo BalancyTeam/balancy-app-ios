@@ -6,15 +6,10 @@
 //
 
 import UIKit
-import SwiftUI
 
 final class MainScreenViewController: UIViewController {
-    private let tabBar: MainScreenTabBarView = {
-        let bar = MainScreenTabBarView()
-        return bar
-    }()
-    
-    private var openTab: MainTabType = .tasks
+    private let tabBar: MainScreenTabBarView = .init()
+    private var openTab: TabBarItem = .tasks
     
     init() {
         super.init(nibName: nil, bundle: nil)
@@ -29,6 +24,14 @@ final class MainScreenViewController: UIViewController {
 
 //MARK: - UI Setup
 private extension MainScreenViewController {
+    private enum Size {
+        static let tabBar: CGFloat = 66
+    }
+    
+    private enum Offset {
+        static let tabBarBottom: CGFloat = -12
+    }
+    
     func setupUI() {
         view.addSubviews(tabBar)
         updateOpenTab(.tasks)
@@ -39,16 +42,16 @@ private extension MainScreenViewController {
     
     func setupConstraints() {
         NSLayoutConstraint.activate([
-            tabBar.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -12),
+            tabBar.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: Offset.tabBarBottom),
             tabBar.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             tabBar.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
-            tabBar.heightAnchor.constraint(equalToConstant: 66),
+            tabBar.heightAnchor.constraint(equalToConstant: Size.tabBar),
         ])
     }
     
     func setupBarActions() {
         tabBar.configureButtonActions {
-            print("Open AddingTaskViewController")
+            //TODO: Open AddingTaskViewController
         } openTasksAction: { [weak self] in
             self?.updateOpenTab(.tasks)
         } openProfileAction: { [weak self] in
@@ -56,13 +59,15 @@ private extension MainScreenViewController {
         }
     }
     
-    func updateOpenTab(_ tab: MainTabType) {
+    func updateOpenTab(_ tab: TabBarItem) {
         openTab = tab
-        tabBar.updateTabBarButtons(with: openTab)
+        tabBar.updateStyle(forState: openTab)
     }
 }
 
 //MARK: - Preview
+import SwiftUI
+
 #Preview {
     MainScreenViewController.preview
 }

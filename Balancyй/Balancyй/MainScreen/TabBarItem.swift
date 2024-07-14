@@ -1,5 +1,5 @@
 //
-//  MainTab.swift
+//  TabBarItem.swift
 //  Balancy
 //
 //  Created by Tobias on 06.07.2024.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum MainTabType {
+enum TabBarItem {
     case tasks
     case profile
 }
