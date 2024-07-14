@@ -19,10 +19,14 @@ enum AppColor {
     static let containerBack: UIColor = UIColor(red: 0.11, green: 0.11, blue: 0.118, alpha: 1)
     static let buttonBorder: UIColor = UIColor(red: 0.282, green: 0.282, blue: 0.29, alpha: 1)
     static let buttonText: UIColor = UIColor(red: 0.851, green: 0.851, blue: 0.851, alpha: 1)
+    
+    static let secondaryText: UIColor = UIColor(named: "SecondaryText")!
+    static let primaryText: UIColor = UIColor(named: "PrimaryText")!
 }
 
 enum ImageName {
     static let logo = "logo"
     static let addPhoto = "addPhotoImage"
     static let loadErrorImage = "LoadErrorImage"
+    static let searchImage = "search"
 }
