@@ -25,6 +25,15 @@ extension UIView {
     }
 }
 
+extension UIView {
+    func mapButton(_ button: UIButton, for event: UIControl.Event = .touchUpInside, action: @escaping () -> Void) {
+        let uiAction = UIAction(handler: { _ in
+            action()
+        })
+        button.addAction(uiAction, for: event)
+    }
+}
+
 //MARK: - Preview Logic
 extension UIView {
     var preview: some View {

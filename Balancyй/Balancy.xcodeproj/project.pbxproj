@@ -40,6 +40,8 @@
 		D2CEEBE12B5D695000C1BCCB /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CEEBE02B5D695000C1BCCB /* UIViewController+Extensions.swift */; };
 		D2CEEBE52B5D69ED00C1BCCB /* ImageLoaderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CEEBE42B5D69ED00C1BCCB /* ImageLoaderService.swift */; };
 		D2CFF6092C39656D0006CF8B /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CFF6082C39656D0006CF8B /* MainScreenViewController.swift */; };
+		D2CFF60B2C3966730006CF8B /* MainScreenTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CFF60A2C3966730006CF8B /* MainScreenTabBarView.swift */; };
+		D2CFF60D2C397DD30006CF8B /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CFF60C2C397DD30006CF8B /* TabBarItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +80,8 @@
 		D2CEEBE02B5D695000C1BCCB /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		D2CEEBE42B5D69ED00C1BCCB /* ImageLoaderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoaderService.swift; sourceTree = "<group>"; };
 		D2CFF6082C39656D0006CF8B /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
+		D2CFF60A2C3966730006CF8B /* MainScreenTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenTabBarView.swift; sourceTree = "<group>"; };
+		D2CFF60C2C397DD30006CF8B /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -264,6 +268,8 @@
 			isa = PBXGroup;
 			children = (
 				D2CFF6082C39656D0006CF8B /* MainScreenViewController.swift */,
+				D2CFF60A2C3966730006CF8B /* MainScreenTabBarView.swift */,
+				D2CFF60C2C397DD30006CF8B /* TabBarItem.swift */,
 			);
 			path = MainScreen;
 			sourceTree = "<group>";
@@ -362,12 +368,14 @@
 				D2CFF6092C39656D0006CF8B /* MainScreenViewController.swift in Sources */,
 				77A524BB2B2E434C00DB3ECD /* UIViewController+Preview.swift in Sources */,
 				D2B98A6D2B977F21007DBD05 /* Int+Extensions.swift in Sources */,
+				D2CFF60B2C3966730006CF8B /* MainScreenTabBarView.swift in Sources */,
 				D2B98A6B2B977A4A007DBD05 /* ProfileVerificationService.swift in Sources */,
 				773364E32B31E1BF0025DD09 /* CategoryBalanceViewController.swift in Sources */,
 				770F746D2B225618005D2585 /* AddPhotoViewController.swift in Sources */,
 				774C2E722B60468100FF3733 /* UIButton+Extensions.swift in Sources */,
 				37EF1CD52A8F66EE008997C6 /* Constants.swift in Sources */,
 				D2CEEBDF2B5D693300C1BCCB /* UIView+Extensions.swift in Sources */,
+				D2CFF60D2C397DD30006CF8B /* TabBarItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

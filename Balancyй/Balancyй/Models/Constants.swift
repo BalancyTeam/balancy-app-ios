@@ -19,10 +19,18 @@ enum AppColor {
     static let containerBack: UIColor = UIColor(red: 0.11, green: 0.11, blue: 0.118, alpha: 1)
     static let buttonBorder: UIColor = UIColor(red: 0.282, green: 0.282, blue: 0.29, alpha: 1)
     static let buttonText: UIColor = UIColor(red: 0.851, green: 0.851, blue: 0.851, alpha: 1)
+    
+    //Main Screen Colors
+    static let tabBarSelected: UIColor = UIColor(named: "TabBarSelected") ?? .white
+    static let tabBarDeselected: UIColor = UIColor(named: "TabBarDeselected") ?? .black
 }
 
 enum ImageName {
     static let logo = "logo"
     static let addPhoto = "addPhotoImage"
     static let loadErrorImage = "LoadErrorImage"
+    //Main Screen icons
+    static let addButton = "Add"
+    static let profile = "Profile"
+    static let tasks = "Tasks"
 }
