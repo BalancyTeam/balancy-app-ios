@@ -26,3 +26,7 @@ enum ImageName {
     static let addPhoto = "addPhotoImage"
     static let loadErrorImage = "LoadErrorImage"
 }
+
+enum CellIdentifiers {
+    static let calendar: String = "CalendarCell"
+}

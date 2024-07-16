@@ -7,10 +7,6 @@
 
 import UIKit
 
-enum CellIdentifiers {
-    static let calendar: String = "CalendarCell"
-}
-
 final class CalendarCell: UICollectionViewCell {
     private let dateLabel: UILabel = {
         let label = UILabel()
