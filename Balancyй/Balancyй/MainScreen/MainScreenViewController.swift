@@ -9,6 +9,7 @@ import UIKit
 
 final class MainScreenViewController: UIViewController {
     private let tabBar: MainScreenTabBarView = .init()
+    private let taskTab: MainScreenContentView = .init()
     private var openTab: TabBarItem = .tasks
     
     init() {
@@ -24,16 +25,18 @@ final class MainScreenViewController: UIViewController {
 
 //MARK: - UI Setup
 private extension MainScreenViewController {
-    private enum Size {
+    enum Size {
         static let tabBar: CGFloat = 66
     }
     
-    private enum Offset {
+    enum Offset {
         static let tabBarBottom: CGFloat = -12
+        static let contentTop: CGFloat = 238
+        static let contentBottom: CGFloat = 68
     }
     
     func setupUI() {
-        view.addSubviews(tabBar)
+        view.addSubviews(tabBar, taskTab)
         updateOpenTab(.tasks)
         
         setupConstraints()
@@ -42,6 +45,11 @@ private extension MainScreenViewController {
     
     func setupConstraints() {
         NSLayoutConstraint.activate([
+            taskTab.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: Offset.contentTop),
+            taskTab.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            taskTab.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+            taskTab.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -Offset.contentBottom),
+            
             tabBar.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: Offset.tabBarBottom),
             tabBar.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             tabBar.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),

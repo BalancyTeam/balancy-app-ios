@@ -17,3 +17,10 @@
 
 "errorDescription" = "Додайте файл розміром до 30 мб";
 "addOther" = "Додати інше фото";
+
+//Main Screen
+"all" = "Всі";
+"work" = "Робота";
+"life" = "Життя";
+"learning" = "Навчання";
+"emptyToDo" = "У вас ще немає тасок";

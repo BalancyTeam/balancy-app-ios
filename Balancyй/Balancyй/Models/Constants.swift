@@ -33,4 +33,5 @@ enum ImageName {
     static let addButton = "Add"
     static let profile = "Profile"
     static let tasks = "Tasks"
+    static let emptyToDoImage = "emptyToDo"
 }

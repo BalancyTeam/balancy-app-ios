@@ -34,6 +34,16 @@ extension UIView {
     }
 }
 
+extension UIView {
+    static func createSpacer(width: CGFloat = 0.0, height: CGFloat = 0.0) -> UIView {
+        let spacer = UIView()
+        spacer.translatesAutoresizingMaskIntoConstraints = false
+        spacer.widthAnchor.constraint(equalToConstant: width).isActive = true
+        spacer.heightAnchor.constraint(equalToConstant: height).isActive = true
+        return spacer
+    }
+}
+
 //MARK: - Preview Logic
 extension UIView {
     var preview: some View {
