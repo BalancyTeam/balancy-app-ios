@@ -23,6 +23,8 @@ enum AppColor {
     //Main Screen Colors
     static let tabBarSelected: UIColor = UIColor(named: "TabBarSelected") ?? .white
     static let tabBarDeselected: UIColor = UIColor(named: "TabBarDeselected") ?? .black
+    static let secondaryText: UIColor = UIColor(named: "SecondaryText") ?? .white
+    static let primaryText: UIColor = UIColor(named: "PrimaryText") ?? .white
 }
 
 enum ImageName {
@@ -33,4 +35,5 @@ enum ImageName {
     static let addButton = "Add"
     static let profile = "Profile"
     static let tasks = "Tasks"
+    static let searchImage = "search"
 }
