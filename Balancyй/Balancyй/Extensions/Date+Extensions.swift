@@ -8,7 +8,7 @@
 import Foundation
 
 extension Date {
-    func toNormalizedDate() -> String {
+    func toDayMonthString() -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "d MMMM"
         let dateString = dateFormatter.string(from: self)

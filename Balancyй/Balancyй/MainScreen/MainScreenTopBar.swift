@@ -37,7 +37,7 @@ final class MainScreenTopBar: UIView {
     }
     
     func setDate(_ date: Date?) {
-        dateLabel.text = date?.toNormalizedDate()
+        dateLabel.text = date?.toDayMonthString()
     }
     
     func configure(searchAction: @escaping () -> Void) {
@@ -95,6 +95,5 @@ private extension MainScreenTopBar {
     func setSearchImage() {
         let image = UIImage(named: ImageName.searchImage)
         searchImageView.image = image?.withRenderingMode(.alwaysTemplate)
-        
     }
 }

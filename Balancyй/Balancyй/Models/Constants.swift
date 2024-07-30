@@ -23,8 +23,8 @@ enum AppColor {
     //Main Screen Colors
     static let tabBarSelected: UIColor = UIColor(named: "TabBarSelected") ?? .white
     static let tabBarDeselected: UIColor = UIColor(named: "TabBarDeselected") ?? .black
-    static let secondaryText: UIColor = UIColor(named: "SecondaryText")!
-    static let primaryText: UIColor = UIColor(named: "PrimaryText")!
+    static let secondaryText: UIColor = UIColor(named: "SecondaryText") ?? .white
+    static let primaryText: UIColor = UIColor(named: "PrimaryText") ?? .white
 }
 
 enum ImageName {
