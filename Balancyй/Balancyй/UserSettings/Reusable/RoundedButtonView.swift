@@ -14,7 +14,7 @@ final class RoundedButtonView: UIButton {
 }
 
 extension RoundedButtonView {
-    convenience init(_ type: ButtonType = .system, text: String = "", textColor: UIColor = .white) {
+    convenience init(_ type: ButtonType = .system, text: String = "", textColor: UIColor = AppColor.textWhite) {
         self.init(type: type)
         self.setupButton()
         self.setTitle(text, textColor: textColor)
@@ -25,7 +25,7 @@ extension RoundedButtonView {
         self.setupButton()
     }
     
-    func setTitle(_ text: String = "", textColor: UIColor = .white) {
+    func setTitle(_ text: String = "", textColor: UIColor = AppColor.textWhite) {
         setTitle(text, for: .normal)
         setTitleColor(textColor, for: .normal)
     }
@@ -46,8 +46,8 @@ private extension RoundedButtonView {
 
 #Preview {
     let button = RoundedButtonView(text: Localized.addOther.localizedString)
-    button.backgroundColor = AppColor.button
-    button.setupBorder(width: 2, color: .white)
+    button.backgroundColor = AppColor.accentMagenta
+    button.setupBorder(width: 2, color: AppColor.textWhite)
     
     return button.preview
         .padding(.horizontal, 24)

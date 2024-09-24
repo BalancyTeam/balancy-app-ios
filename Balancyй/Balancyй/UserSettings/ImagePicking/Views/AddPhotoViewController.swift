@@ -24,7 +24,7 @@ final class AddPhotoViewController: BaseImageSelectionViewController {
     
     private let skipButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setTitleColor(.white, for: .normal)
+        button.setTitleColor(AppColor.textWhite, for: .normal)
         button.titleLabel?.font = UIFont(name: FontName.light, size: 12)
         return button
     }()
@@ -37,7 +37,7 @@ final class AddPhotoViewController: BaseImageSelectionViewController {
     private let addPhotoLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont(name: FontName.regular, size: 24)
-        label.textColor = .white
+        label.textColor = AppColor.textWhite
         label.numberOfLines = 0
         return label
     }()
@@ -51,7 +51,7 @@ final class AddPhotoViewController: BaseImageSelectionViewController {
     
     private let generateRandomImageButton: UIButton = {
         let button = UIButton()
-        button.setTitleColor(.white, for: .normal)
+        button.setTitleColor(AppColor.textWhite, for: .normal)
         button.titleLabel?.font = UIFont(name: FontName.light, size: 12)
         return button
     }()
@@ -59,16 +59,15 @@ final class AddPhotoViewController: BaseImageSelectionViewController {
     private let pageControl: UIPageControl = {
         let pageControl = UIPageControl()
         pageControl.numberOfPages = 2
-        pageControl.pageIndicatorTintColor = AppColor.pageIndicatorTintColor
         pageControl.isUserInteractionEnabled = false
         return pageControl
     }()
     
     let nextButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setTitleColor(.white, for: .normal)
+        button.setTitleColor(AppColor.textWhite, for: .normal)
         button.titleLabel?.font = UIFont(name: FontName.medium, size: 16)
-        button.backgroundColor = AppColor.button
+        button.backgroundColor = AppColor.accentMagenta
         button.layer.cornerRadius = 20
         button.clipsToBounds = true
         button.setDisabled()
@@ -94,7 +93,7 @@ final class AddPhotoViewController: BaseImageSelectionViewController {
     // UI Configuration
     
     private func configureUI() {
-        view.backgroundColor = AppColor.background
+        view.backgroundColor = AppColor.backgroundDefault
         view.addSubviews(skipButton, logoImageView, addPhotoLabel, pageControl, nextButton, addPhotoButton, generateRandomImageButton)
         setConstraints()
         setupAddPhotoButton()
