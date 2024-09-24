@@ -12,7 +12,7 @@ final class UserHoursViewController: UIViewController {
     
     // Properties
     
-    private let hoursArray = Array(0...24)
+    private let hoursArray = Array(1...24)
     private let minutesArray = Array(0...59)
     
     private var selectedHour: Int = 0
