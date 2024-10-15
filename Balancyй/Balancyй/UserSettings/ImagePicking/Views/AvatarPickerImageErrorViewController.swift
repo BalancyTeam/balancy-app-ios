@@ -10,7 +10,7 @@ final class AvatarPickerErrorViewController: BaseImageSelectionViewController {
     
     private let containerView: UIView = {
         var backgroundView = UIView()
-        backgroundView.backgroundColor = AppColor.containerBack
+        backgroundView.backgroundColor = AppColor.backgroundPrimary
         backgroundView.setCornerRadius(28)
         backgroundView.setShadow(
             radius: 20,
@@ -29,7 +29,7 @@ final class AvatarPickerErrorViewController: BaseImageSelectionViewController {
     
     private let errorTextLabel: UILabel = {
         let label = UILabel()
-        label.textColor = .white
+        label.textColor = AppColor.textWhite
         label.textAlignment = .center
         label.font = UIFont(name: FontName.medium, size: 22)
         
@@ -38,7 +38,7 @@ final class AvatarPickerErrorViewController: BaseImageSelectionViewController {
     
     private let errorDescriptionLabel: UILabel = {
         let label = UILabel()
-        label.textColor = AppColor.buttonText
+        label.textColor = AppColor.textPrimary
         label.font = UIFont(name: FontName.light, size: 16)
         label.numberOfLines = 0
         label.lineBreakMode = .byWordWrapping
@@ -49,7 +49,7 @@ final class AvatarPickerErrorViewController: BaseImageSelectionViewController {
     
     private let addButtonView: RoundedButtonView = {
         let button = RoundedButtonView(.system)
-        button.backgroundColor = AppColor.button
+        button.backgroundColor = AppColor.accentMagenta
         
         return button
     }()
@@ -57,7 +57,7 @@ final class AvatarPickerErrorViewController: BaseImageSelectionViewController {
     private let generateCatButtonView: RoundedButtonView = {
         let button = RoundedButtonView(.system)
         button.backgroundColor = .clear
-        button.setupBorder(width: 2, color: AppColor.buttonBorder)
+        button.setupBorder(width: 2, color: AppColor.backgroundQuaternary)
         
         return button
     }()
@@ -149,7 +149,7 @@ private extension AvatarPickerErrorViewController {
     }
     
     func setupGenerateButtonAction() {
-        generateCatButtonView.setTitle(Localized.generateRandomImageButton.localizedString, textColor: AppColor.buttonText)
+        generateCatButtonView.setTitle(Localized.generateRandomImageButton.localizedString, textColor: AppColor.textPrimary)
         mapButton(generateCatButtonView) {
             self.generateAvatar()
         }

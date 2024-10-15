@@ -24,7 +24,7 @@ class TabBarViewController: UITabBar {
        override func draw(_ rect: CGRect) {
            self.addShape()
            self.unselectedItemTintColor = UIColor.gray
-           self.tintColor = UIColor.white
+           self.tintColor = AppColor.textWhite
            setTabBarItems()
        }
 

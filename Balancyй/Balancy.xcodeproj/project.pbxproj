@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D74D60C2CA34A12005C7832 /* ChooseColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D74D60B2CA34A12005C7832 /* ChooseColorViewController.swift */; };
+		0DBBC94B2C99DEA500187177 /* UserHoursViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBBC94A2C99DEA500187177 /* UserHoursViewController.swift */; };
+		0DDA26CF2CBED8B4004761F9 /* UserPreferenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDA26CE2CBED8B4004761F9 /* UserPreferenceManager.swift */; };
 		375ADDDA2A82ABA2008198AE /* CustomTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375ADDD92A82ABA2008198AE /* CustomTabBarViewController.swift */; };
 		375ADDDC2A838479008198AE /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375ADDDB2A838479008198AE /* TabBarViewController.swift */; };
 		377474A72A804BCB00E3FB7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377474A62A804BCB00E3FB7C /* AppDelegate.swift */; };
@@ -42,6 +45,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D74D60B2CA34A12005C7832 /* ChooseColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseColorViewController.swift; sourceTree = "<group>"; };
+		0DBBC94A2C99DEA500187177 /* UserHoursViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHoursViewController.swift; sourceTree = "<group>"; };
+		0DDA26CE2CBED8B4004761F9 /* UserPreferenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreferenceManager.swift; sourceTree = "<group>"; };
 		375ADDD92A82ABA2008198AE /* CustomTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarViewController.swift; sourceTree = "<group>"; };
 		375ADDDB2A838479008198AE /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		377474A32A804BCB00E3FB7C /* Balancy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Balancy.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,6 +126,22 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		0D74D60A2CA349FB005C7832 /* ChooseColor */ = {
+			isa = PBXGroup;
+			children = (
+				0D74D60B2CA34A12005C7832 /* ChooseColorViewController.swift */,
+			);
+			path = ChooseColor;
+			sourceTree = "<group>";
+		};
+		0DBBC9492C99DDD700187177 /* UserHours */ = {
+			isa = PBXGroup;
+			children = (
+				0DBBC94A2C99DEA500187177 /* UserHoursViewController.swift */,
+			);
+			path = UserHours;
+			sourceTree = "<group>";
+		};
 		3774749A2A804BCB00E3FB7C = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +196,9 @@
 				D2B98A6E2B977F61007DBD05 /* Reusable */,
 				777074BD2B4C7B37003AE060 /* CategoryBalance */,
 				777866142B482DDF00134443 /* ImagePicking */,
+				0DBBC9492C99DDD700187177 /* UserHours */,
+				0D74D60A2CA349FB005C7832 /* ChooseColor */,
+				777074BA2B48B824003AE060 /* Helpers */,
 			);
 			path = UserSettings;
 			sourceTree = "<group>";
@@ -207,6 +232,7 @@
 				D2CEEBE42B5D69ED00C1BCCB /* ImageLoaderService.swift */,
 				777074BB2B48B838003AE060 /* ProfilePhotoManager.swift */,
 				774C2E6B2B5AD01A00FF3733 /* Localized.swift */,
+				0DDA26CE2CBED8B4004761F9 /* UserPreferenceManager.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -231,7 +257,6 @@
 			isa = PBXGroup;
 			children = (
 				770F746B2B2255FB005D2585 /* Views */,
-				777074BA2B48B824003AE060 /* Helpers */,
 			);
 			path = ImagePicking;
 			sourceTree = "<group>";
@@ -334,9 +359,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DBBC94B2C99DEA500187177 /* UserHoursViewController.swift in Sources */,
+				0D74D60C2CA34A12005C7832 /* ChooseColorViewController.swift in Sources */,
 				D2CEEBE52B5D69ED00C1BCCB /* ImageLoaderService.swift in Sources */,
 				377474BC2A804C2600E3FB7C /* AuthViewController.swift in Sources */,
 				D2B98A692B9724D8007DBD05 /* BaseImageSelectionViewController.swift in Sources */,
+				0DDA26CF2CBED8B4004761F9 /* UserPreferenceManager.swift in Sources */,
 				D2CEEBDB2B5D68B100C1BCCB /* AvatarPickerImageErrorViewController.swift in Sources */,
 				777074BC2B48B839003AE060 /* ProfilePhotoManager.swift in Sources */,
 				377474AB2A804BCB00E3FB7C /* ViewController.swift in Sources */,
