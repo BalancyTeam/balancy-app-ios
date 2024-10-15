@@ -12,20 +12,19 @@ final class UserHoursViewController: UIViewController {
     
     // Properties
     
+    private let userPreferenceManager: UserPreferenceManager
+    
     private let hoursArray = Array(1...24)
     private let minutesArray = Array(0...59)
     
-    private var selectedHour: Int = 0
+    private var selectedHour: Int = 1
     private var selectedMinute: Int = 0
     
     private var isTimeSet: Bool = false
     
     // UI
     
-    private let logoImageView: UIImageView = {
-        let imageView = UIImageView()
-        return imageView
-    }()
+    private let logoImageView = UIImageView()
     
     private let selectHoursLabel: UILabel = {
         let label = UILabel()
@@ -85,6 +84,17 @@ final class UserHoursViewController: UIViewController {
         return button
     }()
     
+    // Initialize
+    
+    init(userPreferenceManager: UserPreferenceManager) {
+        self.userPreferenceManager = userPreferenceManager
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     // Lifecycle
 
     override func viewDidLoad() {
@@ -133,8 +143,7 @@ final class UserHoursViewController: UIViewController {
     }
     
     private func saveTime() {
-        let timeData = ["hour": selectedHour, "minute": selectedMinute]
-        UserDefaults.standard.set(timeData, forKey: "selectedTime")
+        userPreferenceManager.saveTime(hour: selectedHour, minute: selectedMinute)
     }
     
     @objc private func didTapReturnButton() {
@@ -184,7 +193,8 @@ private extension UserHoursViewController {
             selectHoursLabel.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -16),
             
             pickerContainerView.topAnchor.constraint(equalTo: selectHoursLabel.bottomAnchor, constant: 20),
-            pickerContainerView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            pickerContainerView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16),
+            pickerContainerView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -16),
             pickerContainerView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.88),
             pickerContainerView.heightAnchor.constraint(equalTo: pickerContainerView.widthAnchor, multiplier: 0.146),
             
@@ -223,10 +233,9 @@ extension UserHoursViewController: UIPickerViewDelegate, UIPickerViewDataSource 
         
         if selectedHour == 24 {
             pickerView.selectRow(0, inComponent: 1, animated: true)
-            pickerView.reloadComponent(1)
-        } else {
-            pickerView.reloadComponent(1)
         }
+        
+        pickerView.reloadComponent(1)
         
         selectedMinute = minutesArray[pickerView.selectedRow(inComponent: 1)]
         hoursLabel.text = String(format: "%02d:%02d", selectedHour, selectedMinute)

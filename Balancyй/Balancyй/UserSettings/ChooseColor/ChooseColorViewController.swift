@@ -7,10 +7,10 @@
 
 import UIKit
 
-class ChooseColorViewController: UIViewController {
+final class ChooseColorViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
+        view.backgroundColor = AppColor.backgroundDefault
     }
 }
